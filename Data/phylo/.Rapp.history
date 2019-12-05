@@ -1,0 +1,167 @@
+mi.inference_my <- function (est, std.err, confidence = 0.95) #
+{#
+  qstar <- est[[1]]#
+  for (i in 2:length(est)) {#
+    qstar <- cbind(qstar, est[[i]])#
+  }#
+  qbar <- apply(qstar, 1, mean)#
+  u <- std.err[[1]]#
+  for (i in 2:length(std.err)) {#
+    u <- cbind(u, std.err[[i]])#
+  }#
+  #    dimnames(u)[[1]] <- dimnames(qstar)[[1]]#
+  u <- u^2#
+  ubar <- apply(u, 1, mean)#
+  bm <- apply(qstar, 1, var)#
+  m <- dim(qstar)[2]#
+  tm <- ubar + ((1 + (1/m)) * bm)#
+  rem <- (1 + (1/m)) * bm/ubar#
+  nu <- (m - 1) * (1 + (1/rem))^2#
+  alpha <- 1 - (1 - confidence)/2#
+  low <- qbar - qt(alpha, nu) * sqrt(tm)#
+  up <- qbar + qt(alpha, nu) * sqrt(tm)#
+  pval <- 2 * (1 - pt(abs(qbar/sqrt(tm)), nu))#
+  fminf <- (rem + 2/(nu + 3))/(rem + 1)#
+  result <- list(est = qbar, std.err = sqrt(tm), df = nu, signif = pval, #
+                 lower = low, upper = up, r = rem, fminf = fminf)#
+  result#
+}
+mi.inference_my(c(2,2.2), c(0.2,0.3))
+library (metafor)#
+library (mice)#
+library (norm)#
+#
+# get data#
+Data <- read.csv ("Correa.csv")#
+#
+# checking missing data patterns#
+md.pattern (Data)#
+#
+# checkign correlatoion between variables - key for multiple imputaiton, MI#
+cor (Data[,4:9], use = "pairwise.complete.obs")#
+#
+# multiple imputation (MI); creating 200 datasets#
+Imp <- mice (Data, m = 200)#
+#
+# creating emply lists to be used #
+Est <- list (NA)#
+SE <- list (NA)#
+#
+# fitting meta-analyses to the 200 datasets created by MI#
+for (i in 1 : 200) {#
+	data <- complete (Imp, action = i)#
+	func.Hd <- function (CM, EM, CS, ES, CN, EN) {#
+	sp <- sqrt((((CN - 1) * CS ^ 2)+((EN - 1) * ES ^ 2))/(CN + EN - 2))#
+	d <- (EM - CM) / sp#
+	Hd <- d * (1 - (3 / (4 * (CN + EN - 2) - 1)))#
+	return(Hd)#
+}#
+#
+func.vHd <- function(Hd, CN, EN) {#
+	vHd <- ((CN + EN) / (CN * EN)) + (Hd ^ 2 / (2 * (CN + EN - 2)))#
+	return (vHd)#
+}	# explanations of these functions see above#
+#
+	Hd <- with (data, func.Hd (CM , EM, CS, ES, N, N))#
+	vHd <- with (data, func.vHd (Hg, N, N))#
+	model <- rma (yi = Hd, vi = vHd)#
+	Est[[i]] <- model $ b#
+	SE[[i]] <- model $ se#
+}
+library()
+Data <- read.csv ("/Users/itchyshin/Dropbox (Personal)/Project1/Missing Data/Ecological Statistics/Ecological Statistics Chap 4 & 9/Online Chap9/Correa.csv")#
+#
+# checking missing data patterns#
+md.pattern (Data)#
+#
+# checkign correlatoion between variables - key for multiple imputaiton, MI#
+cor (Data[,4:9], use = "pairwise.complete.obs")#
+#
+# multiple imputation (MI); creating 200 datasets#
+Imp <- mice (Data, m = 200)#
+#
+# creating emply lists to be used #
+Est <- list (NA)#
+SE <- list (NA)#
+#
+# fitting meta-analyses to the 200 datasets created by MI#
+for (i in 1 : 200) {#
+	data <- complete (Imp, action = i)#
+	func.Hd <- function (CM, EM, CS, ES, CN, EN) {#
+	sp <- sqrt((((CN - 1) * CS ^ 2)+((EN - 1) * ES ^ 2))/(CN + EN - 2))#
+	d <- (EM - CM) / sp#
+	Hd <- d * (1 - (3 / (4 * (CN + EN - 2) - 1)))#
+	return(Hd)#
+}#
+#
+func.vHd <- function(Hd, CN, EN) {#
+	vHd <- ((CN + EN) / (CN * EN)) + (Hd ^ 2 / (2 * (CN + EN - 2)))#
+	return (vHd)#
+}	# explanations of these functions see above#
+#
+	Hd <- with (data, func.Hd (CM , EM, CS, ES, N, N))#
+	vHd <- with (data, func.vHd (Hg, N, N))#
+	model <- rma (yi = Hd, vi = vHd)#
+	Est[[i]] <- model $ b#
+	SE[[i]] <- model $ se#
+}
+Est
+func.vHd <- function (Hd, CN, EN) {#
+	vHd <- ((CN + EN) / (CN * EN)) + (Hd ^ 2 / (2 * (CN + EN - 2)))#
+	return (vHd)#
+}
+func.vHd <- function(Hd, CN, EN) {#
+	vHd <- ((CN + EN) / (CN * EN)) + (Hd ^ 2 / (2 * (CN + EN - 2)))#
+	return (vHd)#
+}	# explanations of these functions see above#
+#
+	Hd <- with (data, func.Hd (CM , EM, CS, ES, N, N))#
+	vHd <- with (data, func.vHd (Hg, N, N))#
+	model <- rma (yi = Hd, vi = vHd)#
+	Est[[i]] <- model $ b#
+	SE[[i]] <- model $ se#
+}
+Data
+for (i in 1 : 200) {#
+	data <- complete (Imp, action = i)#
+	func.Hd <- function (CM, EM, CS, ES, CN, EN) {#
+	sp <- sqrt((((CN - 1) * CS ^ 2)+((EN - 1) * ES ^ 2))/(CN + EN - 2))#
+	d <- (EM - CM) / sp#
+	Hd <- d * (1 - (3 / (4 * (CN + EN - 2) - 1)))#
+	return(Hd)#
+}#
+#
+func.vHd <- function(Hd, CN, EN) {#
+	vHd <- ((CN + EN) / (CN * EN)) + (Hd ^ 2 / (2 * (CN + EN - 2)))#
+	return (vHd)#
+}	# explanations of these functions see above#
+#
+	Hd <- with (data, func.Hd (CM , EM, CS, ES, N, N))#
+	vHd <- with (data, func.vHd (Hg, N, N))#
+	model <- rma (yi = Hd, vi = vHd)#
+	Est[[i]] <- model $ b#
+	SE[[i]] <- model $ se#
+}
+# fitting meta-analyses to the 200 datasets created by MI#
+for (i in 1 : 200) {#
+	data <- complete (Imp, action = i)#
+	func.Hd <- function (CM, EM, CS, ES, CN, EN) {#
+	sp <- sqrt((((CN - 1) * CS ^ 2)+((EN - 1) * ES ^ 2))/(CN + EN - 2))#
+	d <- (EM - CM) / sp#
+	Hd <- d * (1 - (3 / (4 * (CN + EN - 2) - 1)))#
+	return(Hd)#
+}#
+#
+func.vHd <- function(Hd, CN, EN) {#
+	vHd <- ((CN + EN) / (CN * EN)) + (Hd ^ 2 / (2 * (CN + EN - 2)))#
+	return (vHd)#
+}	# explanations of these functions see above#
+#
+	Hd <- with (data, func.Hd (CM , EM, CS, ES, N, N))#
+	vHd <- with (data, func.vHd (Hd, N, N))#
+	model <- rma (yi = Hd, vi = vHd)#
+	Est[[i]] <- model $ b#
+	SE[[i]] <- model $ se#
+}
+Est
+SE
