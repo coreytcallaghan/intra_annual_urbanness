@@ -111,7 +111,6 @@ resample_urbanness_day_function <- function(draw){
     sample_n(10, replace=TRUE) %>%
     group_by(COMMON_NAME, DAY) %>%
     summarise(urban_score=median(avg_rad, na.rm=TRUE)) %>%
-    mutate(month_numeric=1:12) %>%
     mutate(resample=draw)
   
 }
