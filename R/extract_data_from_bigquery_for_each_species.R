@@ -58,3 +58,19 @@ species_list <- read_csv("Data/list_of_potential_species.csv") %>%
 lapply(species_list, function(x) {get_data_for_a_species(x)})
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
