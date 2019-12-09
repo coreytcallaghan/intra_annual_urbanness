@@ -21,6 +21,22 @@ species <- readRDS("Data/response_variables.RDS") %>%
   group_by(COMMON_NAME) %>%
   slice(1)
 
+# but some species don't have a tip label
+# for various reasons
+# will manually fix these here
+taxonomic_fix <- species %>%
+  dplyr::filter(!complete.cases(TipLabel)) %>%
+  dplyr::select(-TipLabel) %>%
+  ungroup() %>%
+  mutate(TipLabel=c("Gallinula_chloropus", "Porphyrio_porphyrio",
+                    "Buteo_nitidus", "Troglodytes_troglodytes", 
+                    "Rallus_longirostris", "Amphispiza_belli", 
+                    "Charadrius_alexandrinus", "Gallinago_gallinago", "Aphelocoma_californica"))
+
+species <- species %>%
+  dplyr::filter(complete.cases(TipLabel)) %>%
+  bind_rows(taxonomic_fix)
+
 # read in body size data
 # and prepare it to join up with
 # the species data
@@ -41,7 +57,8 @@ body_size_matched.2 <- species %>%
   rename(COMMON_NAME=COMMON_NAME.x)
 
 body_size_final <- bind_rows(body_size_matched.1,
-                             body_size_matched.2)
+                             body_size_matched.2) %>%
+  distinct()
 
 
 # Now repeat the same general process
@@ -216,6 +233,9 @@ predictor_variables <- species %>%
   left_join(., range_size_final) %>%
   left_join(., mig_habitat_final) %>%
   left_join(., clutch_mating_final)
+
+# write out predictor variables
+saveRDS(predictor_variables, "Data/predictor_variables.RDS")
 
 
 
