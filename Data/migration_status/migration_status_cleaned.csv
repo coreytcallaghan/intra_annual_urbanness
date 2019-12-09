@@ -1,0 +1,1752 @@
+COMMON_NAME,SCIENTIFIC_NAME,MIGRATORY_STATUS,SOURCE_OF_MIGRATORY_STATUS,IUCN_HABITATS,AUDUBON_HABITAT
+Abert's Towhee,Melozone aberti,resident,1,artificial_terrestrial,Shrubland
+Abert's Towhee,Melozone aberti,resident,1,savanna,Shrubland
+Abert's Towhee,Melozone aberti,resident,1,shrubland,Shrubland
+Acadian Flycatcher,Empidonax virescens,long,0,artificial_terrestrial,Woodland
+Acadian Flycatcher,Empidonax virescens,long,0,forest,Woodland
+Acadian Flycatcher,Empidonax virescens,long,0,shrubland,Woodland
+Acadian Flycatcher,Empidonax virescens,long,0,wetlands_inland,Woodland
+Acorn Woodpecker,Melanerpes formicivorus,resident,1,artificial_terrestrial,Woodland
+Acorn Woodpecker,Melanerpes formicivorus,resident,1,forest,Woodland
+Acorn Woodpecker,Melanerpes formicivorus,resident,1,grassland,Woodland
+Alder Flycatcher,Empidonax alnorum,long,1,forest,Wetland
+Alder Flycatcher,Empidonax alnorum,long,1,shrubland,Wetland
+Alder Flycatcher,Empidonax alnorum,long,1,wetlands_inland,Wetland
+Allen's Hummingbird,Selasphorus sasin,moderate,0,forest,Shrubland
+Allen's Hummingbird,Selasphorus sasin,moderate,0,shrubland,Shrubland
+Altamira Oriole,Icterus gularis,resident,1,forest,Woodland
+Altamira Oriole,Icterus gularis,resident,1,savanna,Woodland
+Altamira Oriole,Icterus gularis,resident,1,shrubland,Woodland
+American Avocet,Recurvirostra americana,short,0,marine_intertidal,Wetland
+American Avocet,Recurvirostra americana,short,0,wetlands_inland,Wetland
+American Bittern,Botaurus lentiginosus,short,0,wetlands_inland,Wetland
+American Black Duck,Anas rubripes,short,0,marine_coastal_supratidal,Wetland
+American Black Duck,Anas rubripes,short,0,marine_intertidal,Wetland
+American Black Duck,Anas rubripes,short,0,marine_neritic,Wetland
+American Black Duck,Anas rubripes,short,0,wetlands_inland,Wetland
+American Coot,Fulica americana,short,0,marine_intertidal,Wetland
+American Coot,Fulica americana,short,0,wetlands_inland,Wetland
+American Crow,Corvus brachyrhynchos,withdrawal,1,artificial_terrestrial,Various
+American Crow,Corvus brachyrhynchos,withdrawal,1,forest,Various
+American Crow,Corvus brachyrhynchos,withdrawal,1,grassland,Various
+American Crow,Corvus brachyrhynchos,withdrawal,1,shrubland,Various
+American Dipper,Cinclus mexicanus,resident,1,wetlands_inland,Wetland
+American Golden-Plover,Pluvialis dominica,long,1,artificial_terrestrial,Grassland
+American Golden-Plover,Pluvialis dominica,long,1,grassland,Grassland
+American Golden-Plover,Pluvialis dominica,long,1,marine_intertidal,Grassland
+American Golden-Plover,Pluvialis dominica,long,1,wetlands_inland,Grassland
+American Goldfinch,Spinus tristis,short,0,artificial_terrestrial,Various
+American Goldfinch,Spinus tristis,short,0,forest,Various
+American Goldfinch,Spinus tristis,short,0,grassland,Various
+American Goldfinch,Spinus tristis,short,0,shrubland,Various
+American Kestrel,Falco sparverius,short,0,artificial_terrestrial,Grassland
+American Kestrel,Falco sparverius,short,0,desert,Grassland
+American Kestrel,Falco sparverius,short,0,forest,Grassland
+American Kestrel,Falco sparverius,short,0,grassland,Grassland
+American Kestrel,Falco sparverius,short,0,savanna,Grassland
+American Kestrel,Falco sparverius,short,0,shrubland,Grassland
+American Kestrel,Falco sparverius,short,0,wetlands_inland,Grassland
+American Oystercatcher,Haematopus palliatus,withdrawal,0,marine_intertidal,Wetland
+American Pipit,Anthus rubescens,moderate,0,artificial_terrestrial,Grassland
+American Pipit,Anthus rubescens,moderate,0,grassland,Grassland
+American Pipit,Anthus rubescens,moderate,0,marine_intertidal,Grassland
+American Pipit,Anthus rubescens,moderate,0,rocky,Grassland
+American Pipit,Anthus rubescens,moderate,0,wetlands_inland,Grassland
+American Redstart,Setophaga ruticilla,moderate,0,artificial_terrestrial,Woodland
+American Redstart,Setophaga ruticilla,moderate,0,forest,Woodland
+American Redstart,Setophaga ruticilla,moderate,0,shrubland,Woodland
+American Robin,Turdus migratorius,short,0,artificial_terrestrial,Woodland
+American Robin,Turdus migratorius,short,0,forest,Woodland
+American Robin,Turdus migratorius,short,0,shrubland,Woodland
+American Three-toed Woodpecker,Picoides dorsalis,resident,1,forest,Woodland
+American Tree Sparrow,Spizella arborea,moderate,0,artificial_terrestrial,Shrubland
+American Tree Sparrow,Spizella arborea,moderate,0,grassland,Shrubland
+American Tree Sparrow,Spizella arborea,moderate,0,shrubland,Shrubland
+American Tree Sparrow,Spizella arborea,moderate,0,wetlands_inland,Shrubland
+American White Pelican,Pelecanus erythrorhynchos,moderate,0,marine_coastal_supratidal,Wetland
+American White Pelican,Pelecanus erythrorhynchos,moderate,0,marine_neritic,Wetland
+American White Pelican,Pelecanus erythrorhynchos,moderate,0,wetlands_inland,Wetland
+American Wigeon,Anas americana,short,0,grassland,Wetland
+American Wigeon,Anas americana,short,0,marine_coastal_supratidal,Wetland
+American Wigeon,Anas americana,short,0,marine_intertidal,Wetland
+American Wigeon,Anas americana,short,0,marine_neritic,Wetland
+American Wigeon,Anas americana,short,0,wetlands_inland,Wetland
+American Woodcock,Scolopax minor,short,0,forest,Wetland
+American Woodcock,Scolopax minor,short,0,shrubland,Wetland
+Ancient Murrelet,Synthliboramphus antiquus,short,1,marine_coastal_supratidal,Ocean
+Ancient Murrelet,Synthliboramphus antiquus,short,1,marine_intertidal,Ocean
+Ancient Murrelet,Synthliboramphus antiquus,short,1,marine_neritic,Ocean
+Ancient Murrelet,Synthliboramphus antiquus,short,1,marine_oceanic,Ocean
+Anhinga,Anhinga anhinga,withdrawal,1,wetlands_inland,Wetland
+Anna's Hummingbird,Calypte anna,short,0,artificial_terrestrial,Woodland
+Anna's Hummingbird,Calypte anna,short,0,forest,Woodland
+Anna's Hummingbird,Calypte anna,short,0,savanna,Woodland
+Anna's Hummingbird,Calypte anna,short,0,shrubland,Woodland
+Aplomado Falcon,Falco femoralis,resident,1,artificial_terrestrial,Grassland
+Aplomado Falcon,Falco femoralis,resident,1,desert,Grassland
+Aplomado Falcon,Falco femoralis,resident,1,grassland,Grassland
+Aplomado Falcon,Falco femoralis,resident,1,savanna,Grassland
+Aplomado Falcon,Falco femoralis,resident,1,wetlands_inland,Grassland
+Arctic Tern,Sterna paradisaea,long,1,grassland,Wetland
+Arctic Tern,Sterna paradisaea,long,1,marine_coastal_supratidal,Wetland
+Arctic Tern,Sterna paradisaea,long,1,marine_intertidal,Wetland
+Arctic Tern,Sterna paradisaea,long,1,marine_neritic,Wetland
+Arctic Tern,Sterna paradisaea,long,1,wetlands_inland,Wetland
+Arctic Warbler,Phylloscopus borealis,long,1,artificial_terrestrial,Shrubland
+Arctic Warbler,Phylloscopus borealis,long,1,forest,Shrubland
+Arctic Warbler,Phylloscopus borealis,long,1,shrubland,Shrubland
+Arctic Warbler,Phylloscopus borealis,long,1,wetlands_inland,Shrubland
+Arizona Woodpecker,Picoides arizonae,resident,1,forest,Woodland
+Ash-throated Flycatcher,Myiarchus cinerascens,withdrawal,0,artificial_terrestrial,Shrubland
+Ash-throated Flycatcher,Myiarchus cinerascens,withdrawal,0,forest,Shrubland
+Ash-throated Flycatcher,Myiarchus cinerascens,withdrawal,0,shrubland,Shrubland
+Ash-throated Flycatcher,Myiarchus cinerascens,withdrawal,0,wetlands_inland,Shrubland
+Audubon's Oriole,Icterus graduacauda,resident,1,forest,Woodland
+Audubon's Oriole,Icterus graduacauda,resident,1,wetlands_inland,Woodland
+Bachman's Sparrow,Peucaea aestivalis,withdrawal,0,forest,Woodland
+Bachman's Sparrow,Peucaea aestivalis,withdrawal,0,shrubland,Woodland
+Baird's Sparrow,Ammodramus bairdii,moderate,0,artificial_terrestrial,Grassland
+Baird's Sparrow,Ammodramus bairdii,moderate,0,grassland,Grassland
+Bald Eagle,Haliaeetus leucocephalus,short,0,artificial_aquatic_marine,Wetland
+Bald Eagle,Haliaeetus leucocephalus,short,0,forest,Wetland
+Bald Eagle,Haliaeetus leucocephalus,short,0,grassland,Wetland
+Bald Eagle,Haliaeetus leucocephalus,short,0,marine_intertidal,Wetland
+Bald Eagle,Haliaeetus leucocephalus,short,0,marine_neritic,Wetland
+Bald Eagle,Haliaeetus leucocephalus,short,0,shrubland,Wetland
+Bald Eagle,Haliaeetus leucocephalus,short,0,wetlands_inland,Wetland
+Baltimore Oriole,Icterus galbula,moderate,0,artificial_terrestrial,Woodland
+Baltimore Oriole,Icterus galbula,moderate,0,forest,Woodland
+Baltimore Oriole,Icterus galbula,moderate,0,grassland,Woodland
+Band-tailed Pigeon,Patagioenas fasciata,withdrawal,0,artificial_terrestrial,Woodland
+Band-tailed Pigeon,Patagioenas fasciata,withdrawal,0,forest,Woodland
+Band-tailed Pigeon,Patagioenas fasciata,withdrawal,0,savanna,Woodland
+Bank Swallow,Riparia riparia,long,1,artificial_aquatic_marine,Various
+Bank Swallow,Riparia riparia,long,1,artificial_terrestrial,Various
+Bank Swallow,Riparia riparia,long,1,grassland,Various
+Bank Swallow,Riparia riparia,long,1,wetlands_inland,Various
+Barn Owl,Tyto alba,withdrawal,0,artificial_aquatic_marine,Grassland
+Barn Owl,Tyto alba,withdrawal,0,artificial_terrestrial,Grassland
+Barn Owl,Tyto alba,withdrawal,0,caves,Grassland
+Barn Owl,Tyto alba,withdrawal,0,grassland,Grassland
+Barn Owl,Tyto alba,withdrawal,0,savanna,Grassland
+Barn Owl,Tyto alba,withdrawal,0,shrubland,Grassland
+Barn Owl,Tyto alba,withdrawal,0,wetlands_inland,Grassland
+Barn Swallow,Hirundo rustica,moderate,0,artificial_aquatic_marine,Various
+Barn Swallow,Hirundo rustica,moderate,0,artificial_terrestrial,Various
+Barn Swallow,Hirundo rustica,moderate,0,grassland,Various
+Barn Swallow,Hirundo rustica,moderate,0,savanna,Various
+Barn Swallow,Hirundo rustica,moderate,0,shrubland,Various
+Barn Swallow,Hirundo rustica,moderate,0,wetlands_inland,Various
+Barred Owl,Strix varia,resident,1,artificial_terrestrial,Woodland
+Barred Owl,Strix varia,resident,1,forest,Woodland
+Barred Owl,Strix varia,resident,1,wetlands_inland,Woodland
+Barrow's Goldeneye,Bucephala islandica,moderate,0,forest,Wetland
+Barrow's Goldeneye,Bucephala islandica,moderate,0,marine_coastal_supratidal,Wetland
+Barrow's Goldeneye,Bucephala islandica,moderate,0,wetlands_inland,Wetland
+Bay-breasted Warbler,Setophaga castanea,long,1,forest,Woodland
+Bell's Sparrow,Artemisiospiza belli,short,0,artificial_terrestrial,Shrubland
+Bell's Sparrow,Artemisiospiza belli,short,0,shrubland,Shrubland
+Bell's Vireo,Vireo bellii,moderate,0,forest,Shrubland
+Bell's Vireo,Vireo bellii,moderate,0,shrubland,Shrubland
+Belted Kingfisher,Megaceryle alcyon,short,0,artificial_terrestrial,Wetland
+Belted Kingfisher,Megaceryle alcyon,short,0,forest,Wetland
+Belted Kingfisher,Megaceryle alcyon,short,0,wetlands_inland,Wetland
+Bendire's Thrasher,Toxostoma bendirei,withdrawal,1,desert,Shrubland
+Bendire's Thrasher,Toxostoma bendirei,withdrawal,1,grassland,Shrubland
+Bendire's Thrasher,Toxostoma bendirei,withdrawal,1,shrubland,Shrubland
+Bewick's Wren,Thryomanes bewickii,short,0,artificial_terrestrial,Shrubland
+Bewick's Wren,Thryomanes bewickii,short,0,forest,Shrubland
+Bewick's Wren,Thryomanes bewickii,short,0,shrubland,Shrubland
+Black Guillemot,Cepphus grylle,withdrawal,1,marine_coastal_supratidal,Ocean
+Black Guillemot,Cepphus grylle,withdrawal,1,marine_intertidal,Ocean
+Black Guillemot,Cepphus grylle,withdrawal,1,marine_neritic,Ocean
+Black Guillemot,Cepphus grylle,withdrawal,1,marine_oceanic,Ocean
+Black Oystercatcher,Haematopus bachmani,resident,1,marine_intertidal,Wetland
+Black Phoebe,Sayornis nigricans,withdrawal,0,artificial_aquatic_marine,Wetland
+Black Phoebe,Sayornis nigricans,withdrawal,0,artificial_terrestrial,Wetland
+Black Phoebe,Sayornis nigricans,withdrawal,0,rocky,Wetland
+Black Phoebe,Sayornis nigricans,withdrawal,0,shrubland,Wetland
+Black Phoebe,Sayornis nigricans,withdrawal,0,wetlands_inland,Wetland
+Black Rail,Laterallus jamaicensis,short,0,marine_intertidal,Wetland
+Black Rail,Laterallus jamaicensis,short,0,wetlands_inland,Wetland
+Black Rosy-Finch,Leucosticte atrata,short,0,grassland,Various
+Black Scoter,Melanitta americana,moderate,0,marine_neritic,Wetland
+Black Scoter,Melanitta americana,moderate,0,shrubland,Wetland
+Black Scoter,Melanitta americana,moderate,0,wetlands_inland,Wetland
+Black Skimmer,Rynchops niger,withdrawal,0,marine_coastal_supratidal,Wetland
+Black Skimmer,Rynchops niger,withdrawal,0,marine_intertidal,Wetland
+Black Skimmer,Rynchops niger,withdrawal,0,marine_neritic,Wetland
+Black Skimmer,Rynchops niger,withdrawal,0,wetlands_inland,Wetland
+Black Swift,Cypseloides niger,long,1,artificial_terrestrial,Various
+Black Swift,Cypseloides niger,long,1,forest,Various
+Black Swift,Cypseloides niger,long,1,rocky,Various
+Black Tern,Chlidonias niger,long,1,artificial_aquatic_marine,Wetland
+Black Tern,Chlidonias niger,long,1,marine_coastal_supratidal,Wetland
+Black Tern,Chlidonias niger,long,1,marine_neritic,Wetland
+Black Tern,Chlidonias niger,long,1,marine_oceanic,Wetland
+Black Tern,Chlidonias niger,long,1,wetlands_inland,Wetland
+Black Turnstone,Arenaria melanocephala,moderate,0,grassland,Wetland
+Black Turnstone,Arenaria melanocephala,moderate,0,marine_intertidal,Wetland
+Black Vulture,Coragyps atratus,resident,1,artificial_terrestrial,Various
+Black Vulture,Coragyps atratus,resident,1,forest,Various
+Black Vulture,Coragyps atratus,resident,1,grassland,Various
+Black Vulture,Coragyps atratus,resident,1,shrubland,Various
+Black-and-white Warbler,Mniotilta varia,moderate,0,forest,Woodland
+Black-and-white Warbler,Mniotilta varia,moderate,0,shrubland,Woodland
+Black-backed Woodpecker,Picoides arcticus,resident,1,forest,Woodland
+Black-bellied Plover,Pluvialis squatarola,moderate,0,grassland,Wetland
+Black-bellied Plover,Pluvialis squatarola,moderate,0,marine_coastal_supratidal,Wetland
+Black-bellied Plover,Pluvialis squatarola,moderate,0,marine_intertidal,Wetland
+Black-bellied Whistling-Duck,Dendrocygna autumnalis,withdrawal,1,artificial_terrestrial,Wetland
+Black-bellied Whistling-Duck,Dendrocygna autumnalis,withdrawal,1,wetlands_inland,Wetland
+Black-billed Cuckoo,Coccyzus erythropthalmus,long,1,forest,Woodland
+Black-billed Cuckoo,Coccyzus erythropthalmus,long,1,shrubland,Woodland
+Black-billed Magpie,Pica hudsonia,resident,1,artificial_terrestrial,Woodland
+Black-billed Magpie,Pica hudsonia,resident,1,forest,Woodland
+Black-billed Magpie,Pica hudsonia,resident,1,grassland,Woodland
+Black-billed Magpie,Pica hudsonia,resident,1,rocky,Woodland
+Black-billed Magpie,Pica hudsonia,resident,1,shrubland,Woodland
+Blackburnian Warbler,Setophaga fusca,long,1,forest,Woodland
+Black-capped Chickadee,Poecile atricapillus,resident,1,artificial_terrestrial,Woodland
+Black-capped Chickadee,Poecile atricapillus,resident,1,forest,Woodland
+Black-capped Vireo,Vireo atricapilla,moderate,0,forest,Shrubland
+Black-capped Vireo,Vireo atricapilla,moderate,0,shrubland,Shrubland
+Black-chinned Hummingbird,Archilochus alexandri,short,0,artificial_terrestrial,Woodland
+Black-chinned Hummingbird,Archilochus alexandri,short,0,forest,Woodland
+Black-chinned Hummingbird,Archilochus alexandri,short,0,shrubland,Woodland
+Black-chinned Sparrow,Spizella atrogularis,short,0,shrubland,Shrubland
+Black-crested Titmouse,Baeolophus atricristatus,resident,1,forest,Woodland
+Black-crested Titmouse,Baeolophus atricristatus,resident,1,shrubland,Woodland
+Black-crowned Night-Heron,Nycticorax nycticorax,short,0,forest,Wetland
+Black-crowned Night-Heron,Nycticorax nycticorax,short,0,marine_intertidal,Wetland
+Black-crowned Night-Heron,Nycticorax nycticorax,short,0,wetlands_inland,Wetland
+Black-headed Grosbeak,Pheucticus melanocephalus,short,0,forest,Woodland
+Black-headed Gull,Chroicocephalus ridibundus,moderate,0,artificial_aquatic_marine,Wetland
+Black-headed Gull,Chroicocephalus ridibundus,moderate,0,artificial_terrestrial,Wetland
+Black-headed Gull,Chroicocephalus ridibundus,moderate,0,grassland,Wetland
+Black-headed Gull,Chroicocephalus ridibundus,moderate,0,marine_coastal_supratidal,Wetland
+Black-headed Gull,Chroicocephalus ridibundus,moderate,0,marine_intertidal,Wetland
+Black-headed Gull,Chroicocephalus ridibundus,moderate,0,marine_neritic,Wetland
+Black-headed Gull,Chroicocephalus ridibundus,moderate,0,wetlands_inland,Wetland
+Black-legged Kittiwake,Rissa tridactyla,moderate,1,marine_coastal_supratidal,Wetland
+Black-legged Kittiwake,Rissa tridactyla,moderate,1,marine_intertidal,Wetland
+Black-legged Kittiwake,Rissa tridactyla,moderate,1,marine_neritic,Wetland
+Black-legged Kittiwake,Rissa tridactyla,moderate,1,marine_oceanic,Wetland
+Black-necked Stilt,Himantopus mexicanus,short,0,marine_intertidal,Wetland
+Black-necked Stilt,Himantopus mexicanus,short,0,marine_neritic,Wetland
+Black-necked Stilt,Himantopus mexicanus,short,0,wetlands_inland,Wetland
+Blackpoll Warbler,Setophaga striata,long,1,forest,Woodland
+Blackpoll Warbler,Setophaga striata,long,1,shrubland,Woodland
+Black-tailed Gnatcatcher,Polioptila melanura,resident,1,shrubland,Shrubland
+Black-throated Blue Warbler,Setophaga caerulescens,long,0,artificial_terrestrial,Woodland
+Black-throated Blue Warbler,Setophaga caerulescens,long,0,forest,Woodland
+Black-throated Blue Warbler,Setophaga caerulescens,long,0,shrubland,Woodland
+Black-throated Gray Warbler,Setophaga nigrescens,moderate,0,forest,Various
+Black-throated Gray Warbler,Setophaga nigrescens,moderate,0,shrubland,Various
+Black-throated Green Warbler,Setophaga virens,moderate,0,forest,Woodland
+Black-throated Green Warbler,Setophaga virens,moderate,0,wetlands_inland,Woodland
+Black-throated Sparrow,Amphispiza bilineata,withdrawal,0,desert,Shrubland
+Black-throated Sparrow,Amphispiza bilineata,withdrawal,0,shrubland,Shrubland
+Black-vented Shearwater,Puffinus opisthomelas,withdrawal,1,caves,Ocean
+Black-vented Shearwater,Puffinus opisthomelas,withdrawal,1,marine_neritic,Ocean
+Black-vented Shearwater,Puffinus opisthomelas,withdrawal,1,marine_oceanic,Ocean
+Black-vented Shearwater,Puffinus opisthomelas,withdrawal,1,shrubland,Ocean
+Black-whiskered Vireo,Vireo altiloquus,moderate,1,artificial_terrestrial,Woodland
+Black-whiskered Vireo,Vireo altiloquus,moderate,1,forest,Woodland
+Black-whiskered Vireo,Vireo altiloquus,moderate,1,shrubland,Woodland
+Blue Grosbeak,Passerina caerulea,short,0,artificial_terrestrial,Shrubland
+Blue Grosbeak,Passerina caerulea,short,0,forest,Shrubland
+Blue Grosbeak,Passerina caerulea,short,0,shrubland,Shrubland
+Blue Jay,Cyanocitta cristata,withdrawal,1,artificial_terrestrial,Woodland
+Blue Jay,Cyanocitta cristata,withdrawal,1,forest,Woodland
+Blue-gray Gnatcatcher,Polioptila caerulea ,short,0,artificial_terrestrial,Woodland
+Blue-gray Gnatcatcher,Polioptila caerulea ,short,0,forest,Woodland
+Blue-gray Gnatcatcher,Polioptila caerulea ,short,0,savanna,Woodland
+Blue-gray Gnatcatcher,Polioptila caerulea ,short,0,shrubland,Woodland
+Blue-winged Teal,Anas discors,moderate,0,grassland,Wetland
+Blue-winged Teal,Anas discors,moderate,0,marine_coastal_supratidal,Wetland
+Blue-winged Teal,Anas discors,moderate,0,marine_intertidal,Wetland
+Blue-winged Teal,Anas discors,moderate,0,wetlands_inland,Wetland
+Blue-winged Warbler,Vermivora cyanoptera,long,0,grassland,Shrubland
+Blue-winged Warbler,Vermivora cyanoptera,long,0,shrubland,Shrubland
+Boat-tailed Grackle,Quiscalus major,resident,1,marine_coastal_supratidal,Wetland
+Boat-tailed Grackle,Quiscalus major,resident,1,wetlands_inland,Wetland
+Bobolink,Dolichonyx oryzivorus,long,1,artificial_terrestrial,Grassland
+Bobolink,Dolichonyx oryzivorus,long,1,grassland,Grassland
+Bobolink,Dolichonyx oryzivorus,long,1,savanna,Grassland
+Bohemian Waxwing,Bombycilla garrulus,irruptive,0,artificial_terrestrial,Woodland
+Bohemian Waxwing,Bombycilla garrulus,irruptive,0,forest,Woodland
+Bonaparte's Gull,Chroicocephalus philadelphia,moderate,0,forest,Wetland
+Bonaparte's Gull,Chroicocephalus philadelphia,moderate,0,marine_neritic,Wetland
+Bonaparte's Gull,Chroicocephalus philadelphia,moderate,0,wetlands_inland,Wetland
+Boreal Chickadee,Poecile hudsonicus,resident,1,forest,Woodland
+Boreal Owl,Aegolius funereus,irruptive,0,forest,Woodland
+Brandt's Cormorant,Phalacrocorax penicillatus,withdrawal,1,marine_neritic,Wetland
+Brant,Branta bernicla,moderate,0,artificial_terrestrial,Wetland
+Brant,Branta bernicla,moderate,0,grassland,Wetland
+Brant,Branta bernicla,moderate,0,marine_intertidal,Wetland
+Brewer's Blackbird,Euphagus cyanocephalus,short,0,artificial_terrestrial,Various
+Brewer's Blackbird,Euphagus cyanocephalus,short,0,grassland,Various
+Brewer's Blackbird,Euphagus cyanocephalus,short,0,marine_intertidal,Various
+Brewer's Sparrow,Spizella breweri,moderate,0,grassland,Shrubland
+Brewer's Sparrow,Spizella breweri,moderate,0,shrubland,Shrubland
+Bridled Titmouse,Baeolophus wollweberi,resident,1,artificial_terrestrial,Woodland
+Bridled Titmouse,Baeolophus wollweberi,resident,1,forest,Woodland
+Broad-billed Hummingbird,Cynanthus latirostris,withdrawal,0,desert,Woodland
+Broad-billed Hummingbird,Cynanthus latirostris,withdrawal,0,forest,Woodland
+Broad-billed Hummingbird,Cynanthus latirostris,withdrawal,0,shrubland,Woodland
+Broad-tailed Hummingbird,Selasphorus platycercus,moderate,0,artificial_terrestrial,Woodland
+Broad-tailed Hummingbird,Selasphorus platycercus,moderate,0,forest,Woodland
+Broad-tailed Hummingbird,Selasphorus platycercus,moderate,0,grassland,Woodland
+Broad-tailed Hummingbird,Selasphorus platycercus,moderate,0,shrubland,Woodland
+Broad-winged Hawk,Buteo platypterus,long,0,artificial_terrestrial,Woodland
+Broad-winged Hawk,Buteo platypterus,long,0,forest,Woodland
+Bronzed Cowbird,Molothrus aeneus,withdrawal,0,artificial_terrestrial,Various
+Bronzed Cowbird,Molothrus aeneus,withdrawal,0,forest,Various
+Brown Creeper,Certhia americana,short,0,forest,Woodland
+Brown Pelican,Pelecanus occidentalis,withdrawal,1,marine_coastal_supratidal,Wetland
+Brown Pelican,Pelecanus occidentalis,withdrawal,1,marine_intertidal,Wetland
+Brown Pelican,Pelecanus occidentalis,withdrawal,1,marine_neritic,Wetland
+Brown Pelican,Pelecanus occidentalis,withdrawal,1,marine_oceanic,Wetland
+Brown Thrasher,Toxostoma rufum,short,0,forest,Shrubland
+Brown Thrasher,Toxostoma rufum,short,0,shrubland,Shrubland
+Brown-capped Rosy-Finch,Leucosticte australis,short,0,grassland,Various
+Brown-crested Flycatcher,Myiarchus tyrannulus,withdrawal,0,artificial_terrestrial,Woodland
+Brown-crested Flycatcher,Myiarchus tyrannulus,withdrawal,0,forest,Woodland
+Brown-crested Flycatcher,Myiarchus tyrannulus,withdrawal,0,savanna,Woodland
+Brown-crested Flycatcher,Myiarchus tyrannulus,withdrawal,0,shrubland,Woodland
+Brown-crested Flycatcher,Myiarchus tyrannulus,withdrawal,0,wetlands_inland,Woodland
+Brown-headed Cowbird,Molothrus ater,short,0,artificial_terrestrial,Various
+Brown-headed Cowbird,Molothrus ater,short,0,forest,Various
+Brown-headed Cowbird,Molothrus ater,short,0,grassland,Various
+Brown-headed Nuthatch,Sitta pusilla,resident,1,forest,Woodland
+Buff-bellied Hummingbird,Amazilia yucatanensis,resident,1,artificial_terrestrial,Woodland
+Buff-bellied Hummingbird,Amazilia yucatanensis,resident,1,forest,Woodland
+Buff-bellied Hummingbird,Amazilia yucatanensis,resident,1,shrubland,Woodland
+Bufflehead,Bucephala albeola,short,0,forest,Wetland
+Bufflehead,Bucephala albeola,short,0,marine_coastal_supratidal,Wetland
+Bufflehead,Bucephala albeola,short,0,marine_neritic,Wetland
+Bufflehead,Bucephala albeola,short,0,wetlands_inland,Wetland
+Bullock's Oriole,Icterus bullockii,moderate,0,artificial_terrestrial,Woodland
+Bullock's Oriole,Icterus bullockii,moderate,0,forest,Woodland
+Burrowing Owl,Athene cunicularia,short,0,artificial_terrestrial,Grassland
+Burrowing Owl,Athene cunicularia,short,0,desert,Grassland
+Burrowing Owl,Athene cunicularia,short,0,grassland,Grassland
+Burrowing Owl,Athene cunicularia,short,0,savanna,Grassland
+Burrowing Owl,Athene cunicularia,short,0,shrubland,Grassland
+Bushtit,Psaltriparus minimus,resident,1,artificial_terrestrial,Various
+Bushtit,Psaltriparus minimus,resident,1,forest,Various
+Bushtit,Psaltriparus minimus,resident,1,shrubland,Various
+Cactus Wren,Campylorhynchus brunneicapillus,resident,1,shrubland,Shrubland
+California Gnatcatcher,Polioptila californica,resident,1,shrubland,Shrubland
+California Gull,Larus californicus,short,0,artificial_terrestrial,Wetland
+California Gull,Larus californicus,short,0,desert,Wetland
+California Gull,Larus californicus,short,0,marine_intertidal,Wetland
+California Gull,Larus californicus,short,0,marine_neritic,Wetland
+California Gull,Larus californicus,short,0,wetlands_inland,Wetland
+California Quail,Callipepla californica,resident,1,artificial_terrestrial,Shrubland
+California Quail,Callipepla californica,resident,1,desert,Shrubland
+California Quail,Callipepla californica,resident,1,forest,Shrubland
+California Quail,Callipepla californica,resident,1,grassland,Shrubland
+California Quail,Callipepla californica,resident,1,shrubland,Shrubland
+California Thrasher,Toxostoma redivivum,resident,1,shrubland,Shrubland
+California Towhee,Melozone crissalis,resident,1,artificial_terrestrial,Shrubland
+California Towhee,Melozone crissalis,resident,1,shrubland,Shrubland
+Calliope Hummingbird,Selasphorus calliope,moderate,0,artificial_terrestrial,Woodland
+Calliope Hummingbird,Selasphorus calliope,moderate,0,forest,Woodland
+Calliope Hummingbird,Selasphorus calliope,moderate,0,grassland,Woodland
+Calliope Hummingbird,Selasphorus calliope,moderate,0,shrubland,Woodland
+Canada and Cackling Goose,Branta canadensis and hutchinsii,short,0,artificial_aquatic_marine,Wetland
+Canada and Cackling Goose,Branta canadensis and hutchinsii,short,0,artificial_terrestrial,Wetland
+Canada and Cackling Goose,Branta canadensis and hutchinsii,short,0,grassland,Wetland
+Canada and Cackling Goose,Branta canadensis and hutchinsii,short,0,wetlands_inland,Wetland
+Canada Warbler,Cardellina canadensis,long,0,forest,Woodland
+Canada Warbler,Cardellina canadensis,long,0,shrubland,Woodland
+Canvasback,Aythya valisineria,short,0,marine_coastal_supratidal,Wetland
+Canvasback,Aythya valisineria,short,0,marine_intertidal,Wetland
+Canvasback,Aythya valisineria,short,0,marine_neritic,Wetland
+Canvasback,Aythya valisineria,short,0,wetlands_inland,Wetland
+Canyon Towhee,Melozone fusca,resident,1,shrubland,Shrubland
+Canyon Wren,Catherpes mexicanus,short,0,rocky,Various
+Canyon Wren,Catherpes mexicanus,short,0,shrubland,Various
+Cape May Warbler,Setophaga tigrina,long,0,artificial_terrestrial,Woodland
+Cape May Warbler,Setophaga tigrina,long,0,forest,Woodland
+Cape May Warbler,Setophaga tigrina,long,0,shrubland,Woodland
+Carolina Chickadee,Poecile carolinensis,resident,1,artificial_terrestrial,Woodland
+Carolina Chickadee,Poecile carolinensis,resident,1,forest,Woodland
+Carolina Chickadee,Poecile carolinensis,resident,1,shrubland,Woodland
+Carolina Chickadee,Poecile carolinensis,resident,1,wetlands_inland,Woodland
+Carolina Wren,Thryothorus ludovicianus,resident,1,artificial_terrestrial,Woodland
+Carolina Wren,Thryothorus ludovicianus,resident,1,forest,Woodland
+Caspian Tern,Hydroprogne caspia,moderate,0,artificial_aquatic_marine,Wetland
+Caspian Tern,Hydroprogne caspia,moderate,0,marine_coastal_supratidal,Wetland
+Caspian Tern,Hydroprogne caspia,moderate,0,marine_intertidal,Wetland
+Caspian Tern,Hydroprogne caspia,moderate,0,marine_neritic,Wetland
+Caspian Tern,Hydroprogne caspia,moderate,0,wetlands_inland,Wetland
+Cassin's Auklet,Ptychoramphus aleuticus,short,1,marine_coastal_supratidal,Ocean
+Cassin's Auklet,Ptychoramphus aleuticus,short,1,marine_neritic,Ocean
+Cassin's Auklet,Ptychoramphus aleuticus,short,1,marine_oceanic,Ocean
+Cassin's Finch,Haemorhous cassinii,short,0,forest,Woodland
+Cassin's Kingbird,Tyrannus vociferans,moderate,0,artificial_terrestrial,Woodland
+Cassin's Kingbird,Tyrannus vociferans,moderate,0,forest,Woodland
+Cassin's Kingbird,Tyrannus vociferans,moderate,0,savanna,Woodland
+Cassin's Kingbird,Tyrannus vociferans,moderate,0,shrubland,Woodland
+Cassin's Sparrow,Peucaea cassinii,short,0,grassland,Grassland
+Cassin's Sparrow,Peucaea cassinii,short,0,shrubland,Grassland
+Cattle Egret,Bubulcus ibis,short,0,artificial_terrestrial,Wetland
+Cattle Egret,Bubulcus ibis,short,0,forest,Wetland
+Cattle Egret,Bubulcus ibis,short,0,grassland,Wetland
+Cattle Egret,Bubulcus ibis,short,0,wetlands_inland,Wetland
+Cave Swallow,Petrochelidon fulva,short,0,artificial_terrestrial,Various
+Cave Swallow,Petrochelidon fulva,short,0,grassland,Various
+Cave Swallow,Petrochelidon fulva,short,0,rocky,Various
+Cave Swallow,Petrochelidon fulva,short,0,shrubland,Various
+Cedar Waxwing,Bombycilla cedrorum,irruptive,0,artificial_terrestrial,Woodland
+Cedar Waxwing,Bombycilla cedrorum,irruptive,0,forest,Woodland
+Cedar Waxwing,Bombycilla cedrorum,irruptive,0,wetlands_inland,Woodland
+Cerulean Warbler,Setophaga cerulea,long,1,forest,Woodland
+Chestnut-backed Chickadee,Poecile rufescens,resident,1,artificial_terrestrial,Woodland
+Chestnut-backed Chickadee,Poecile rufescens,resident,1,forest,Woodland
+Chestnut-backed Chickadee,Poecile rufescens,resident,1,shrubland,Woodland
+Chestnut-collared Longspur,Calcarius ornatus,moderate,0,grassland,Grassland
+Chestnut-collared Longspur,Calcarius ornatus,moderate,0,shrubland,Grassland
+Chestnut-sided Warbler,Setophaga pensylvanica,long,0,artificial_terrestrial,Shrubland
+Chestnut-sided Warbler,Setophaga pensylvanica,long,0,forest,Shrubland
+Chestnut-sided Warbler,Setophaga pensylvanica,long,0,shrubland,Shrubland
+Chihuahuan Raven,Corvus cryptoleucus,withdrawal,1,artificial_terrestrial,Shrubland
+Chihuahuan Raven,Corvus cryptoleucus,withdrawal,1,grassland,Shrubland
+Chihuahuan Raven,Corvus cryptoleucus,withdrawal,1,shrubland,Shrubland
+Chimney Swift,Chaetura pelagica,long,1,artificial_aquatic_marine,Various
+Chimney Swift,Chaetura pelagica,long,1,artificial_terrestrial,Various
+Chimney Swift,Chaetura pelagica,long,1,forest,Various
+Chipping Sparrow,Spizella passerina,short,0,artificial_terrestrial,Woodland
+Chipping Sparrow,Spizella passerina,short,0,forest,Woodland
+Chipping Sparrow,Spizella passerina,short,0,grassland,Woodland
+Chipping Sparrow,Spizella passerina,short,0,shrubland,Woodland
+Chuck-will's-widow,Antrostomus carolinensis,short,0,artificial_terrestrial,Woodland
+Chuck-will's-widow,Antrostomus carolinensis,short,0,forest,Woodland
+Chuck-will's-widow,Antrostomus carolinensis,short,0,grassland,Woodland
+Chuck-will's-widow,Antrostomus carolinensis,short,0,shrubland,Woodland
+Chukar,Alectoris chukar,resident,1,grassland,Various
+Chukar,Alectoris chukar,resident,1,shrubland,Various
+Cinnamon Teal,Anas cyanoptera,short,0,wetlands_inland,Wetland
+Clapper Rail,Rallus longirostris,resident,1,forest,Wetland
+Clapper Rail,Rallus longirostris,resident,1,marine_intertidal,Wetland
+Clapper Rail,Rallus longirostris,resident,1,wetlands_inland,Wetland
+Clark's Grebe,Aechmophorus clarkii,short,0,wetlands_inland,Wetland
+Clark's Nutcracker,Nucifraga columbiana,resident,1,artificial_terrestrial,Woodland
+Clark's Nutcracker,Nucifraga columbiana,resident,1,forest,Woodland
+Clark's Nutcracker,Nucifraga columbiana,resident,1,shrubland,Woodland
+Clay-colored Sparrow,Spizella pallida,moderate,0,forest,Shrubland
+Clay-colored Sparrow,Spizella pallida,moderate,0,grassland,Shrubland
+Clay-colored Sparrow,Spizella pallida,moderate,0,shrubland,Shrubland
+Clay-colored Sparrow,Spizella pallida,moderate,0,wetlands_inland,Shrubland
+Cliff Swallow,Petrochelidon pyrrhonota,long,1,artificial_terrestrial,Various
+Cliff Swallow,Petrochelidon pyrrhonota,long,1,forest,Various
+Cliff Swallow,Petrochelidon pyrrhonota,long,1,grassland,Various
+Cliff Swallow,Petrochelidon pyrrhonota,long,1,wetlands_inland,Various
+Common Eider,Somateria mollissima,short,0,marine_coastal_supratidal,Wetland
+Common Eider,Somateria mollissima,short,0,marine_intertidal,Wetland
+Common Eider,Somateria mollissima,short,0,marine_neritic,Wetland
+Common Goldeneye,Bucephala clangula,short,0,forest,Wetland
+Common Goldeneye,Bucephala clangula,short,0,marine_neritic,Wetland
+Common Goldeneye,Bucephala clangula,short,0,wetlands_inland,Wetland
+Common Grackle,Quiscalus quiscula,short,0,artificial_terrestrial,Various
+Common Grackle,Quiscalus quiscula,short,0,forest,Various
+Common Grackle,Quiscalus quiscula,short,0,shrubland,Various
+Common Grackle,Quiscalus quiscula,short,0,wetlands_inland,Various
+Common Ground-Dove,Columbina passerina,resident,1,artificial_terrestrial,Shrubland
+Common Ground-Dove,Columbina passerina,resident,1,savanna,Shrubland
+Common Ground-Dove,Columbina passerina,resident,1,shrubland,Shrubland
+Common Loon,Gavia immer,moderate,0,marine_neritic,Wetland
+Common Loon,Gavia immer,moderate,0,wetlands_inland,Wetland
+Common Merganser,Mergus merganser,short,0,forest,Wetland
+Common Merganser,Mergus merganser,short,0,marine_neritic,Wetland
+Common Merganser,Mergus merganser,short,0,wetlands_inland,Wetland
+Common Moorhen,Gallinula chloropus,withdrawal,0,artificial_aquatic_marine,Wetland
+Common Moorhen,Gallinula chloropus,withdrawal,0,marine_coastal_supratidal,Wetland
+Common Moorhen,Gallinula chloropus,withdrawal,0,wetlands_inland,Wetland
+Common Murre,Uria aalge,short,1,marine_coastal_supratidal,Ocean
+Common Murre,Uria aalge,short,1,marine_neritic,Ocean
+Common Murre,Uria aalge,short,1,marine_oceanic,Ocean
+Common Myna,Acridotheres tristis,resident,1,artificial_terrestrial,Various
+Common Myna,Acridotheres tristis,resident,1,forest,Various
+Common Myna,Acridotheres tristis,resident,1,grassland,Various
+Common Nighthawk,Chordeiles minor,long,1,artificial_terrestrial,Various
+Common Nighthawk,Chordeiles minor,long,1,forest,Various
+Common Nighthawk,Chordeiles minor,long,1,grassland,Various
+Common Nighthawk,Chordeiles minor,long,1,marine_coastal_supratidal,Various
+Common Nighthawk,Chordeiles minor,long,1,marine_intertidal,Various
+Common Nighthawk,Chordeiles minor,long,1,savanna,Various
+Common Nighthawk,Chordeiles minor,long,1,wetlands_inland,Various
+Common Pauraque,Nyctidromus albicollis,resident,1,artificial_terrestrial,Shrubland
+Common Pauraque,Nyctidromus albicollis,resident,1,forest,Shrubland
+Common Pauraque,Nyctidromus albicollis,resident,1,grassland,Shrubland
+Common Pauraque,Nyctidromus albicollis,resident,1,shrubland,Shrubland
+Common Pauraque,Nyctidromus albicollis,resident,1,wetlands_inland,Shrubland
+Common Poorwill,Phalaenoptilus nuttallii,short,0,desert,Shrubland
+Common Poorwill,Phalaenoptilus nuttallii,short,0,grassland,Shrubland
+Common Poorwill,Phalaenoptilus nuttallii,short,0,rocky,Shrubland
+Common Poorwill,Phalaenoptilus nuttallii,short,0,shrubland,Shrubland
+Common Raven,Corvus corax,resident,1,artificial_terrestrial,Various
+Common Raven,Corvus corax,resident,1,forest,Various
+Common Raven,Corvus corax,resident,1,grassland,Various
+Common Raven,Corvus corax,resident,1,rocky,Various
+Common Raven,Corvus corax,resident,1,shrubland,Various
+Common Redpoll,Acanthis flammea,irruptive,0,artificial_terrestrial,Shrubland
+Common Redpoll,Acanthis flammea,irruptive,0,forest,Shrubland
+Common Redpoll,Acanthis flammea,irruptive,0,shrubland,Shrubland
+Common Tern,Sterna hirundo,moderate,0,marine_coastal_supratidal,Wetland
+Common Tern,Sterna hirundo,moderate,0,marine_intertidal,Wetland
+Common Tern,Sterna hirundo,moderate,0,marine_neritic,Wetland
+Common Tern,Sterna hirundo,moderate,0,wetlands_inland,Wetland
+Common Yellowthroat,Geothlypis trichas,short,0,forest,Shrubland
+Common Yellowthroat,Geothlypis trichas,short,0,marine_intertidal,Shrubland
+Common Yellowthroat,Geothlypis trichas,short,0,shrubland,Shrubland
+Common Yellowthroat,Geothlypis trichas,short,0,wetlands_inland,Shrubland
+Connecticut Warbler,Oporornis agilis,long,1,forest,Woodland
+Connecticut Warbler,Oporornis agilis,long,1,wetlands_inland,Woodland
+Cooper's Hawk,Accipiter cooperii,short,0,artificial_terrestrial,Woodland
+Cooper's Hawk,Accipiter cooperii,short,0,forest,Woodland
+Cooper's Hawk,Accipiter cooperii,short,0,shrubland,Woodland
+Cordilleran Flycatcher,Empidonax occidentalis,moderate,0,forest,Woodland
+Costa's Hummingbird,Calypte costae,short,0,artificial_terrestrial,Shrubland
+Costa's Hummingbird,Calypte costae,short,0,desert,Shrubland
+Costa's Hummingbird,Calypte costae,short,0,grassland,Shrubland
+Costa's Hummingbird,Calypte costae,short,0,savanna,Shrubland
+Costa's Hummingbird,Calypte costae,short,0,shrubland,Shrubland
+Couch's Kingbird,Tyrannus couchii,withdrawal,1,artificial_terrestrial,Woodland
+Couch's Kingbird,Tyrannus couchii,withdrawal,1,forest,Woodland
+Couch's Kingbird,Tyrannus couchii,withdrawal,1,grassland,Woodland
+Couch's Kingbird,Tyrannus couchii,withdrawal,1,shrubland,Woodland
+Crested Caracara,Caracara cheriway,resident,1,artificial_terrestrial,Shrubland
+Crested Caracara,Caracara cheriway,resident,1,grassland,Shrubland
+Crested Caracara,Caracara cheriway,resident,1,shrubland,Shrubland
+Crested Caracara,Caracara cheriway,resident,1,wetlands_inland,Shrubland
+Crissal Thrasher,Toxostoma crissale,resident,1,shrubland,Shrubland
+Curve-billed Thrasher,Toxostoma curvirostre,resident,1,desert,Shrubland
+Curve-billed Thrasher,Toxostoma curvirostre,resident,1,grassland,Shrubland
+Curve-billed Thrasher,Toxostoma curvirostre,resident,1,shrubland,Shrubland
+Dark-eyed Junco,Junco hyemalis,short,0,artificial_terrestrial,Woodland
+Dark-eyed Junco,Junco hyemalis,short,0,forest,Woodland
+Dark-eyed Junco,Junco hyemalis,short,0,shrubland,Woodland
+Dickcissel,Spiza americana,moderate,1,artificial_terrestrial,Grassland
+Dickcissel,Spiza americana,moderate,1,grassland,Grassland
+Dickcissel,Spiza americana,moderate,1,savanna,Grassland
+Double-crested Cormorant,Phalacrocorax auritus,short,0,marine_neritic,Wetland
+Double-crested Cormorant,Phalacrocorax auritus,short,0,wetlands_inland,Wetland
+Dovekie,Alle alle,withdrawal,1,marine_coastal_supratidal,Ocean
+Dovekie,Alle alle,withdrawal,1,marine_intertidal,Ocean
+Dovekie,Alle alle,withdrawal,1,marine_neritic,Ocean
+Dovekie,Alle alle,withdrawal,1,marine_oceanic,Ocean
+Downy Woodpecker,Picoides pubescens,resident,1,artificial_terrestrial,Woodland
+Downy Woodpecker,Picoides pubescens,resident,1,forest,Woodland
+Dunlin,Calidris alpina,moderate,0,artificial_aquatic_marine,Wetland
+Dunlin,Calidris alpina,moderate,0,artificial_terrestrial,Wetland
+Dunlin,Calidris alpina,moderate,0,marine_coastal_supratidal,Wetland
+Dunlin,Calidris alpina,moderate,0,marine_intertidal,Wetland
+Dunlin,Calidris alpina,moderate,0,marine_neritic,Wetland
+Dunlin,Calidris alpina,moderate,0,wetlands_inland,Wetland
+Dusky Flycatcher,Empidonax oberholseri,moderate,0,forest,Woodland
+Dusky Flycatcher,Empidonax oberholseri,moderate,0,shrubland,Woodland
+Dusky Grouse,Dendragapus obscurus,resident,1,forest,Woodland
+Dusky-capped Flycatcher,Myiarchus tuberculifer,withdrawal,0,artificial_terrestrial,Woodland
+Dusky-capped Flycatcher,Myiarchus tuberculifer,withdrawal,0,forest,Woodland
+Dusky-capped Flycatcher,Myiarchus tuberculifer,withdrawal,0,wetlands_inland,Woodland
+Eared Grebe,Podiceps nigricollis,short,0,artificial_aquatic_marine,Wetland
+Eared Grebe,Podiceps nigricollis,short,0,marine_neritic,Wetland
+Eared Grebe,Podiceps nigricollis,short,0,wetlands_inland,Wetland
+Eastern Bluebird,Sialia sialis,short,0,artificial_terrestrial,Woodland
+Eastern Bluebird,Sialia sialis,short,0,forest,Woodland
+Eastern Bluebird,Sialia sialis,short,0,shrubland,Woodland
+Eastern Bluebird,Sialia sialis,short,0,wetlands_inland,Woodland
+Eastern Kingbird,Tyrannus tyrannus,long,1,artificial_terrestrial,Woodland
+Eastern Kingbird,Tyrannus tyrannus,long,1,forest,Woodland
+Eastern Kingbird,Tyrannus tyrannus,long,1,shrubland,Woodland
+Eastern Kingbird,Tyrannus tyrannus,long,1,wetlands_inland,Woodland
+Eastern Meadowlark,Sturnella magna,withdrawal,0,artificial_terrestrial,Grassland
+Eastern Meadowlark,Sturnella magna,withdrawal,0,grassland,Grassland
+Eastern Meadowlark,Sturnella magna,withdrawal,0,shrubland,Grassland
+Eastern Phoebe,Sayornis phoebe,short,0,forest,Woodland
+Eastern Phoebe,Sayornis phoebe,short,0,shrubland,Woodland
+Eastern Screech-Owl,Megascops asio,resident,1,artificial_terrestrial,Woodland
+Eastern Screech-Owl,Megascops asio,resident,1,forest,Woodland
+Eastern Screech-Owl,Megascops asio,resident,1,shrubland,Woodland
+Eastern Towhee,Pipilo erythrophthalmus,short,0,artificial_terrestrial,Shrubland
+Eastern Towhee,Pipilo erythrophthalmus,short,0,forest,Shrubland
+Eastern Towhee,Pipilo erythrophthalmus,short,0,shrubland,Shrubland
+Eastern Whip-poor-will,Antrostomus vociferus,moderate,0,forest,Woodland
+Eastern Wood-Pewee,Contopus virens,long,1,forest,Woodland
+Eastern Wood-Pewee,Contopus virens,long,1,shrubland,Woodland
+Emperor Goose,Chen canagica,moderate,0,grassland,Wetland
+Emperor Goose,Chen canagica,moderate,0,marine_coastal_supratidal,Wetland
+Emperor Goose,Chen canagica,moderate,0,marine_intertidal,Wetland
+Emperor Goose,Chen canagica,moderate,0,marine_neritic,Wetland
+Emperor Goose,Chen canagica,moderate,0,wetlands_inland,Wetland
+Eurasian Collared-Dove,Streptopelia decaocto,resident,1,artificial_terrestrial,Shrubland
+Eurasian Collared-Dove,Streptopelia decaocto,resident,1,shrubland,Shrubland
+Eurasian Tree Sparrow,Passer montanus,resident,1,artificial_terrestrial,Various
+Eurasian Tree Sparrow,Passer montanus,resident,1,forest,Various
+Eurasian Tree Sparrow,Passer montanus,resident,1,shrubland,Various
+Eurasian Wigeon,Anas penelope,long,1,grassland,Wetland
+Eurasian Wigeon,Anas penelope,long,1,marine_coastal_supratidal,Wetland
+Eurasian Wigeon,Anas penelope,long,1,marine_intertidal,Wetland
+Eurasian Wigeon,Anas penelope,long,1,marine_neritic,Wetland
+Eurasian Wigeon,Anas penelope,long,1,wetlands_inland,Wetland
+European Starling,Sturnus vulgaris,withdrawal,1,artificial_aquatic_marine,Various
+European Starling,Sturnus vulgaris,withdrawal,1,artificial_terrestrial,Various
+European Starling,Sturnus vulgaris,withdrawal,1,forest,Various
+European Starling,Sturnus vulgaris,withdrawal,1,grassland,Various
+European Starling,Sturnus vulgaris,withdrawal,1,marine_intertidal,Various
+European Starling,Sturnus vulgaris,withdrawal,1,shrubland,Various
+Evening Grosbeak,Coccothraustes vespertinus,irruptive,0,artificial_terrestrial,Woodland
+Evening Grosbeak,Coccothraustes vespertinus,irruptive,0,forest,Woodland
+Ferruginous Hawk,Buteo regalis,short,0,artificial_terrestrial,Grassland
+Ferruginous Hawk,Buteo regalis,short,0,desert,Grassland
+Ferruginous Hawk,Buteo regalis,short,0,grassland,Grassland
+Ferruginous Hawk,Buteo regalis,short,0,shrubland,Grassland
+Ferruginous Pygmy-Owl,Glaucidium brasilianum,resident,1,artificial_terrestrial,Woodland
+Ferruginous Pygmy-Owl,Glaucidium brasilianum,resident,1,forest,Woodland
+Ferruginous Pygmy-Owl,Glaucidium brasilianum,resident,1,shrubland,Woodland
+Field Sparrow,Spizella pusilla,short,0,artificial_terrestrial,Shrubland
+Field Sparrow,Spizella pusilla,short,0,forest,Shrubland
+Field Sparrow,Spizella pusilla,short,0,grassland,Shrubland
+Field Sparrow,Spizella pusilla,short,0,shrubland,Shrubland
+Fish Crow,Corvus ossifragus,withdrawal,1,grassland,Wetland
+Fish Crow,Corvus ossifragus,withdrawal,1,marine_intertidal,Wetland
+Fish Crow,Corvus ossifragus,withdrawal,1,wetlands_inland,Wetland
+Florida Scrub-Jay,Aphelocoma coerulescens,resident,1,shrubland,Shrubland
+Forster's Tern,Sterna forsteri,moderate,0,marine_neritic,Wetland
+Forster's Tern,Sterna forsteri,moderate,0,wetlands_inland,Wetland
+Fox Sparrow,Passerella iliaca,short,0,forest,Shrubland
+Fox Sparrow,Passerella iliaca,short,0,shrubland,Shrubland
+Franklin's Gull,Leucophaeus pipixcan,long,1,artificial_terrestrial,Wetland
+Franklin's Gull,Leucophaeus pipixcan,long,1,marine_coastal_supratidal,Wetland
+Franklin's Gull,Leucophaeus pipixcan,long,1,marine_intertidal,Wetland
+Franklin's Gull,Leucophaeus pipixcan,long,1,marine_neritic,Wetland
+Franklin's Gull,Leucophaeus pipixcan,long,1,marine_oceanic,Wetland
+Franklin's Gull,Leucophaeus pipixcan,long,1,wetlands_inland,Wetland
+Fulvous Whistling-Duck,Dendrocygna bicolor,withdrawal,1,artificial_terrestrial,Wetland
+Fulvous Whistling-Duck,Dendrocygna bicolor,withdrawal,1,wetlands_inland,Wetland
+Gadwall,Anas strepera,short,0,wetlands_inland,Wetland
+Gambel's Quail,Callipepla gambelii,resident,1,artificial_terrestrial,Shrubland
+Gambel's Quail,Callipepla gambelii,resident,1,desert,Shrubland
+Gambel's Quail,Callipepla gambelii,resident,1,shrubland,Shrubland
+Gila Woodpecker,Melanerpes uropygialis,resident,1,artificial_terrestrial,Woodland
+Gila Woodpecker,Melanerpes uropygialis,resident,1,forest,Woodland
+Gila Woodpecker,Melanerpes uropygialis,resident,1,shrubland,Woodland
+Gilded Flicker,Colaptes chrysoides,resident,1,desert,Woodland
+Gilded Flicker,Colaptes chrysoides,resident,1,forest,Woodland
+Gilded Flicker,Colaptes chrysoides,resident,1,shrubland,Woodland
+Glaucous Gull,Larus hyperboreus,moderate,0,marine_coastal_supratidal,Wetland
+Glaucous Gull,Larus hyperboreus,moderate,0,marine_intertidal,Wetland
+Glaucous Gull,Larus hyperboreus,moderate,0,marine_neritic,Wetland
+Glaucous-winged Gull,Larus glaucescens,short,0,artificial_terrestrial,Wetland
+Glaucous-winged Gull,Larus glaucescens,short,0,grassland,Wetland
+Glaucous-winged Gull,Larus glaucescens,short,0,marine_coastal_supratidal,Wetland
+Glaucous-winged Gull,Larus glaucescens,short,0,marine_intertidal,Wetland
+Glaucous-winged Gull,Larus glaucescens,short,0,marine_neritic,Wetland
+Glaucous-winged Gull,Larus glaucescens,short,0,rocky,Wetland
+Glaucous-winged Gull,Larus glaucescens,short,0,wetlands_inland,Wetland
+Glossy Ibis,Plegadis falcinellus,withdrawal,0,marine_coastal_supratidal,Wetland
+Glossy Ibis,Plegadis falcinellus,withdrawal,0,wetlands_inland,Wetland
+Golden Eagle,Aquila chrysaetos,short,0,desert,Grassland
+Golden Eagle,Aquila chrysaetos,short,0,forest,Grassland
+Golden Eagle,Aquila chrysaetos,short,0,grassland,Grassland
+Golden Eagle,Aquila chrysaetos,short,0,rocky,Grassland
+Golden Eagle,Aquila chrysaetos,short,0,shrubland,Grassland
+Golden-cheeked Warbler,Setophaga chrysoparia,long,0,forest,Woodland
+Golden-cheeked Warbler,Setophaga chrysoparia,long,0,shrubland,Woodland
+Golden-crowned Kinglet,Regulus satrapa,short,0,forest,Woodland
+Golden-crowned Sparrow,Zonotrichia atricapilla,moderate,0,forest,Shrubland
+Golden-crowned Sparrow,Zonotrichia atricapilla,moderate,0,grassland,Shrubland
+Golden-crowned Sparrow,Zonotrichia atricapilla,moderate,0,shrubland,Shrubland
+Golden-crowned Sparrow,Zonotrichia atricapilla,moderate,0,wetlands_inland,Shrubland
+Golden-fronted Woodpecker,Melanerpes aurifrons,resident,1,artificial_terrestrial,Woodland
+Golden-fronted Woodpecker,Melanerpes aurifrons,resident,1,forest,Woodland
+Golden-fronted Woodpecker,Melanerpes aurifrons,resident,1,grassland,Woodland
+Golden-fronted Woodpecker,Melanerpes aurifrons,resident,1,shrubland,Woodland
+Golden-winged Warbler,Vermivora chrysoptera,long,0,artificial_terrestrial,Shrubland
+Golden-winged Warbler,Vermivora chrysoptera,long,0,forest,Shrubland
+Golden-winged Warbler,Vermivora chrysoptera,long,0,grassland,Shrubland
+Golden-winged Warbler,Vermivora chrysoptera,long,0,shrubland,Shrubland
+Golden-winged Warbler,Vermivora chrysoptera,long,0,wetlands_inland,Shrubland
+Grace's Warbler,Setophaga graciae,short,0,forest,Woodland
+Grasshopper Sparrow,Ammodramus savannarum,short,0,artificial_terrestrial,Various
+Grasshopper Sparrow,Ammodramus savannarum,short,0,grassland,Various
+Grasshopper Sparrow,Ammodramus savannarum,short,0,shrubland,Various
+Gray Catbird,Dumetella carolinensis,short,0,artificial_terrestrial,Shrubland
+Gray Catbird,Dumetella carolinensis,short,0,forest,Shrubland
+Gray Catbird,Dumetella carolinensis,short,0,shrubland,Shrubland
+Gray Flycatcher,Empidonax wrightii,moderate,0,forest,Various
+Gray Flycatcher,Empidonax wrightii,moderate,0,shrubland,Various
+Gray Hawk,Buteo plagiatus,withdrawal,0,forest,Woodland
+Gray Hawk,Buteo plagiatus,withdrawal,0,savanna,Woodland
+Gray Jay,Perisoreus canadensis,resident,1,forest,Woodland
+Gray Kingbird,Tyrannus dominicensis,short,1,artificial_terrestrial,Woodland
+Gray Kingbird,Tyrannus dominicensis,short,1,forest,Woodland
+Gray Kingbird,Tyrannus dominicensis,short,1,grassland,Woodland
+Gray Kingbird,Tyrannus dominicensis,short,1,savanna,Woodland
+Gray Kingbird,Tyrannus dominicensis,short,1,shrubland,Woodland
+Gray Partridge,Perdix perdix,resident,1,artificial_terrestrial,Various
+Gray Partridge,Perdix perdix,resident,1,grassland,Various
+Gray Partridge,Perdix perdix,resident,1,shrubland,Various
+Gray Vireo,Vireo vicinior,moderate,0,forest,Shrubland
+Gray Vireo,Vireo vicinior,moderate,0,savanna,Shrubland
+Gray Vireo,Vireo vicinior,moderate,0,shrubland,Shrubland
+Gray-cheeked Thrush,Catharus minimus,long,1,forest,Woodland
+Gray-cheeked Thrush,Catharus minimus,long,1,grassland,Woodland
+Gray-cheeked Thrush,Catharus minimus,long,1,shrubland,Woodland
+Gray-crowned Rosy-Finch,Leucosticte tephrocotis,moderate,0,grassland,Various
+Great Black-backed Gull,Larus marinus,short,0,marine_coastal_supratidal,Wetland
+Great Black-backed Gull,Larus marinus,short,0,marine_intertidal,Wetland
+Great Black-backed Gull,Larus marinus,short,0,marine_neritic,Wetland
+Great Blue Heron,Ardea herodias,short,0,forest,Wetland
+Great Blue Heron,Ardea herodias,short,0,marine_intertidal,Wetland
+Great Blue Heron,Ardea herodias,short,0,wetlands_inland,Wetland
+Great Cormorant,Phalacrocorax carbo,short,0,forest,Wetland
+Great Cormorant,Phalacrocorax carbo,short,0,marine_coastal_supratidal,Wetland
+Great Cormorant,Phalacrocorax carbo,short,0,marine_neritic,Wetland
+Great Cormorant,Phalacrocorax carbo,short,0,wetlands_inland,Wetland
+Great Crested Flycatcher,Myiarchus crinitus,moderate,0,artificial_terrestrial,Woodland
+Great Crested Flycatcher,Myiarchus crinitus,moderate,0,forest,Woodland
+Great Crested Flycatcher,Myiarchus crinitus,moderate,0,wetlands_inland,Woodland
+Great Egret,Ardea alba,short,0,artificial_aquatic_marine,Wetland
+Great Egret,Ardea alba,short,0,grassland,Wetland
+Great Egret,Ardea alba,short,0,marine_intertidal,Wetland
+Great Egret,Ardea alba,short,0,wetlands_inland,Wetland
+Great Gray Owl,Strix nebulosa,resident,1,artificial_terrestrial,Woodland
+Great Gray Owl,Strix nebulosa,resident,1,forest,Woodland
+Great Gray Owl,Strix nebulosa,resident,1,grassland,Woodland
+Great Gray Owl,Strix nebulosa,resident,1,shrubland,Woodland
+Great Gray Owl,Strix nebulosa,resident,1,wetlands_inland,Woodland
+Great Horned Owl,Bubo virginianus,resident,1,forest,Woodland
+Great Horned Owl,Bubo virginianus,resident,1,shrubland,Woodland
+Great Kiskadee,Pitangus sulphuratus,resident,1,artificial_terrestrial,Woodland
+Great Kiskadee,Pitangus sulphuratus,resident,1,forest,Woodland
+Great Kiskadee,Pitangus sulphuratus,resident,1,grassland,Woodland
+Great Kiskadee,Pitangus sulphuratus,resident,1,shrubland,Woodland
+Greater Prairie-Chicken,Tympanuchus cupido,resident,1,forest,Grassland
+Greater Prairie-Chicken,Tympanuchus cupido,resident,1,grassland,Grassland
+Greater Roadrunner,Geococcyx californianus,resident,1,desert,Shrubland
+Greater Roadrunner,Geococcyx californianus,resident,1,grassland,Shrubland
+Greater Roadrunner,Geococcyx californianus,resident,1,shrubland,Shrubland
+Greater Sage-Grouse,Centrocercus urophasianus,resident,1,shrubland,Shrubland
+Greater Scaup,Aythya marila,moderate,0,grassland,Wetland
+Greater Scaup,Aythya marila,moderate,0,marine_neritic,Wetland
+Greater Scaup,Aythya marila,moderate,0,wetlands_inland,Wetland
+Greater White-fronted Goose,Anser albifrons,moderate,0,artificial_terrestrial,Wetland
+Greater White-fronted Goose,Anser albifrons,moderate,0,grassland,Wetland
+Greater White-fronted Goose,Anser albifrons,moderate,0,marine_coastal_supratidal,Wetland
+Greater White-fronted Goose,Anser albifrons,moderate,0,marine_neritic,Wetland
+Greater White-fronted Goose,Anser albifrons,moderate,0,wetlands_inland,Wetland
+Greater Yellowlegs,Tringa melanoleuca,moderate,0,artificial_aquatic_marine,Wetland
+Greater Yellowlegs,Tringa melanoleuca,moderate,0,forest,Wetland
+Greater Yellowlegs,Tringa melanoleuca,moderate,0,marine_coastal_supratidal,Wetland
+Greater Yellowlegs,Tringa melanoleuca,moderate,0,marine_intertidal,Wetland
+Greater Yellowlegs,Tringa melanoleuca,moderate,0,shrubland,Wetland
+Greater Yellowlegs,Tringa melanoleuca,moderate,0,wetlands_inland,Wetland
+Great-tailed Grackle,Quiscalus mexicanus,withdrawal,0,artificial_terrestrial,Various
+Great-tailed Grackle,Quiscalus mexicanus,withdrawal,0,forest,Various
+Great-tailed Grackle,Quiscalus mexicanus,withdrawal,0,grassland,Various
+Great-tailed Grackle,Quiscalus mexicanus,withdrawal,0,wetlands_inland,Various
+Green Heron,Butorides virescens,short,0,forest,Wetland
+Green Heron,Butorides virescens,short,0,wetlands_inland,Wetland
+Green Jay,Cyanocorax yncas,resident,1,artificial_terrestrial,Woodland
+Green Jay,Cyanocorax yncas,resident,1,forest,Woodland
+Green Jay,Cyanocorax yncas,resident,1,savanna,Woodland
+Green Jay,Cyanocorax yncas,resident,1,shrubland,Woodland
+Green Kingfisher,Chloroceryle americana,resident,1,artificial_aquatic_marine,Wetland
+Green Kingfisher,Chloroceryle americana,resident,1,artificial_terrestrial,Wetland
+Green Kingfisher,Chloroceryle americana,resident,1,forest,Wetland
+Green Kingfisher,Chloroceryle americana,resident,1,marine_coastal_supratidal,Wetland
+Green Kingfisher,Chloroceryle americana,resident,1,marine_intertidal,Wetland
+Green Kingfisher,Chloroceryle americana,resident,1,wetlands_inland,Wetland
+Green-tailed Towhee,Pipilo chlorurus,short,0,forest,Shrubland
+Green-tailed Towhee,Pipilo chlorurus,short,0,shrubland,Shrubland
+Green-winged Teal,Anas crecca,short,0,wetlands_inland,Wetland
+Groove-billed Ani,Crotophaga sulcirostris,withdrawal,0,artificial_terrestrial,Shrubland
+Groove-billed Ani,Crotophaga sulcirostris,withdrawal,0,grassland,Shrubland
+Groove-billed Ani,Crotophaga sulcirostris,withdrawal,0,shrubland,Shrubland
+Groove-billed Ani,Crotophaga sulcirostris,withdrawal,0,wetlands_inland,Shrubland
+Gull-billed Tern,Gelochelidon nilotica,moderate,0,artificial_aquatic_marine,Wetland
+Gull-billed Tern,Gelochelidon nilotica,moderate,0,marine_coastal_supratidal,Wetland
+Gull-billed Tern,Gelochelidon nilotica,moderate,0,marine_intertidal,Wetland
+Gull-billed Tern,Gelochelidon nilotica,moderate,0,marine_neritic,Wetland
+Gull-billed Tern,Gelochelidon nilotica,moderate,0,wetlands_inland,Wetland
+Gyrfalcon,Falco rusticolus,irruptive,0,artificial_terrestrial,Grassland
+Gyrfalcon,Falco rusticolus,irruptive,0,forest,Grassland
+Gyrfalcon,Falco rusticolus,irruptive,0,grassland,Grassland
+Gyrfalcon,Falco rusticolus,irruptive,0,marine_coastal_supratidal,Grassland
+Gyrfalcon,Falco rusticolus,irruptive,0,rocky,Grassland
+Hairy Woodpecker,Picoides villosus,resident,1,forest,Woodland
+Hammond's Flycatcher,Empidonax hammondii,moderate,0,forest,Woodland
+Hammond's Flycatcher,Empidonax hammondii,moderate,0,shrubland,Woodland
+Harlequin Duck,Histrionicus histrionicus,moderate,0,marine_intertidal,Wetland
+Harlequin Duck,Histrionicus histrionicus,moderate,0,marine_neritic,Wetland
+Harlequin Duck,Histrionicus histrionicus,moderate,0,wetlands_inland,Wetland
+Harris's Hawk,Parabuteo unicinctus,resident,1,forest,Shrubland
+Harris's Hawk,Parabuteo unicinctus,resident,1,grassland,Shrubland
+Harris's Hawk,Parabuteo unicinctus,resident,1,shrubland,Shrubland
+Harris's Sparrow,Zonotrichia querula,moderate,0,artificial_terrestrial,Shrubland
+Harris's Sparrow,Zonotrichia querula,moderate,0,grassland,Shrubland
+Harris's Sparrow,Zonotrichia querula,moderate,0,shrubland,Shrubland
+Heermann's Gull,Larus heermanni,withdrawal,0,marine_coastal_supratidal,Wetland
+Heermann's Gull,Larus heermanni,withdrawal,0,marine_intertidal,Wetland
+Heermann's Gull,Larus heermanni,withdrawal,0,marine_neritic,Wetland
+Henslow's Sparrow,Ammodramus henslowii,moderate,0,artificial_terrestrial,Grassland
+Henslow's Sparrow,Ammodramus henslowii,moderate,0,grassland,Grassland
+Henslow's Sparrow,Ammodramus henslowii,moderate,0,wetlands_inland,Grassland
+Hepatic Tanager,Piranga flava,withdrawal,0,artificial_terrestrial,Woodland
+Hepatic Tanager,Piranga flava,withdrawal,0,forest,Woodland
+Hepatic Tanager,Piranga flava,withdrawal,0,savanna,Woodland
+Hermit Thrush,Catharus guttatus,short,0,forest,Woodland
+Hermit Warbler,Setophaga occidentalis,moderate,0,forest,Woodland
+Herring Gull,Larus argentatus,short,0,artificial_aquatic_marine,Wetland
+Herring Gull,Larus argentatus,short,0,artificial_terrestrial,Wetland
+Herring Gull,Larus argentatus,short,0,marine_coastal_supratidal,Wetland
+Herring Gull,Larus argentatus,short,0,marine_intertidal,Wetland
+Herring Gull,Larus argentatus,short,0,marine_neritic,Wetland
+Herring Gull,Larus argentatus,short,0,marine_oceanic,Wetland
+Herring Gull,Larus argentatus,short,0,wetlands_inland,Wetland
+Hoary Redpoll,Acanthis hornemanni,irruptive,0,artificial_terrestrial,Shrubland
+Hoary Redpoll,Acanthis hornemanni,irruptive,0,forest,Shrubland
+Hoary Redpoll,Acanthis hornemanni,irruptive,0,shrubland,Shrubland
+Hooded Merganser,Lophodytes cucullatus,short,0,forest,Wetland
+Hooded Merganser,Lophodytes cucullatus,short,0,marine_coastal_supratidal,Wetland
+Hooded Merganser,Lophodytes cucullatus,short,0,marine_neritic,Wetland
+Hooded Merganser,Lophodytes cucullatus,short,0,wetlands_inland,Wetland
+Hooded Oriole,Icterus cucullatus,withdrawal,0,artificial_terrestrial,Woodland
+Hooded Oriole,Icterus cucullatus,withdrawal,0,forest,Woodland
+Hooded Warbler,Setophaga citrina,moderate,0,forest,Woodland
+Hook-billed Kite,Chondrohierax uncinatus,resident,1,artificial_terrestrial,Woodland
+Hook-billed Kite,Chondrohierax uncinatus,resident,1,forest,Woodland
+Hook-billed Kite,Chondrohierax uncinatus,resident,1,shrubland,Woodland
+Horned Grebe,Podiceps auritus,moderate,0,marine_neritic,Wetland
+Horned Grebe,Podiceps auritus,moderate,0,wetlands_inland,Wetland
+Horned Lark,Eremophila alpestris,moderate,0,artificial_terrestrial,Grassland
+Horned Lark,Eremophila alpestris,moderate,0,grassland,Grassland
+Horned Lark,Eremophila alpestris,moderate,0,marine_coastal_supratidal,Grassland
+Horned Lark,Eremophila alpestris,moderate,0,marine_intertidal,Grassland
+Horned Lark,Eremophila alpestris,moderate,0,shrubland,Grassland
+House Finch,Haemorhous mexicanus,resident,1,artificial_terrestrial,Various
+House Finch,Haemorhous mexicanus,resident,1,grassland,Various
+House Finch,Haemorhous mexicanus,resident,1,shrubland,Various
+House Sparrow,Passer domesticus,resident,1,artificial_aquatic_marine,Various
+House Sparrow,Passer domesticus,resident,1,artificial_terrestrial,Various
+House Sparrow,Passer domesticus,resident,1,forest,Various
+House Sparrow,Passer domesticus,resident,1,grassland,Various
+House Sparrow,Passer domesticus,resident,1,rocky,Various
+House Sparrow,Passer domesticus,resident,1,shrubland,Various
+House Sparrow,Passer domesticus,resident,1,wetlands_inland,Various
+House Wren,Troglodytes aedon,short,0,artificial_terrestrial,Woodland
+House Wren,Troglodytes aedon,short,0,forest,Woodland
+House Wren,Troglodytes aedon,short,0,savanna,Woodland
+House Wren,Troglodytes aedon,short,0,shrubland,Woodland
+Hutton's Vireo,Vireo huttoni,resident,1,forest,Woodland
+Iceland Gull,Larus glaucoides,moderate,0,marine_coastal_supratidal,Wetland
+Iceland Gull,Larus glaucoides,moderate,0,marine_intertidal,Wetland
+Iceland Gull,Larus glaucoides,moderate,0,marine_neritic,Wetland
+Inca Dove,Columbina inca,resident,1,artificial_terrestrial,Shrubland
+Inca Dove,Columbina inca,resident,1,shrubland,Shrubland
+Indigo Bunting,Passerina cyanea,moderate,0,forest,Woodland
+Indigo Bunting,Passerina cyanea,moderate,0,shrubland,Woodland
+Juniper Titmouse,Baeolophus ridgwayi,resident,1,forest,Woodland
+Juniper Titmouse,Baeolophus ridgwayi,resident,1,shrubland,Woodland
+Kentucky Warbler,Geothlypis formosa,moderate,0,forest,Woodland
+Killdeer,Charadrius vociferus,short,0,artificial_terrestrial,Various
+Killdeer,Charadrius vociferus,short,0,marine_intertidal,Various
+Killdeer,Charadrius vociferus,short,0,wetlands_inland,Various
+King Eider,Somateria spectabilis,moderate,0,marine_neritic,Wetland
+King Eider,Somateria spectabilis,moderate,0,wetlands_inland,Wetland
+King Rail,Rallus elegans,short,0,wetlands_inland,Wetland
+Kittlitz's Murrelet,Brachyramphus brevirostris,withdrawal,1,forest,Ocean
+Kittlitz's Murrelet,Brachyramphus brevirostris,withdrawal,1,marine_neritic,Ocean
+Kittlitz's Murrelet,Brachyramphus brevirostris,withdrawal,1,marine_oceanic,Ocean
+Kittlitz's Murrelet,Brachyramphus brevirostris,withdrawal,1,rocky,Ocean
+Ladder-backed Woodpecker,Picoides scalaris,resident,1,forest,Woodland
+Ladder-backed Woodpecker,Picoides scalaris,resident,1,shrubland,Woodland
+Lapland Longspur,Calcarius lapponicus,moderate,0,artificial_terrestrial,Grassland
+Lapland Longspur,Calcarius lapponicus,moderate,0,grassland,Grassland
+Lapland Longspur,Calcarius lapponicus,moderate,0,marine_intertidal,Grassland
+Lapland Longspur,Calcarius lapponicus,moderate,0,wetlands_inland,Grassland
+Lark Bunting,Calamospiza melanocorys,short,0,artificial_terrestrial,Grassland
+Lark Bunting,Calamospiza melanocorys,short,0,grassland,Grassland
+Lark Bunting,Calamospiza melanocorys,short,0,shrubland,Grassland
+Lark Sparrow,Chondestes grammacus,short,0,artificial_terrestrial,Various
+Lark Sparrow,Chondestes grammacus,short,0,forest,Various
+Lark Sparrow,Chondestes grammacus,short,0,grassland,Various
+Laughing Gull,Leucophaeus atricilla,withdrawal,0,marine_coastal_supratidal,Wetland
+Laughing Gull,Leucophaeus atricilla,withdrawal,0,marine_intertidal,Wetland
+Laughing Gull,Leucophaeus atricilla,withdrawal,0,marine_neritic,Wetland
+Lawrence's Goldfinch,Spinus lawrencei,irruptive,0,forest,Various
+Lawrence's Goldfinch,Spinus lawrencei,irruptive,0,shrubland,Various
+Lazuli Bunting,Passerina amoena,moderate,0,forest,Shrubland
+Lazuli Bunting,Passerina amoena,moderate,0,shrubland,Shrubland
+Le Conte's Sparrow,Ammodramus leconteii,moderate,0,grassland,Wetland
+Le Conte's Sparrow,Ammodramus leconteii,moderate,0,wetlands_inland,Wetland
+Le Conte's Thrasher,Toxostoma lecontei,resident,1,shrubland,Shrubland
+Least Bittern,Ixobrychus exilis,short,0,artificial_aquatic_marine,Wetland
+Least Bittern,Ixobrychus exilis,short,0,forest,Wetland
+Least Bittern,Ixobrychus exilis,short,0,marine_intertidal,Wetland
+Least Bittern,Ixobrychus exilis,short,0,wetlands_inland,Wetland
+Least Flycatcher,Empidonax minimus,moderate,0,artificial_terrestrial,Woodland
+Least Flycatcher,Empidonax minimus,moderate,0,forest,Woodland
+Least Flycatcher,Empidonax minimus,moderate,0,shrubland,Woodland
+Least Grebe,Tachybaptus dominicus,resident,1,wetlands_inland,Wetland
+Least Sandpiper,Calidris minutilla,moderate,0,forest,Wetland
+Least Sandpiper,Calidris minutilla,moderate,0,grassland,Wetland
+Least Sandpiper,Calidris minutilla,moderate,0,marine_coastal_supratidal,Wetland
+Least Sandpiper,Calidris minutilla,moderate,0,marine_intertidal,Wetland
+Least Sandpiper,Calidris minutilla,moderate,0,marine_neritic,Wetland
+Least Sandpiper,Calidris minutilla,moderate,0,shrubland,Wetland
+Least Sandpiper,Calidris minutilla,moderate,0,wetlands_inland,Wetland
+Least Tern,Sternula antillarum,moderate,1,marine_intertidal,Wetland
+Lesser Black-backed Gull,Larus fuscus,moderate,0,artificial_aquatic_marine,Ocean
+Lesser Black-backed Gull,Larus fuscus,moderate,0,artificial_terrestrial,Ocean
+Lesser Black-backed Gull,Larus fuscus,moderate,0,grassland,Ocean
+Lesser Black-backed Gull,Larus fuscus,moderate,0,marine_coastal_supratidal,Ocean
+Lesser Black-backed Gull,Larus fuscus,moderate,0,marine_intertidal,Ocean
+Lesser Black-backed Gull,Larus fuscus,moderate,0,marine_neritic,Ocean
+Lesser Black-backed Gull,Larus fuscus,moderate,0,marine_oceanic,Ocean
+Lesser Black-backed Gull,Larus fuscus,moderate,0,wetlands_inland,Ocean
+Lesser Goldfinch,Spinus psaltria,short,0,artificial_terrestrial,Various
+Lesser Goldfinch,Spinus psaltria,short,0,shrubland,Various
+Lesser Nighthawk,Chordeiles acutipennis,short,0,artificial_terrestrial,Shrubland
+Lesser Nighthawk,Chordeiles acutipennis,short,0,grassland,Shrubland
+Lesser Nighthawk,Chordeiles acutipennis,short,0,shrubland,Shrubland
+Lesser Prairie-Chicken,Tympanuchus pallidicinctus,resident,1,artificial_terrestrial,Shrubland
+Lesser Prairie-Chicken,Tympanuchus pallidicinctus,resident,1,grassland,Shrubland
+Lesser Prairie-Chicken,Tympanuchus pallidicinctus,resident,1,shrubland,Shrubland
+Lesser Scaup,Aythya affinis,short,0,artificial_aquatic_marine,Wetland
+Lesser Scaup,Aythya affinis,short,0,marine_coastal_supratidal,Wetland
+Lesser Scaup,Aythya affinis,short,0,marine_neritic,Wetland
+Lesser Scaup,Aythya affinis,short,0,wetlands_inland,Wetland
+Lesser Yellowlegs,Tringa flavipes,moderate,0,artificial_aquatic_marine,Wetland
+Lesser Yellowlegs,Tringa flavipes,moderate,0,grassland,Wetland
+Lesser Yellowlegs,Tringa flavipes,moderate,0,marine_coastal_supratidal,Wetland
+Lesser Yellowlegs,Tringa flavipes,moderate,0,shrubland,Wetland
+Lesser Yellowlegs,Tringa flavipes,moderate,0,wetlands_inland,Wetland
+Lewis's Woodpecker,Melanerpes lewis,short,0,artificial_terrestrial,Woodland
+Lewis's Woodpecker,Melanerpes lewis,short,0,forest,Woodland
+Limpkin,Aramus guarauna,resident,1,forest,Wetland
+Limpkin,Aramus guarauna,resident,1,savanna,Wetland
+Limpkin,Aramus guarauna,resident,1,wetlands_inland,Wetland
+Lincoln's Sparrow,Melospiza lincolnii,moderate,0,grassland,Shrubland
+Lincoln's Sparrow,Melospiza lincolnii,moderate,0,shrubland,Shrubland
+Lincoln's Sparrow,Melospiza lincolnii,moderate,0,wetlands_inland,Shrubland
+Little Blue Heron,Egretta caerulea,short,0,forest,Wetland
+Little Blue Heron,Egretta caerulea,short,0,marine_intertidal,Wetland
+Little Blue Heron,Egretta caerulea,short,0,wetlands_inland,Wetland
+Little Gull,Hydrocoloeus minutus,moderate,0,artificial_aquatic_marine,Wetland
+Little Gull,Hydrocoloeus minutus,moderate,0,marine_coastal_supratidal,Wetland
+Little Gull,Hydrocoloeus minutus,moderate,0,marine_intertidal,Wetland
+Little Gull,Hydrocoloeus minutus,moderate,0,marine_neritic,Wetland
+Little Gull,Hydrocoloeus minutus,moderate,0,marine_oceanic,Wetland
+Little Gull,Hydrocoloeus minutus,moderate,0,wetlands_inland,Wetland
+Loggerhead Shrike,Lanius ludovicianus,withdrawal,0,artificial_terrestrial,Shrubland
+Loggerhead Shrike,Lanius ludovicianus,withdrawal,0,grassland,Shrubland
+Loggerhead Shrike,Lanius ludovicianus,withdrawal,0,savanna,Shrubland
+Loggerhead Shrike,Lanius ludovicianus,withdrawal,0,shrubland,Shrubland
+Long-billed Curlew,Numenius americanus,moderate,0,grassland,Grassland
+Long-billed Curlew,Numenius americanus,moderate,0,marine_intertidal,Grassland
+Long-billed Curlew,Numenius americanus,moderate,0,wetlands_inland,Grassland
+Long-billed Dowitcher,Limnodromus scolopaceus,moderate,0,marine_intertidal,Wetland
+Long-billed Dowitcher,Limnodromus scolopaceus,moderate,0,wetlands_inland,Wetland
+Long-billed Thrasher,Toxostoma longirostre,resident,1,forest,Shrubland
+Long-billed Thrasher,Toxostoma longirostre,resident,1,shrubland,Shrubland
+Long-eared Owl,Asio otus,short,0,artificial_terrestrial,Woodland
+Long-eared Owl,Asio otus,short,0,forest,Woodland
+Long-eared Owl,Asio otus,short,0,grassland,Woodland
+Long-eared Owl,Asio otus,short,0,shrubland,Woodland
+Long-eared Owl,Asio otus,short,0,wetlands_inland,Woodland
+Long-tailed Duck,Clangula hyemalis,moderate,0,grassland,Wetland
+Long-tailed Duck,Clangula hyemalis,moderate,0,marine_neritic,Wetland
+Long-tailed Duck,Clangula hyemalis,moderate,0,wetlands_inland,Wetland
+Long-tailed Jaeger,Stercorarius longicaudus,long,1,grassland,Ocean
+Long-tailed Jaeger,Stercorarius longicaudus,long,1,marine_neritic,Ocean
+Long-tailed Jaeger,Stercorarius longicaudus,long,1,marine_oceanic,Ocean
+Louisiana Waterthrush,Parkesia motacilla,moderate,0,forest,Woodland
+Louisiana Waterthrush,Parkesia motacilla,moderate,0,shrubland,Woodland
+Louisiana Waterthrush,Parkesia motacilla,moderate,0,wetlands_inland,Woodland
+Lucy's Warbler,Oreothlypis luciae,moderate,0,shrubland,Shrubland
+MacGillivray's Warbler,Geothlypis tolmiei,moderate,0,forest,Shrubland
+MacGillivray's Warbler,Geothlypis tolmiei,moderate,0,shrubland,Shrubland
+Magnificent Frigatebird,Fregata magnificens,withdrawal,1,forest,Ocean
+Magnificent Frigatebird,Fregata magnificens,withdrawal,1,marine_neritic,Ocean
+Magnificent Frigatebird,Fregata magnificens,withdrawal,1,marine_oceanic,Ocean
+Magnolia Warbler,Setophaga magnolia,long,0,artificial_terrestrial,Woodland
+Magnolia Warbler,Setophaga magnolia,long,0,forest,Woodland
+Magnolia Warbler,Setophaga magnolia,long,0,shrubland,Woodland
+Mallard,Anas platyrhynchos,short,0,artificial_aquatic_marine,Wetland
+Mallard,Anas platyrhynchos,short,0,wetlands_inland,Wetland
+Mangrove Cuckoo,Coccyzus minor,withdrawal,0,artificial_terrestrial,Woodland
+Mangrove Cuckoo,Coccyzus minor,withdrawal,0,forest,Woodland
+Marbled Godwit,Limosa fedoa,moderate,0,grassland,Wetland
+Marbled Godwit,Limosa fedoa,moderate,0,marine_intertidal,Wetland
+Marbled Godwit,Limosa fedoa,moderate,0,marine_neritic,Wetland
+Marbled Godwit,Limosa fedoa,moderate,0,wetlands_inland,Wetland
+Marbled Murrelet,Brachyramphus marmoratus,withdrawal,1,forest,Ocean
+Marbled Murrelet,Brachyramphus marmoratus,withdrawal,1,marine_coastal_supratidal,Ocean
+Marbled Murrelet,Brachyramphus marmoratus,withdrawal,1,marine_neritic,Ocean
+Marbled Murrelet,Brachyramphus marmoratus,withdrawal,1,marine_oceanic,Ocean
+Marbled Murrelet,Brachyramphus marmoratus,withdrawal,1,wetlands_inland,Ocean
+Marsh Wren,Cistothorus palustris,short,0,marine_intertidal,Wetland
+Marsh Wren,Cistothorus palustris,short,0,wetlands_inland,Wetland
+McCown's Longspur,Rhynchophanes mccownii,moderate,0,artificial_terrestrial,Grassland
+McCown's Longspur,Rhynchophanes mccownii,moderate,0,grassland,Grassland
+Merlin,Falco columbarius,short,0,artificial_terrestrial,Woodland
+Merlin,Falco columbarius,short,0,forest,Woodland
+Merlin,Falco columbarius,short,0,grassland,Woodland
+Merlin,Falco columbarius,short,0,marine_intertidal,Woodland
+Merlin,Falco columbarius,short,0,shrubland,Woodland
+Mew Gull,Larus canus,short,0,artificial_aquatic_marine,Wetland
+Mew Gull,Larus canus,short,0,artificial_terrestrial,Wetland
+Mew Gull,Larus canus,short,0,grassland,Wetland
+Mew Gull,Larus canus,short,0,marine_coastal_supratidal,Wetland
+Mew Gull,Larus canus,short,0,marine_intertidal,Wetland
+Mew Gull,Larus canus,short,0,marine_neritic,Wetland
+Mew Gull,Larus canus,short,0,wetlands_inland,Wetland
+Mexican Jay,Aphelocoma wollweberi,resident,1,forest,Woodland
+Mississippi Kite,Ictinia mississippiensis,long,1,artificial_terrestrial,Woodland
+Mississippi Kite,Ictinia mississippiensis,long,1,forest,Woodland
+Mississippi Kite,Ictinia mississippiensis,long,1,grassland,Woodland
+Monk Parakeet,Myiopsitta monachus,resident,1,artificial_terrestrial,Various
+Monk Parakeet,Myiopsitta monachus,resident,1,forest,Various
+Monk Parakeet,Myiopsitta monachus,resident,1,savanna,Various
+Montezuma Quail,Cyrtonyx montezumae,resident,1,forest,Woodland
+Montezuma Quail,Cyrtonyx montezumae,resident,1,shrubland,Woodland
+Mottled Duck,Anas fulvigula,withdrawal,1,artificial_aquatic_marine,Wetland
+Mottled Duck,Anas fulvigula,withdrawal,1,marine_intertidal,Wetland
+Mottled Duck,Anas fulvigula,withdrawal,1,wetlands_inland,Wetland
+Mountain Bluebird,Sialia currucoides,short,0,artificial_terrestrial,Shrubland
+Mountain Bluebird,Sialia currucoides,short,0,forest,Shrubland
+Mountain Bluebird,Sialia currucoides,short,0,grassland,Shrubland
+Mountain Bluebird,Sialia currucoides,short,0,shrubland,Shrubland
+Mountain Chickadee,Poecile gambeli,resident,1,artificial_terrestrial,Woodland
+Mountain Chickadee,Poecile gambeli,resident,1,forest,Woodland
+Mountain Plover,Charadrius montanus,moderate,0,artificial_terrestrial,Grassland
+Mountain Plover,Charadrius montanus,moderate,0,grassland,Grassland
+Mountain Plover,Charadrius montanus,moderate,0,shrubland,Grassland
+Mountain Quail,Oreortyx pictus,resident,1,artificial_terrestrial,Shrubland
+Mountain Quail,Oreortyx pictus,resident,1,forest,Shrubland
+Mountain Quail,Oreortyx pictus,resident,1,shrubland,Shrubland
+Mourning Dove,Zenaida macroura,withdrawal,0,artificial_terrestrial,Various
+Mourning Dove,Zenaida macroura,withdrawal,0,forest,Various
+Mourning Dove,Zenaida macroura,withdrawal,0,shrubland,Various
+Mourning Dove,Zenaida macroura,withdrawal,0,wetlands_inland,Various
+Mourning Warbler,Geothlypis philadelphia,long,1,forest,Woodland
+Mourning Warbler,Geothlypis philadelphia,long,1,shrubland,Woodland
+Muscovy Duck,Cairina moschata,resident,1,forest,Various
+Muscovy Duck,Cairina moschata,resident,1,wetlands_inland,Various
+Mute Swan,Cygnus olor,resident,1,marine_coastal_supratidal,Wetland
+Mute Swan,Cygnus olor,resident,1,wetlands_inland,Wetland
+Nashville Warbler,Oreothlypis ruficapilla,moderate,0,forest,Woodland
+Neotropic Cormorant,Phalacrocorax brasilianus,withdrawal,1,marine_neritic,Wetland
+Neotropic Cormorant,Phalacrocorax brasilianus,withdrawal,1,wetlands_inland,Wetland
+Northern Beardless-Tyrannulet,Camptostoma imberbe,withdrawal,0,artificial_terrestrial,Woodland
+Northern Beardless-Tyrannulet,Camptostoma imberbe,withdrawal,0,desert,Woodland
+Northern Beardless-Tyrannulet,Camptostoma imberbe,withdrawal,0,forest,Woodland
+Northern Beardless-Tyrannulet,Camptostoma imberbe,withdrawal,0,savanna,Woodland
+Northern Beardless-Tyrannulet,Camptostoma imberbe,withdrawal,0,shrubland,Woodland
+Northern Beardless-Tyrannulet,Camptostoma imberbe,withdrawal,0,wetlands_inland,Woodland
+Northern Bobwhite,Colinus virginianus,resident,1,artificial_terrestrial,Shrubland
+Northern Bobwhite,Colinus virginianus,resident,1,forest,Shrubland
+Northern Bobwhite,Colinus virginianus,resident,1,grassland,Shrubland
+Northern Bobwhite,Colinus virginianus,resident,1,shrubland,Shrubland
+Northern Cardinal,Cardinalis cardinalis,resident,1,artificial_terrestrial,Shrubland
+Northern Cardinal,Cardinalis cardinalis,resident,1,forest,Shrubland
+Northern Cardinal,Cardinalis cardinalis,resident,1,shrubland,Shrubland
+Northern Cardinal,Cardinalis cardinalis,resident,1,wetlands_inland,Shrubland
+Northern Flicker,Colaptes auratus,short,0,artificial_terrestrial,Woodland
+Northern Flicker,Colaptes auratus,short,0,forest,Woodland
+Northern Fulmar,Fulmarus glacialis,short,1,marine_coastal_supratidal,Ocean
+Northern Fulmar,Fulmarus glacialis,short,1,marine_neritic,Ocean
+Northern Fulmar,Fulmarus glacialis,short,1,marine_oceanic,Ocean
+Northern Gannet,Morus bassanus,short,1,marine_neritic,Ocean
+Northern Gannet,Morus bassanus,short,1,marine_oceanic,Ocean
+Northern Goshawk,Accipiter gentilis,withdrawal,0,artificial_terrestrial,Woodland
+Northern Goshawk,Accipiter gentilis,withdrawal,0,forest,Woodland
+Northern Goshawk,Accipiter gentilis,withdrawal,0,grassland,Woodland
+Northern Harrier,Circus cyaneus,short,0,artificial_terrestrial,Grassland
+Northern Harrier,Circus cyaneus,short,0,forest,Grassland
+Northern Harrier,Circus cyaneus,short,0,grassland,Grassland
+Northern Harrier,Circus cyaneus,short,0,shrubland,Grassland
+Northern Harrier,Circus cyaneus,short,0,wetlands_inland,Grassland
+Northern Hawk Owl,Surnia ulula,irruptive,0,artificial_terrestrial,Woodland
+Northern Hawk Owl,Surnia ulula,irruptive,0,forest,Woodland
+Northern Hawk Owl,Surnia ulula,irruptive,0,grassland,Woodland
+Northern Hawk Owl,Surnia ulula,irruptive,0,shrubland,Woodland
+Northern Hawk Owl,Surnia ulula,irruptive,0,wetlands_inland,Woodland
+Northern Mockingbird,Mimus polyglottos,withdrawal,0,artificial_terrestrial,Shrubland
+Northern Mockingbird,Mimus polyglottos,withdrawal,0,forest,Shrubland
+Northern Mockingbird,Mimus polyglottos,withdrawal,0,shrubland,Shrubland
+Northern Parula,Setophaga americana,moderate,0,forest,Woodland
+Northern Pintail,Anas acuta,short,0,marine_coastal_supratidal,Wetland
+Northern Pintail,Anas acuta,short,0,marine_neritic,Wetland
+Northern Pintail,Anas acuta,short,0,wetlands_inland,Wetland
+Northern Pygmy-Owl,Glaucidium gnoma,resident,1,forest,Woodland
+Northern Pygmy-Owl,Glaucidium gnoma,resident,1,savanna,Woodland
+Northern Pygmy-Owl,Glaucidium gnoma,resident,1,wetlands_inland,Woodland
+Northern Rough-winged Swallow,Stelgidopteryx serripennis,moderate,0,artificial_aquatic_marine,Various
+Northern Rough-winged Swallow,Stelgidopteryx serripennis,moderate,0,artificial_terrestrial,Various
+Northern Rough-winged Swallow,Stelgidopteryx serripennis,moderate,0,forest,Various
+Northern Rough-winged Swallow,Stelgidopteryx serripennis,moderate,0,rocky,Various
+Northern Rough-winged Swallow,Stelgidopteryx serripennis,moderate,0,wetlands_inland,Various
+Northern Saw-whet Owl,Aegolius acadicus,short,0,artificial_terrestrial,Woodland
+Northern Saw-whet Owl,Aegolius acadicus,short,0,desert,Woodland
+Northern Saw-whet Owl,Aegolius acadicus,short,0,forest,Woodland
+Northern Shoveler,Anas clypeata,short,0,artificial_aquatic_marine,Wetland
+Northern Shoveler,Anas clypeata,short,0,grassland,Wetland
+Northern Shoveler,Anas clypeata,short,0,marine_coastal_supratidal,Wetland
+Northern Shoveler,Anas clypeata,short,0,marine_intertidal,Wetland
+Northern Shoveler,Anas clypeata,short,0,marine_neritic,Wetland
+Northern Shoveler,Anas clypeata,short,0,wetlands_inland,Wetland
+Northern Shrike,Lanius excubitor,short,0,desert,Shrubland
+Northern Shrike,Lanius excubitor,short,0,forest,Shrubland
+Northern Shrike,Lanius excubitor,short,0,grassland,Shrubland
+Northern Shrike,Lanius excubitor,short,0,rocky,Shrubland
+Northern Shrike,Lanius excubitor,short,0,savanna,Shrubland
+Northern Shrike,Lanius excubitor,short,0,shrubland,Shrubland
+Northern Shrike,Lanius excubitor,short,0,wetlands_inland,Shrubland
+Northern Waterthrush,Parkesia noveboracensis,moderate,0,artificial_terrestrial,Woodland
+Northern Waterthrush,Parkesia noveboracensis,moderate,0,forest,Woodland
+Northern Waterthrush,Parkesia noveboracensis,moderate,0,shrubland,Woodland
+Northern Waterthrush,Parkesia noveboracensis,moderate,0,wetlands_inland,Woodland
+Northwestern Crow,Corvus caurinus,resident,1,artificial_terrestrial,Wetland
+Northwestern Crow,Corvus caurinus,resident,1,forest,Wetland
+Northwestern Crow,Corvus caurinus,resident,1,marine_coastal_supratidal,Wetland
+Northwestern Crow,Corvus caurinus,resident,1,marine_intertidal,Wetland
+Nuttall's Woodpecker,Picoides nuttallii,resident,1,artificial_terrestrial,Woodland
+Nuttall's Woodpecker,Picoides nuttallii,resident,1,forest,Woodland
+Oak and Juniper Titmouse,Baeolophus inornatus and ridgwayi,resident,1,artificial_terrestrial,Woodland
+Oak and Juniper Titmouse,Baeolophus inornatus and ridgwayi,resident,1,forest,Woodland
+Oak and Juniper Titmouse,Baeolophus inornatus and ridgwayi,resident,1,shrubland,Woodland
+Oak Titmouse,Baeolophus inornatus,resident,1,artificial_terrestrial,Woodland
+Oak Titmouse,Baeolophus inornatus,resident,1,forest,Woodland
+Oak Titmouse,Baeolophus inornatus,resident,1,shrubland,Woodland
+Olive Sparrow,Arremonops rufivirgatus,resident,1,artificial_terrestrial,Shrubland
+Olive Sparrow,Arremonops rufivirgatus,resident,1,forest,Shrubland
+Olive Sparrow,Arremonops rufivirgatus,resident,1,shrubland,Shrubland
+Olive Warbler,Peucedramus taeniatus,withdrawal,0,forest,Woodland
+Olive-sided Flycatcher,Contopus cooperi,long,0,artificial_terrestrial,Woodland
+Olive-sided Flycatcher,Contopus cooperi,long,0,forest,Woodland
+Olive-sided Flycatcher,Contopus cooperi,long,0,wetlands_inland,Woodland
+Orange-crowned Warbler,Oreothlypis celata,moderate,0,forest,Various
+Orange-crowned Warbler,Oreothlypis celata,moderate,0,shrubland,Various
+Orchard Oriole,Icterus spurius,moderate,0,artificial_terrestrial,Woodland
+Orchard Oriole,Icterus spurius,moderate,0,forest,Woodland
+Orchard Oriole,Icterus spurius,moderate,0,savanna,Woodland
+Osprey,Pandion haliaetus,short,0,artificial_aquatic_marine,Wetland
+Osprey,Pandion haliaetus,short,0,forest,Wetland
+Osprey,Pandion haliaetus,short,0,marine_coastal_supratidal,Wetland
+Osprey,Pandion haliaetus,short,0,marine_neritic,Wetland
+Osprey,Pandion haliaetus,short,0,wetlands_inland,Wetland
+Ovenbird,Seiurus aurocapilla,moderate,0,forest,Woodland
+Pacific Golden-Plover,Pluvialis fulva,long,1,artificial_terrestrial,Grassland
+Pacific Golden-Plover,Pluvialis fulva,long,1,forest,Grassland
+Pacific Golden-Plover,Pluvialis fulva,long,1,grassland,Grassland
+Pacific Golden-Plover,Pluvialis fulva,long,1,marine_coastal_supratidal,Grassland
+Pacific Golden-Plover,Pluvialis fulva,long,1,marine_intertidal,Grassland
+Pacific Golden-Plover,Pluvialis fulva,long,1,shrubland,Grassland
+Pacific Golden-Plover,Pluvialis fulva,long,1,wetlands_inland,Grassland
+Pacific Loon,Gavia pacifica,moderate,0,marine_neritic,Wetland
+Pacific Loon,Gavia pacifica,moderate,0,wetlands_inland,Wetland
+Pacific-slope Flycatcher,Empidonax difficilis,moderate,0,forest,Woodland
+Pacific-slope Flycatcher,Empidonax difficilis,moderate,0,wetlands_inland,Woodland
+Painted Bunting,Passerina ciris,moderate,0,artificial_terrestrial,Shrubland
+Painted Bunting,Passerina ciris,moderate,0,shrubland,Shrubland
+Painted Redstart,Myioborus pictus,withdrawal,0,forest,Woodland
+Palm Warbler,Setophaga palmarum,short,0,artificial_terrestrial,Various
+Palm Warbler,Setophaga palmarum,short,0,forest,Various
+Palm Warbler,Setophaga palmarum,short,0,grassland,Various
+Palm Warbler,Setophaga palmarum,short,0,shrubland,Various
+Palm Warbler,Setophaga palmarum,short,0,wetlands_inland,Various
+Parasitic Jaeger,Stercorarius parasiticus,moderate,1,grassland,Ocean
+Parasitic Jaeger,Stercorarius parasiticus,moderate,1,marine_neritic,Ocean
+Parasitic Jaeger,Stercorarius parasiticus,moderate,1,marine_oceanic,Ocean
+Pelagic Cormorant,Phalacrocorax pelagicus,short,0,marine_neritic,Wetland
+Peregrine Falcon,Falco peregrinus,short,0,artificial_terrestrial,Various
+Peregrine Falcon,Falco peregrinus,short,0,desert,Various
+Peregrine Falcon,Falco peregrinus,short,0,forest,Various
+Peregrine Falcon,Falco peregrinus,short,0,grassland,Various
+Peregrine Falcon,Falco peregrinus,short,0,marine_coastal_supratidal,Various
+Peregrine Falcon,Falco peregrinus,short,0,marine_intertidal,Various
+Peregrine Falcon,Falco peregrinus,short,0,rocky,Various
+Peregrine Falcon,Falco peregrinus,short,0,savanna,Various
+Peregrine Falcon,Falco peregrinus,short,0,shrubland,Various
+Peregrine Falcon,Falco peregrinus,short,0,wetlands_inland,Various
+Phainopepla,Phainopepla nitens,withdrawal,0,desert,Woodland
+Phainopepla,Phainopepla nitens,withdrawal,0,forest,Woodland
+Phainopepla,Phainopepla nitens,withdrawal,0,shrubland,Woodland
+Philadelphia Vireo,Vireo philadelphicus,moderate,0,artificial_terrestrial,Woodland
+Philadelphia Vireo,Vireo philadelphicus,moderate,0,forest,Woodland
+Pied-billed Grebe,Podilymbus podiceps,short,0,wetlands_inland,Wetland
+Pigeon Guillemot,Cepphus columba,withdrawal,1,marine_coastal_supratidal,Ocean
+Pigeon Guillemot,Cepphus columba,withdrawal,1,marine_intertidal,Ocean
+Pigeon Guillemot,Cepphus columba,withdrawal,1,marine_neritic,Ocean
+Pigeon Guillemot,Cepphus columba,withdrawal,1,marine_oceanic,Ocean
+Pileated Woodpecker,Dryocopus pileatus,resident,1,artificial_terrestrial,Woodland
+Pileated Woodpecker,Dryocopus pileatus,resident,1,forest,Woodland
+Pileated Woodpecker,Dryocopus pileatus,resident,1,wetlands_inland,Woodland
+Pine Grosbeak,Pinicola enucleator,irruptive,0,artificial_terrestrial,Woodland
+Pine Grosbeak,Pinicola enucleator,irruptive,0,forest,Woodland
+Pine Grosbeak,Pinicola enucleator,irruptive,0,shrubland,Woodland
+Pine Siskin,Spinus pinus,irruptive,0,artificial_terrestrial,Woodland
+Pine Siskin,Spinus pinus,irruptive,0,forest,Woodland
+Pine Siskin,Spinus pinus,irruptive,0,shrubland,Woodland
+Pine Warbler,Setophaga pinus,short,0,forest,Woodland
+Pinyon Jay,Gymnorhinus cyanocephalus,resident,1,artificial_terrestrial,Woodland
+Pinyon Jay,Gymnorhinus cyanocephalus,resident,1,forest,Woodland
+Pinyon Jay,Gymnorhinus cyanocephalus,resident,1,shrubland,Woodland
+Piping Plover,Charadrius melodus,moderate,0,marine_coastal_supratidal,Wetland
+Piping Plover,Charadrius melodus,moderate,0,wetlands_inland,Wetland
+Plain Chachalaca,Ortalis vetula,resident,1,artificial_terrestrial,Woodland
+Plain Chachalaca,Ortalis vetula,resident,1,forest,Woodland
+Plain Chachalaca,Ortalis vetula,resident,1,shrubland,Woodland
+Pomarine Jaeger,Stercorarius pomarinus,moderate,1,grassland,Ocean
+Pomarine Jaeger,Stercorarius pomarinus,moderate,1,marine_neritic,Ocean
+Pomarine Jaeger,Stercorarius pomarinus,moderate,1,marine_oceanic,Ocean
+Pomarine Jaeger,Stercorarius pomarinus,moderate,1,wetlands_inland,Ocean
+Prairie Falcon,Falco mexicanus,short,0,artificial_terrestrial,Grassland
+Prairie Falcon,Falco mexicanus,short,0,grassland,Grassland
+Prairie Falcon,Falco mexicanus,short,0,shrubland,Grassland
+Prairie Falcon,Falco mexicanus,short,0,wetlands_inland,Grassland
+Prairie Warbler,Setophaga discolor,short,0,artificial_terrestrial,Shrubland
+Prairie Warbler,Setophaga discolor,short,0,forest,Shrubland
+Prairie Warbler,Setophaga discolor,short,0,shrubland,Shrubland
+Prothonotary Warbler,Protonotaria citrea,moderate,0,forest,Wetland
+Purple Finch,Haemorhous purpureus,short,0,artificial_terrestrial,Woodland
+Purple Finch,Haemorhous purpureus,short,0,forest,Woodland
+Purple Martin,Progne subis,long,1,artificial_terrestrial,Various
+Purple Martin,Progne subis,long,1,forest,Various
+Purple Martin,Progne subis,long,1,shrubland,Various
+Purple Martin,Progne subis,long,1,wetlands_inland,Various
+Purple Sandpiper,Calidris maritima,long,0,grassland,Wetland
+Purple Sandpiper,Calidris maritima,long,0,marine_intertidal,Wetland
+Purple Sandpiper,Calidris maritima,long,0,rocky,Wetland
+Purple Sandpiper,Calidris maritima,long,0,wetlands_inland,Wetland
+Pygmy Nuthatch,Sitta pygmaea,resident,1,forest,Woodland
+Pyrrhuloxia,Cardinalis sinuatus,resident,1,shrubland,Shrubland
+Razorbill,Alca torda,short,1,marine_coastal_supratidal,Ocean
+Razorbill,Alca torda,short,1,marine_intertidal,Ocean
+Razorbill,Alca torda,short,1,marine_neritic,Ocean
+Razorbill,Alca torda,short,1,marine_oceanic,Ocean
+Red Crossbill,Loxia curvirostra,resident,1,artificial_terrestrial,Woodland
+Red Crossbill,Loxia curvirostra,resident,1,forest,Woodland
+Red Knot,Calidris canutus,long,0,grassland,Wetland
+Red Knot,Calidris canutus,long,0,marine_intertidal,Wetland
+Red Knot,Calidris canutus,long,0,marine_neritic,Wetland
+Red Knot,Calidris canutus,long,0,wetlands_inland,Wetland
+Red-bellied Woodpecker,Melanerpes carolinus,resident,1,artificial_terrestrial,Woodland
+Red-bellied Woodpecker,Melanerpes carolinus,resident,1,forest,Woodland
+Red-bellied Woodpecker,Melanerpes carolinus,resident,1,savanna,Woodland
+Red-bellied Woodpecker,Melanerpes carolinus,resident,1,wetlands_inland,Woodland
+Red-breasted Merganser,Mergus serrator,moderate,0,marine_coastal_supratidal,Wetland
+Red-breasted Merganser,Mergus serrator,moderate,0,marine_neritic,Wetland
+Red-breasted Merganser,Mergus serrator,moderate,0,wetlands_inland,Wetland
+Red-breasted Nuthatch,Sitta canadensis,withdrawal,0,artificial_terrestrial,Woodland
+Red-breasted Nuthatch,Sitta canadensis,withdrawal,0,forest,Woodland
+Red-breasted Nuthatch,Sitta canadensis,withdrawal,0,shrubland,Woodland
+Red-breasted Sapsucker,Sphyrapicus ruber,short,0,forest,Woodland
+Red-cockaded Woodpecker,Picoides borealis,resident,1,artificial_terrestrial,Woodland
+Red-cockaded Woodpecker,Picoides borealis,resident,1,forest,Woodland
+Red-crowned Parrot,Amazona viridigenalis,resident,1,artificial_terrestrial,Woodland
+Red-crowned Parrot,Amazona viridigenalis,resident,1,forest,Woodland
+Reddish Egret,Egretta rufescens,withdrawal,1,forest,Wetland
+Reddish Egret,Egretta rufescens,withdrawal,1,marine_coastal_supratidal,Wetland
+Reddish Egret,Egretta rufescens,withdrawal,1,marine_intertidal,Wetland
+Red-eyed Vireo,Vireo olivaceus,long,1,artificial_terrestrial,Woodland
+Red-eyed Vireo,Vireo olivaceus,long,1,forest,Woodland
+Red-faced Cormorant,Phalacrocorax urile,resident,1,marine_coastal_supratidal,Wetland
+Red-faced Cormorant,Phalacrocorax urile,resident,1,marine_intertidal,Wetland
+Red-faced Cormorant,Phalacrocorax urile,resident,1,marine_neritic,Wetland
+Red-faced Warbler,Cardellina rubrifrons,withdrawal,0,forest,Woodland
+Redhead,Aythya americana,short,0,marine_intertidal,Wetland
+Redhead,Aythya americana,short,0,marine_neritic,Wetland
+Redhead,Aythya americana,short,0,wetlands_inland,Wetland
+Red-headed Woodpecker,Melanerpes erythrocephalus,withdrawal,0,artificial_terrestrial,Woodland
+Red-headed Woodpecker,Melanerpes erythrocephalus,withdrawal,0,forest,Woodland
+Red-headed Woodpecker,Melanerpes erythrocephalus,withdrawal,0,grassland,Woodland
+Red-headed Woodpecker,Melanerpes erythrocephalus,withdrawal,0,savanna,Woodland
+Red-naped Sapsucker,Sphyrapicus nuchalis,short,0,forest,Woodland
+Red-naped Sapsucker,Sphyrapicus nuchalis,short,0,shrubland,Woodland
+Red-necked Grebe,Podiceps grisegena,moderate,0,marine_neritic,Wetland
+Red-necked Grebe,Podiceps grisegena,moderate,0,wetlands_inland,Wetland
+Red-necked Phalarope,Phalaropus lobatus,long,1,artificial_aquatic_marine,Wetland
+Red-necked Phalarope,Phalaropus lobatus,long,1,marine_coastal_supratidal,Wetland
+Red-necked Phalarope,Phalaropus lobatus,long,1,marine_neritic,Wetland
+Red-necked Phalarope,Phalaropus lobatus,long,1,marine_oceanic,Wetland
+Red-necked Phalarope,Phalaropus lobatus,long,1,wetlands_inland,Wetland
+Red-shouldered Hawk,Buteo lineatus,short,0,artificial_terrestrial,Woodland
+Red-shouldered Hawk,Buteo lineatus,short,0,forest,Woodland
+Red-tailed Hawk,Buteo jamaicensis,short,0,artificial_terrestrial,Woodland
+Red-tailed Hawk,Buteo jamaicensis,short,0,desert,Woodland
+Red-tailed Hawk,Buteo jamaicensis,short,0,forest,Woodland
+Red-tailed Hawk,Buteo jamaicensis,short,0,grassland,Woodland
+Red-tailed Hawk,Buteo jamaicensis,short,0,shrubland,Woodland
+Red-throated Loon,Gavia stellata,moderate,0,marine_neritic,Wetland
+Red-throated Loon,Gavia stellata,moderate,0,wetlands_inland,Wetland
+Red-winged Blackbird,Agelaius phoeniceus,short,0,artificial_terrestrial,Various
+Red-winged Blackbird,Agelaius phoeniceus,short,0,wetlands_inland,Various
+Rhinoceros Auklet,Cerorhinca monocerata,withdrawal,1,grassland,Ocean
+Rhinoceros Auklet,Cerorhinca monocerata,withdrawal,1,marine_neritic,Ocean
+Rhinoceros Auklet,Cerorhinca monocerata,withdrawal,1,marine_oceanic,Ocean
+Ring-billed Gull,Larus delawarensis,short,0,artificial_aquatic_marine,Wetland
+Ring-billed Gull,Larus delawarensis,short,0,grassland,Wetland
+Ring-billed Gull,Larus delawarensis,short,0,marine_coastal_supratidal,Wetland
+Ring-billed Gull,Larus delawarensis,short,0,marine_neritic,Wetland
+Ring-billed Gull,Larus delawarensis,short,0,wetlands_inland,Wetland
+Ringed Kingfisher,Megaceryle torquata,resident,1,artificial_aquatic_marine,Wetland
+Ringed Kingfisher,Megaceryle torquata,resident,1,artificial_terrestrial,Wetland
+Ringed Kingfisher,Megaceryle torquata,resident,1,forest,Wetland
+Ringed Kingfisher,Megaceryle torquata,resident,1,marine_coastal_supratidal,Wetland
+Ringed Kingfisher,Megaceryle torquata,resident,1,marine_intertidal,Wetland
+Ringed Kingfisher,Megaceryle torquata,resident,1,marine_neritic,Wetland
+Ringed Kingfisher,Megaceryle torquata,resident,1,wetlands_inland,Wetland
+Ring-necked Duck,Aythya collaris,short,0,wetlands_inland,Wetland
+Ring-necked Pheasant,Phasianus colchicus,resident,1,artificial_terrestrial,Various
+Ring-necked Pheasant,Phasianus colchicus,resident,1,forest,Various
+Ring-necked Pheasant,Phasianus colchicus,resident,1,shrubland,Various
+Rock Pigeon,Columba livia,resident,1,artificial_terrestrial,Various
+Rock Pigeon,Columba livia,resident,1,caves,Various
+Rock Pigeon,Columba livia,resident,1,rocky,Various
+Rock Ptarmigan,Lagopus muta,withdrawal,1,grassland,Grassland
+Rock Sandpiper,Calidris ptilocnemis,moderate,0,grassland,Wetland
+Rock Sandpiper,Calidris ptilocnemis,moderate,0,marine_intertidal,Wetland
+Rock Sandpiper,Calidris ptilocnemis,moderate,0,wetlands_inland,Wetland
+Rock Wren,Salpinctes obsoletus,short,0,rocky,Various
+Rock Wren,Salpinctes obsoletus,short,0,shrubland,Various
+Roseate Spoonbill,Platalea ajaja,withdrawal,1,wetlands_inland,Wetland
+Rose-breasted Grosbeak,Pheucticus ludovicianus,moderate,0,artificial_terrestrial,Woodland
+Rose-breasted Grosbeak,Pheucticus ludovicianus,moderate,0,forest,Woodland
+Ross's Goose,Chen rossii,moderate,0,artificial_aquatic_marine,Wetland
+Ross's Goose,Chen rossii,moderate,0,artificial_terrestrial,Wetland
+Ross's Goose,Chen rossii,moderate,0,grassland,Wetland
+Ross's Goose,Chen rossii,moderate,0,rocky,Wetland
+Ross's Goose,Chen rossii,moderate,0,wetlands_inland,Wetland
+Rough-legged Hawk,Buteo lagopus,moderate,0,artificial_terrestrial,Grassland
+Rough-legged Hawk,Buteo lagopus,moderate,0,forest,Grassland
+Rough-legged Hawk,Buteo lagopus,moderate,0,grassland,Grassland
+Rough-legged Hawk,Buteo lagopus,moderate,0,rocky,Grassland
+Rough-legged Hawk,Buteo lagopus,moderate,0,shrubland,Grassland
+Rough-legged Hawk,Buteo lagopus,moderate,0,wetlands_inland,Grassland
+Royal Tern,Thalasseus maximus,short,0,marine_coastal_supratidal,Wetland
+Royal Tern,Thalasseus maximus,short,0,marine_intertidal,Wetland
+Royal Tern,Thalasseus maximus,short,0,marine_neritic,Wetland
+Ruby-crowned Kinglet,Regulus calendula,short,0,forest,Woodland
+Ruby-throated Hummingbird,Archilochus colubris,moderate,0,artificial_terrestrial,Woodland
+Ruby-throated Hummingbird,Archilochus colubris,moderate,0,forest,Woodland
+Ruby-throated Hummingbird,Archilochus colubris,moderate,0,shrubland,Woodland
+Ruddy Duck,Oxyura jamaicensis,short,0,marine_coastal_supratidal,Wetland
+Ruddy Duck,Oxyura jamaicensis,short,0,marine_neritic,Wetland
+Ruddy Duck,Oxyura jamaicensis,short,0,wetlands_inland,Wetland
+Ruddy Turnstone,Arenaria interpres,moderate,0,grassland,Wetland
+Ruddy Turnstone,Arenaria interpres,moderate,0,marine_intertidal,Wetland
+Ruddy Turnstone,Arenaria interpres,moderate,0,marine_neritic,Wetland
+Ruddy Turnstone,Arenaria interpres,moderate,0,wetlands_inland,Wetland
+Ruffed Grouse,Bonasa umbellus,resident,1,forest,Woodland
+Rufous Hummingbird,Selasphorus rufus,moderate,0,artificial_terrestrial,Woodland
+Rufous Hummingbird,Selasphorus rufus,moderate,0,forest,Woodland
+Rufous Hummingbird,Selasphorus rufus,moderate,0,shrubland,Woodland
+Rufous-crowned Sparrow,Aimophila ruficeps,resident,1,forest,Shrubland
+Rufous-crowned Sparrow,Aimophila ruficeps,resident,1,grassland,Shrubland
+Rufous-crowned Sparrow,Aimophila ruficeps,resident,1,shrubland,Shrubland
+Rufous-winged Sparrow,Peucaea carpalis,resident,1,grassland,Shrubland
+Rufous-winged Sparrow,Peucaea carpalis,resident,1,shrubland,Shrubland
+Rusty Blackbird,Euphagus carolinus,moderate,0,wetlands_inland,Wetland
+Sage Thrasher,Oreoscoptes montanus,short,0,shrubland,Shrubland
+Sanderling,Calidris alba,long,0,grassland,Wetland
+Sanderling,Calidris alba,long,0,marine_intertidal,Wetland
+Sanderling,Calidris alba,long,0,wetlands_inland,Wetland
+Sandhill Crane,Grus canadensis,moderate,0,grassland,Wetland
+Sandhill Crane,Grus canadensis,moderate,0,wetlands_inland,Wetland
+Sandwich Tern,Thalasseus sandvicensis,short,0,marine_intertidal,Wetland
+Sandwich Tern,Thalasseus sandvicensis,short,0,marine_neritic,Wetland
+Sandwich Tern,Thalasseus sandvicensis,short,0,marine_oceanic,Wetland
+Savannah Sparrow,Passerculus sandwichensis,short,0,artificial_terrestrial,Grassland
+Savannah Sparrow,Passerculus sandwichensis,short,0,grassland,Grassland
+Savannah Sparrow,Passerculus sandwichensis,short,0,marine_coastal_supratidal,Grassland
+Savannah Sparrow,Passerculus sandwichensis,short,0,marine_intertidal,Grassland
+Savannah Sparrow,Passerculus sandwichensis,short,0,shrubland,Grassland
+Savannah Sparrow,Passerculus sandwichensis,short,0,wetlands_inland,Grassland
+Say's Phoebe,Sayornis saya,short,0,artificial_terrestrial,Various
+Say's Phoebe,Sayornis saya,short,0,grassland,Various
+Say's Phoebe,Sayornis saya,short,0,shrubland,Various
+Scaled Quail,Callipepla squamata,resident,1,grassland,Shrubland
+Scaled Quail,Callipepla squamata,resident,1,shrubland,Shrubland
+Scarlet Tanager,Piranga olivacea,long,1,artificial_terrestrial,Woodland
+Scarlet Tanager,Piranga olivacea,long,1,forest,Woodland
+Scissor-tailed Flycatcher,Tyrannus forficatus,moderate,0,artificial_terrestrial,Shrubland
+Scissor-tailed Flycatcher,Tyrannus forficatus,moderate,0,forest,Shrubland
+Scissor-tailed Flycatcher,Tyrannus forficatus,moderate,0,grassland,Shrubland
+Scissor-tailed Flycatcher,Tyrannus forficatus,moderate,0,savanna,Shrubland
+Scissor-tailed Flycatcher,Tyrannus forficatus,moderate,0,shrubland,Shrubland
+Scott's Oriole,Icterus parisorum,short,0,desert,Shrubland
+Scott's Oriole,Icterus parisorum,short,0,shrubland,Shrubland
+Seaside Sparrow,Ammodramus maritimus,withdrawal,0,marine_intertidal,Wetland
+Sedge Wren,Cistothorus platensis,moderate,0,artificial_terrestrial,Wetland
+Sedge Wren,Cistothorus platensis,moderate,0,grassland,Wetland
+Sedge Wren,Cistothorus platensis,moderate,0,savanna,Wetland
+Sedge Wren,Cistothorus platensis,moderate,0,wetlands_inland,Wetland
+Semipalmated Plover,Charadrius semipalmatus,long,0,marine_coastal_supratidal,Wetland
+Semipalmated Plover,Charadrius semipalmatus,long,0,marine_intertidal,Wetland
+Semipalmated Plover,Charadrius semipalmatus,long,0,wetlands_inland,Wetland
+Semipalmated Sandpiper,Calidris pusilla,long,1,grassland,Wetland
+Semipalmated Sandpiper,Calidris pusilla,long,1,marine_coastal_supratidal,Wetland
+Semipalmated Sandpiper,Calidris pusilla,long,1,marine_intertidal,Wetland
+Semipalmated Sandpiper,Calidris pusilla,long,1,wetlands_inland,Wetland
+Sharp-shinned Hawk,Accipiter striatus,short,0,artificial_terrestrial,Woodland
+Sharp-shinned Hawk,Accipiter striatus,short,0,forest,Woodland
+Sharp-shinned Hawk,Accipiter striatus,short,0,savanna,Woodland
+Sharp-shinned Hawk,Accipiter striatus,short,0,shrubland,Woodland
+Sharp-tailed Grouse,Tympanuchus phasianellus,resident,1,forest,Shrubland
+Sharp-tailed Grouse,Tympanuchus phasianellus,resident,1,grassland,Shrubland
+Sharp-tailed Sparrow (Nelson's and Saltmarsh),Ammodramus nelsoni and caudacutus,short,0,marine_intertidal,Wetland
+Sharp-tailed Sparrow (Nelson's and Saltmarsh),Ammodramus nelsoni and caudacutus,short,0,wetlands_inland,Wetland
+Short-billed Dowitcher,Limnodromus griseus,moderate,0,grassland,Wetland
+Short-billed Dowitcher,Limnodromus griseus,moderate,0,marine_intertidal,Wetland
+Short-billed Dowitcher,Limnodromus griseus,moderate,0,wetlands_inland,Wetland
+Short-eared Owl,Asio flammeus,short,0,artificial_terrestrial,Grassland
+Short-eared Owl,Asio flammeus,short,0,grassland,Grassland
+Short-eared Owl,Asio flammeus,short,0,wetlands_inland,Grassland
+Short-tailed Hawk,Buteo brachyurus,withdrawal,0,forest,Woodland
+Short-tailed Hawk,Buteo brachyurus,withdrawal,0,savanna,Woodland
+Smith's Longspur,Calcarius pictus,moderate,0,artificial_terrestrial,Grassland
+Smith's Longspur,Calcarius pictus,moderate,0,grassland,Grassland
+Smith's Longspur,Calcarius pictus,moderate,0,shrubland,Grassland
+Smith's Longspur,Calcarius pictus,moderate,0,wetlands_inland,Grassland
+Snail Kite,Rostrhamus sociabilis,resident,1,artificial_aquatic_marine,Wetland
+Snail Kite,Rostrhamus sociabilis,resident,1,wetlands_inland,Wetland
+Snow Bunting,Plectrophenax nivalis,moderate,0,grassland,Grassland
+Snow Bunting,Plectrophenax nivalis,moderate,0,marine_coastal_supratidal,Grassland
+Snow Bunting,Plectrophenax nivalis,moderate,0,rocky,Grassland
+Snow Goose,Chen caerulescens,moderate,0,artificial_terrestrial,Wetland
+Snow Goose,Chen caerulescens,moderate,0,grassland,Wetland
+Snow Goose,Chen caerulescens,moderate,0,marine_intertidal,Wetland
+Snow Goose,Chen caerulescens,moderate,0,rocky,Wetland
+Snow Goose,Chen caerulescens,moderate,0,wetlands_inland,Wetland
+Snowy Egret,Egretta thula,short,0,marine_intertidal,Wetland
+Snowy Egret,Egretta thula,short,0,wetlands_inland,Wetland
+Snowy Owl,Bubo scandiacus,irruptive,0,artificial_terrestrial,Grassland
+Snowy Owl,Bubo scandiacus,irruptive,0,grassland,Grassland
+Snowy Owl,Bubo scandiacus,irruptive,0,wetlands_inland,Grassland
+Snowy Plover,Charadrius nivosus,short,0,artificial_aquatic_marine,Wetland
+Snowy Plover,Charadrius nivosus,short,0,desert,Wetland
+Snowy Plover,Charadrius nivosus,short,0,grassland,Wetland
+Snowy Plover,Charadrius nivosus,short,0,marine_coastal_supratidal,Wetland
+Snowy Plover,Charadrius nivosus,short,0,marine_intertidal,Wetland
+Snowy Plover,Charadrius nivosus,short,0,marine_neritic,Wetland
+Snowy Plover,Charadrius nivosus,short,0,wetlands_inland,Wetland
+Solitary Sandpiper,Tringa solitaria,long,0,artificial_aquatic_marine,Wetland
+Solitary Sandpiper,Tringa solitaria,long,0,forest,Wetland
+Solitary Sandpiper,Tringa solitaria,long,0,grassland,Wetland
+Solitary Sandpiper,Tringa solitaria,long,0,savanna,Wetland
+Solitary Sandpiper,Tringa solitaria,long,0,wetlands_inland,Wetland
+"Solitary Vireo complex (Plumbeous, Cassin's, and Blue-headed Vireos)","Vireo plumbeus, cassinii, and solitarius",moderate,0,forest,Woodland
+Song Sparrow,Melospiza melodia,short,0,artificial_terrestrial,Shrubland
+Song Sparrow,Melospiza melodia,short,0,grassland,Shrubland
+Song Sparrow,Melospiza melodia,short,0,marine_intertidal,Shrubland
+Song Sparrow,Melospiza melodia,short,0,shrubland,Shrubland
+Song Sparrow,Melospiza melodia,short,0,wetlands_inland,Shrubland
+Sora,Porzana carolina,short,0,wetlands_inland,Wetland
+Spot-breasted Oriole,Icterus pectoralis,resident,1,artificial_terrestrial,Various
+Spot-breasted Oriole,Icterus pectoralis,resident,1,forest,Various
+Spot-breasted Oriole,Icterus pectoralis,resident,1,shrubland,Various
+Spotted Dove,Streptopelia chinensis,resident,1,artificial_terrestrial,Various
+Spotted Dove,Streptopelia chinensis,resident,1,forest,Various
+Spotted Dove,Streptopelia chinensis,resident,1,wetlands_inland,Various
+Spotted Owl,Strix occidentalis,resident,1,forest,Woodland
+Spotted Sandpiper,Actitis macularius,moderate,0,artificial_aquatic_marine,Wetland
+Spotted Sandpiper,Actitis macularius,moderate,0,marine_coastal_supratidal,Wetland
+Spotted Sandpiper,Actitis macularius,moderate,0,marine_intertidal,Wetland
+Spotted Sandpiper,Actitis macularius,moderate,0,wetlands_inland,Wetland
+Spotted Towhee,Pipilo maculatus,short,0,artificial_terrestrial,Shrubland
+Spotted Towhee,Pipilo maculatus,short,0,forest,Shrubland
+Spotted Towhee,Pipilo maculatus,short,0,shrubland,Shrubland
+Sprague's Pipit,Anthus spragueii,moderate,0,artificial_terrestrial,Grassland
+Sprague's Pipit,Anthus spragueii,moderate,0,grassland,Grassland
+Spruce Grouse,Falcipennis canadensis,resident,1,forest,Woodland
+Steller's Jay,Cyanocitta stelleri,resident,1,artificial_terrestrial,Woodland
+Steller's Jay,Cyanocitta stelleri,resident,1,forest,Woodland
+Stilt Sandpiper,Calidris himantopus,long,0,artificial_aquatic_marine,Wetland
+Stilt Sandpiper,Calidris himantopus,long,0,forest,Wetland
+Stilt Sandpiper,Calidris himantopus,long,0,grassland,Wetland
+Stilt Sandpiper,Calidris himantopus,long,0,wetlands_inland,Wetland
+Sulphur-bellied Flycatcher,Myiodynastes luteiventris,moderate,1,artificial_terrestrial,Woodland
+Sulphur-bellied Flycatcher,Myiodynastes luteiventris,moderate,1,forest,Woodland
+Sulphur-bellied Flycatcher,Myiodynastes luteiventris,moderate,1,wetlands_inland,Woodland
+Summer Tanager,Piranga rubra,moderate,0,artificial_terrestrial,Woodland
+Summer Tanager,Piranga rubra,moderate,0,forest,Woodland
+Surf Scoter,Melanitta perspicillata,moderate,0,forest,Wetland
+Surf Scoter,Melanitta perspicillata,moderate,0,marine_neritic,Wetland
+Surf Scoter,Melanitta perspicillata,moderate,0,wetlands_inland,Wetland
+Surfbird,Calidris virgata,moderate,0,grassland,Wetland
+Surfbird,Calidris virgata,moderate,0,marine_intertidal,Wetland
+Surfbird,Calidris virgata,moderate,0,rocky,Wetland
+Swainson's Hawk,Buteo swainsoni,long,0,artificial_terrestrial,Various
+Swainson's Hawk,Buteo swainsoni,long,0,grassland,Various
+Swainson's Hawk,Buteo swainsoni,long,0,savanna,Various
+Swainson's Hawk,Buteo swainsoni,long,0,shrubland,Various
+Swainson's Thrush,Catharus ustulatus,long,0,artificial_terrestrial,Woodland
+Swainson's Thrush,Catharus ustulatus,long,0,forest,Woodland
+Swainson's Warbler,Limnothlypis swainsonii,moderate,0,forest,Woodland
+Swainson's Warbler,Limnothlypis swainsonii,moderate,0,shrubland,Woodland
+Swainson's Warbler,Limnothlypis swainsonii,moderate,0,wetlands_inland,Woodland
+Swallow-tailed Kite,Elanoides forficatus,long,0,forest,Woodland
+Swamp Sparrow,Melospiza georgiana,short,0,wetlands_inland,Wetland
+Tennessee Warbler,Oreothlypis peregrina,long,0,artificial_terrestrial,Woodland
+Tennessee Warbler,Oreothlypis peregrina,long,0,forest,Woodland
+Tennessee Warbler,Oreothlypis peregrina,long,0,shrubland,Woodland
+Thayer's Gull,Larus thayeri,moderate,0,artificial_terrestrial,Wetland
+Thayer's Gull,Larus thayeri,moderate,0,marine_coastal_supratidal,Wetland
+Thayer's Gull,Larus thayeri,moderate,0,marine_intertidal,Wetland
+Thayer's Gull,Larus thayeri,moderate,0,marine_neritic,Wetland
+Thayer's Gull,Larus thayeri,moderate,0,rocky,Wetland
+Thick-billed Kingbird,Tyrannus crassirostris,withdrawal,0,artificial_terrestrial,Woodland
+Thick-billed Kingbird,Tyrannus crassirostris,withdrawal,0,forest,Woodland
+Thick-billed Kingbird,Tyrannus crassirostris,withdrawal,0,savanna,Woodland
+Thick-billed Kingbird,Tyrannus crassirostris,withdrawal,0,shrubland,Woodland
+Thick-billed Kingbird,Tyrannus crassirostris,withdrawal,0,wetlands_inland,Woodland
+Thick-billed Murre,Uria lomvia,short,1,marine_coastal_supratidal,Ocean
+Thick-billed Murre,Uria lomvia,short,1,marine_neritic,Ocean
+Thick-billed Murre,Uria lomvia,short,1,marine_oceanic,Ocean
+Townsend's Solitaire,Myadestes townsendi,short,0,forest,Woodland
+Townsend's Solitaire,Myadestes townsendi,short,0,shrubland,Woodland
+Townsend's Warbler,Setophaga townsendi,moderate,0,forest,Woodland
+Tree Swallow,Tachycineta bicolor,moderate,0,artificial_terrestrial,Various
+Tree Swallow,Tachycineta bicolor,moderate,0,wetlands_inland,Various
+Tricolored Blackbird,Agelaius tricolor,short,0,artificial_terrestrial,Wetland
+Tricolored Blackbird,Agelaius tricolor,short,0,wetlands_inland,Wetland
+Tricolored Heron,Egretta tricolor,short,0,forest,Wetland
+Tricolored Heron,Egretta tricolor,short,0,marine_intertidal,Wetland
+Tricolored Heron,Egretta tricolor,short,0,wetlands_inland,Wetland
+Tropical Kingbird,Tyrannus melancholicus,withdrawal,1,artificial_terrestrial,Woodland
+Tropical Kingbird,Tyrannus melancholicus,withdrawal,1,forest,Woodland
+Tropical Kingbird,Tyrannus melancholicus,withdrawal,1,shrubland,Woodland
+Tropical Kingbird,Tyrannus melancholicus,withdrawal,1,wetlands_inland,Woodland
+Tropical Parula,Setophaga pitiayumi,withdrawal,1,forest,Woodland
+Tropical Parula,Setophaga pitiayumi,withdrawal,1,savanna,Woodland
+Trumpeter Swan,Cygnus buccinator,short,0,marine_neritic,Wetland
+Trumpeter Swan,Cygnus buccinator,short,0,wetlands_inland,Wetland
+Tufted and Black-crested Titmouse,Baeolophus bicolor and atricristatus,resident,1,artificial_terrestrial,Woodland
+Tufted and Black-crested Titmouse,Baeolophus bicolor and atricristatus,resident,1,forest,Woodland
+Tufted and Black-crested Titmouse,Baeolophus bicolor and atricristatus,resident,1,shrubland,Woodland
+Tufted Titmouse,Baeolophus bicolor,resident,1,artificial_terrestrial,Woodland
+Tufted Titmouse,Baeolophus bicolor,resident,1,forest,Woodland
+Tufted Titmouse,Baeolophus bicolor,resident,1,shrubland,Woodland
+Tundra Swan,Cygnus columbianus,moderate,0,artificial_terrestrial,Wetland
+Tundra Swan,Cygnus columbianus,moderate,0,grassland,Wetland
+Tundra Swan,Cygnus columbianus,moderate,0,wetlands_inland,Wetland
+Turkey Vulture,Cathartes aura,withdrawal,0,artificial_terrestrial,Various
+Turkey Vulture,Cathartes aura,withdrawal,0,desert,Various
+Turkey Vulture,Cathartes aura,withdrawal,0,forest,Various
+Turkey Vulture,Cathartes aura,withdrawal,0,grassland,Various
+Turkey Vulture,Cathartes aura,withdrawal,0,shrubland,Various
+Upland Sandpiper,Bartramia longicauda,long,1,artificial_terrestrial,Grassland
+Upland Sandpiper,Bartramia longicauda,long,1,grassland,Grassland
+Varied Bunting,Passerina versicolor,short,0,shrubland,Shrubland
+Varied Thrush,Ixoreus naevius,short,0,forest,Woodland
+Vaux's Swift,Chaetura vauxi,moderate,0,artificial_terrestrial,Woodland
+Vaux's Swift,Chaetura vauxi,moderate,0,forest,Woodland
+Veery,Catharus fuscescens,long,1,forest,Woodland
+Veery,Catharus fuscescens,long,1,savanna,Woodland
+Verdin,Auriparus flaviceps,resident,1,desert,Shrubland
+Verdin,Auriparus flaviceps,resident,1,savanna,Shrubland
+Verdin,Auriparus flaviceps,resident,1,shrubland,Shrubland
+Vermilion Flycatcher,Pyrocephalus rubinus,short,0,artificial_terrestrial,Shrubland
+Vermilion Flycatcher,Pyrocephalus rubinus,short,0,forest,Shrubland
+Vermilion Flycatcher,Pyrocephalus rubinus,short,0,savanna,Shrubland
+Vermilion Flycatcher,Pyrocephalus rubinus,short,0,shrubland,Shrubland
+Vesper Sparrow,Pooecetes gramineus,moderate,0,artificial_terrestrial,Grassland
+Vesper Sparrow,Pooecetes gramineus,moderate,0,grassland,Grassland
+Vesper Sparrow,Pooecetes gramineus,moderate,0,shrubland,Grassland
+Violet-green Swallow,Tachycineta thalassina,moderate,0,desert,Woodland
+Violet-green Swallow,Tachycineta thalassina,moderate,0,forest,Woodland
+Violet-green Swallow,Tachycineta thalassina,moderate,0,grassland,Woodland
+Violet-green Swallow,Tachycineta thalassina,moderate,0,marine_intertidal,Woodland
+Violet-green Swallow,Tachycineta thalassina,moderate,0,rocky,Woodland
+Violet-green Swallow,Tachycineta thalassina,moderate,0,shrubland,Woodland
+Virginia Rail,Rallus limicola,short,0,wetlands_inland,Wetland
+Virginia's Warbler,Oreothlypis virginiae,moderate,0,forest,Shrubland
+Virginia's Warbler,Oreothlypis virginiae,moderate,0,shrubland,Shrubland
+Wandering Tattler,Tringa incana,long,0,marine_intertidal,Wetland
+Wandering Tattler,Tringa incana,long,0,marine_neritic,Wetland
+Wandering Tattler,Tringa incana,long,0,wetlands_inland,Wetland
+Warbling Vireo,Vireo gilvus,moderate,0,forest,Woodland
+Warbling Vireo,Vireo gilvus,moderate,0,wetlands_inland,Woodland
+Western Bluebird,Sialia mexicana,short,0,artificial_terrestrial,Woodland
+Western Bluebird,Sialia mexicana,short,0,forest,Woodland
+Western Bluebird,Sialia mexicana,short,0,shrubland,Woodland
+Western Grebe,Aechmophorus occidentalis,short,0,wetlands_inland,Wetland
+Western Gull,Larus occidentalis,withdrawal,0,marine_coastal_supratidal,Wetland
+Western Gull,Larus occidentalis,withdrawal,0,marine_intertidal,Wetland
+Western Gull,Larus occidentalis,withdrawal,0,marine_neritic,Wetland
+Western Kingbird,Tyrannus verticalis,moderate,0,artificial_terrestrial,Woodland
+Western Kingbird,Tyrannus verticalis,moderate,0,forest,Woodland
+Western Kingbird,Tyrannus verticalis,moderate,0,grassland,Woodland
+Western Kingbird,Tyrannus verticalis,moderate,0,savanna,Woodland
+Western Kingbird,Tyrannus verticalis,moderate,0,shrubland,Woodland
+Western Meadowlark,Sturnella neglecta,short,0,artificial_terrestrial,Grassland
+Western Meadowlark,Sturnella neglecta,short,0,grassland,Grassland
+Western Meadowlark,Sturnella neglecta,short,0,shrubland,Grassland
+Western Sandpiper,Calidris mauri,long,0,grassland,Wetland
+Western Sandpiper,Calidris mauri,long,0,marine_coastal_supratidal,Wetland
+Western Sandpiper,Calidris mauri,long,0,marine_intertidal,Wetland
+Western Sandpiper,Calidris mauri,long,0,marine_neritic,Wetland
+Western Screech-Owl,Megascops kennicottii,resident,1,artificial_terrestrial,Woodland
+Western Screech-Owl,Megascops kennicottii,resident,1,desert,Woodland
+Western Screech-Owl,Megascops kennicottii,resident,1,forest,Woodland
+Western Screech-Owl,Megascops kennicottii,resident,1,shrubland,Woodland
+Western Scrub-Jay,Aphelocoma californica,resident,1,artificial_terrestrial,Shrubland
+Western Scrub-Jay,Aphelocoma californica,resident,1,forest,Shrubland
+Western Scrub-Jay,Aphelocoma californica,resident,1,shrubland,Shrubland
+Western Tanager,Piranga ludoviciana,moderate,0,artificial_terrestrial,Woodland
+Western Tanager,Piranga ludoviciana,moderate,0,forest,Woodland
+Western Tanager,Piranga ludoviciana,moderate,0,shrubland,Woodland
+Western Wood-Pewee,Contopus sordidulus,long,1,forest,Woodland
+Whimbrel,Numenius phaeopus,moderate,0,artificial_aquatic_marine,Wetland
+Whimbrel,Numenius phaeopus,moderate,0,forest,Wetland
+Whimbrel,Numenius phaeopus,moderate,0,grassland,Wetland
+Whimbrel,Numenius phaeopus,moderate,0,marine_coastal_supratidal,Wetland
+Whimbrel,Numenius phaeopus,moderate,0,marine_intertidal,Wetland
+Whimbrel,Numenius phaeopus,moderate,0,marine_neritic,Wetland
+Whimbrel,Numenius phaeopus,moderate,0,shrubland,Wetland
+Whimbrel,Numenius phaeopus,moderate,0,wetlands_inland,Wetland
+Whiskered Screech-Owl,Megascops trichopsis,resident,1,artificial_terrestrial,Woodland
+Whiskered Screech-Owl,Megascops trichopsis,resident,1,forest,Woodland
+White Ibis,Eudocimus albus,withdrawal,1,forest,Wetland
+White Ibis,Eudocimus albus,withdrawal,1,wetlands_inland,Wetland
+White-breasted Nuthatch,Sitta carolinensis,resident,1,artificial_terrestrial,Woodland
+White-breasted Nuthatch,Sitta carolinensis,resident,1,forest,Woodland
+White-crowned Pigeon,Patagioenas leucocephala,resident,1,forest,Woodland
+White-crowned Sparrow,Zonotrichia leucophrys,moderate,0,artificial_terrestrial,Shrubland
+White-crowned Sparrow,Zonotrichia leucophrys,moderate,0,forest,Shrubland
+White-crowned Sparrow,Zonotrichia leucophrys,moderate,0,grassland,Shrubland
+White-crowned Sparrow,Zonotrichia leucophrys,moderate,0,shrubland,Shrubland
+White-crowned Sparrow,Zonotrichia leucophrys,moderate,0,wetlands_inland,Shrubland
+White-eyed Vireo,Vireo griseus,short,0,artificial_terrestrial,Shrubland
+White-eyed Vireo,Vireo griseus,short,0,forest,Shrubland
+White-eyed Vireo,Vireo griseus,short,0,savanna,Shrubland
+White-eyed Vireo,Vireo griseus,short,0,shrubland,Shrubland
+White-faced Ibis,Plegadis chihi,short,0,wetlands_inland,Wetland
+White-headed Woodpecker,Picoides albolarvatus,resident,1,forest,Woodland
+White-tailed Hawk,Buteo albicaudatus,resident,1,artificial_terrestrial,Grassland
+White-tailed Hawk,Buteo albicaudatus,resident,1,grassland,Grassland
+White-tailed Hawk,Buteo albicaudatus,resident,1,savanna,Grassland
+White-tailed Hawk,Buteo albicaudatus,resident,1,shrubland,Grassland
+White-tailed Kite,Elanus leucurus,withdrawal,1,artificial_terrestrial,Various
+White-tailed Kite,Elanus leucurus,withdrawal,1,grassland,Various
+White-tailed Kite,Elanus leucurus,withdrawal,1,marine_intertidal,Various
+White-tailed Kite,Elanus leucurus,withdrawal,1,savanna,Various
+White-tailed Kite,Elanus leucurus,withdrawal,1,shrubland,Various
+White-tailed Kite,Elanus leucurus,withdrawal,1,wetlands_inland,Various
+White-throated Sparrow,Zonotrichia albicollis,short,0,artificial_terrestrial,Woodland
+White-throated Sparrow,Zonotrichia albicollis,short,0,forest,Woodland
+White-throated Sparrow,Zonotrichia albicollis,short,0,shrubland,Woodland
+White-throated Swift,Aeronautes saxatalis,short,0,artificial_terrestrial,Various
+White-throated Swift,Aeronautes saxatalis,short,0,forest,Various
+White-throated Swift,Aeronautes saxatalis,short,0,grassland,Various
+White-throated Swift,Aeronautes saxatalis,short,0,rocky,Various
+White-throated Swift,Aeronautes saxatalis,short,0,shrubland,Various
+White-tipped Dove,Leptotila verreauxi,resident,1,artificial_terrestrial,Woodland
+White-tipped Dove,Leptotila verreauxi,resident,1,forest,Woodland
+White-tipped Dove,Leptotila verreauxi,resident,1,shrubland,Woodland
+White-winged Crossbill,Loxia leucoptera,withdrawal,1,forest,Woodland
+White-winged Dove,Zenaida asiatica,withdrawal,1,artificial_terrestrial,Various
+White-winged Dove,Zenaida asiatica,withdrawal,1,desert,Various
+White-winged Dove,Zenaida asiatica,withdrawal,1,forest,Various
+White-winged Dove,Zenaida asiatica,withdrawal,1,shrubland,Various
+White-winged Scoter,Melanitta fusca,moderate,0,forest,Wetland
+White-winged Scoter,Melanitta fusca,moderate,0,grassland,Wetland
+White-winged Scoter,Melanitta fusca,moderate,0,marine_neritic,Wetland
+White-winged Scoter,Melanitta fusca,moderate,0,wetlands_inland,Wetland
+Whooping Crane,Grus americana,moderate,0,marine_coastal_supratidal,Wetland
+Whooping Crane,Grus americana,moderate,0,wetlands_inland,Wetland
+Wild Turkey,Meleagris gallopavo,resident,1,artificial_terrestrial,Woodland
+Wild Turkey,Meleagris gallopavo,resident,1,forest,Woodland
+Wild Turkey,Meleagris gallopavo,resident,1,grassland,Woodland
+Wild Turkey,Meleagris gallopavo,resident,1,savanna,Woodland
+Wild Turkey,Meleagris gallopavo,resident,1,shrubland,Woodland
+Willet,Tringa semipalmata,moderate,0,marine_intertidal,Wetland
+Willet,Tringa semipalmata,moderate,0,wetlands_inland,Wetland
+Williamson's Sapsucker,Sphyrapicus thyroideus,short,0,forest,Woodland
+Willow Flycatcher,Empidonax traillii,long,0,artificial_terrestrial,Shrubland
+Willow Flycatcher,Empidonax traillii,long,0,forest,Shrubland
+Willow Flycatcher,Empidonax traillii,long,0,shrubland,Shrubland
+Willow Flycatcher,Empidonax traillii,long,0,wetlands_inland,Shrubland
+Willow Ptarmigan,Lagopus lagopus,withdrawal,1,forest,Shrubland
+Willow Ptarmigan,Lagopus lagopus,withdrawal,1,grassland,Shrubland
+Willow Ptarmigan,Lagopus lagopus,withdrawal,1,shrubland,Shrubland
+Wilson's Phalarope,Phalaropus tricolor,moderate,1,forest,Wetland
+Wilson's Phalarope,Phalaropus tricolor,moderate,1,grassland,Wetland
+Wilson's Phalarope,Phalaropus tricolor,moderate,1,marine_intertidal,Wetland
+Wilson's Phalarope,Phalaropus tricolor,moderate,1,wetlands_inland,Wetland
+Wilson's Plover,Charadrius wilsonia,short,0,marine_intertidal,Wetland
+Wilson's Snipe,Gallinago delicata,short,0,artificial_aquatic_marine,Wetland
+Wilson's Snipe,Gallinago delicata,short,0,forest,Wetland
+Wilson's Snipe,Gallinago delicata,short,0,grassland,Wetland
+Wilson's Snipe,Gallinago delicata,short,0,marine_neritic,Wetland
+Wilson's Snipe,Gallinago delicata,short,0,wetlands_inland,Wetland
+Wilson's Warbler,Cardellina pusilla,moderate,0,artificial_terrestrial,Shrubland
+Wilson's Warbler,Cardellina pusilla,moderate,0,forest,Shrubland
+Wilson's Warbler,Cardellina pusilla,moderate,0,grassland,Shrubland
+Wilson's Warbler,Cardellina pusilla,moderate,0,shrubland,Shrubland
+Wilson's Warbler,Cardellina pusilla,moderate,0,wetlands_inland,Shrubland
+Winter Wren,Troglodytes hiemalis,short,0,artificial_terrestrial,Woodland
+Winter Wren,Troglodytes hiemalis,short,0,forest,Woodland
+Winter Wren,Troglodytes hiemalis,short,0,shrubland,Woodland
+Wood Duck,Aix sponsa,short,0,forest,Wetland
+Wood Duck,Aix sponsa,short,0,wetlands_inland,Wetland
+Wood Stork,Mycteria americana,withdrawal,1,artificial_aquatic_marine,Wetland
+Wood Stork,Mycteria americana,withdrawal,1,forest,Wetland
+Wood Stork,Mycteria americana,withdrawal,1,grassland,Wetland
+Wood Stork,Mycteria americana,withdrawal,1,marine_intertidal,Wetland
+Wood Stork,Mycteria americana,withdrawal,1,wetlands_inland,Wetland
+Wood Thrush,Hylocichla mustelina,moderate,0,artificial_terrestrial,Woodland
+Wood Thrush,Hylocichla mustelina,moderate,0,forest,Woodland
+Worm-eating Warbler,Helmitheros vermivorum,moderate,0,forest,Woodland
+Wrentit,Chamaea fasciata,resident,1,shrubland,Shrubland
+Yellow Rail,Coturnicops noveboracensis,moderate,0,wetlands_inland,Wetland
+Yellow Warbler,Setophaga petechia,moderate,0,artificial_terrestrial,Shrubland
+Yellow Warbler,Setophaga petechia,moderate,0,forest,Shrubland
+Yellow Warbler,Setophaga petechia,moderate,0,shrubland,Shrubland
+Yellow-bellied Flycatcher,Empidonax flaviventris,moderate,1,artificial_terrestrial,Woodland
+Yellow-bellied Flycatcher,Empidonax flaviventris,moderate,1,forest,Woodland
+Yellow-bellied Flycatcher,Empidonax flaviventris,moderate,1,wetlands_inland,Woodland
+Yellow-bellied Sapsucker,Sphyrapicus varius,short,0,artificial_terrestrial,Woodland
+Yellow-bellied Sapsucker,Sphyrapicus varius,short,0,forest,Woodland
+Yellow-billed Cuckoo,Coccyzus americanus,long,1,artificial_terrestrial,Woodland
+Yellow-billed Cuckoo,Coccyzus americanus,long,1,forest,Woodland
+Yellow-billed Cuckoo,Coccyzus americanus,long,1,savanna,Woodland
+Yellow-billed Cuckoo,Coccyzus americanus,long,1,shrubland,Woodland
+Yellow-billed Loon,Gavia adamsii,moderate,0,marine_neritic,Wetland
+Yellow-billed Loon,Gavia adamsii,moderate,0,wetlands_inland,Wetland
+Yellow-billed Magpie,Pica nuttalli,resident,1,artificial_terrestrial,Woodland
+Yellow-billed Magpie,Pica nuttalli,resident,1,forest,Woodland
+Yellow-breasted Chat,Icteria virens,moderate,0,artificial_terrestrial,Shrubland
+Yellow-breasted Chat,Icteria virens,moderate,0,forest,Shrubland
+Yellow-breasted Chat,Icteria virens,moderate,0,shrubland,Shrubland
+Yellow-crowned Night-Heron,Nyctanassa violacea,withdrawal,0,forest,Wetland
+Yellow-crowned Night-Heron,Nyctanassa violacea,withdrawal,0,marine_intertidal,Wetland
+Yellow-crowned Night-Heron,Nyctanassa violacea,withdrawal,0,wetlands_inland,Wetland
+Yellow-eyed Junco,Junco phaeonotus,resident,1,forest,Woodland
+Yellow-eyed Junco,Junco phaeonotus,resident,1,grassland,Woodland
+Yellow-eyed Junco,Junco phaeonotus,resident,1,shrubland,Woodland
+Yellow-footed Gull,Larus livens,short,0,marine_coastal_supratidal,Wetland
+Yellow-footed Gull,Larus livens,short,0,marine_intertidal,Wetland
+Yellow-footed Gull,Larus livens,short,0,marine_neritic,Wetland
+Yellow-headed Blackbird,Xanthocephalus xanthocephalus,short,0,artificial_terrestrial,Wetland
+Yellow-headed Blackbird,Xanthocephalus xanthocephalus,short,0,wetlands_inland,Wetland
+Yellow-rumped Warbler,Setophaga coronata,short,0,artificial_terrestrial,Woodland
+Yellow-rumped Warbler,Setophaga coronata,short,0,forest,Woodland
+Yellow-rumped Warbler,Setophaga coronata,short,0,shrubland,Woodland
+Yellow-throated Vireo,Vireo flavifrons,moderate,0,artificial_terrestrial,Woodland
+Yellow-throated Vireo,Vireo flavifrons,moderate,0,forest,Woodland
+Yellow-throated Warbler,Setophaga dominica,short,0,artificial_terrestrial,Woodland
+Yellow-throated Warbler,Setophaga dominica,short,0,forest,Woodland
+Yellow-throated Warbler,Setophaga dominica,short,0,shrubland,Woodland
+Yellow-throated Warbler,Setophaga dominica,short,0,wetlands_inland,Woodland
+Zone-tailed Hawk,Buteo albonotatus,short,0,artificial_terrestrial,Woodland
+Zone-tailed Hawk,Buteo albonotatus,short,0,forest,Woodland
+Zone-tailed Hawk,Buteo albonotatus,short,0,shrubland,Woodland
