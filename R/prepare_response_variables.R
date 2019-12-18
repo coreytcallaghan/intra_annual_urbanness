@@ -43,7 +43,9 @@ setwd("Data/species_monthly_summaries")
 monthly_dat <- list.files(pattern = ".RDS") %>%
   map_dfr(readRDS) %>%
   dplyr::filter(COMMON_NAME %in% species_to_keep)
-  
+
+length(unique(monthly_dat$COMMON_NAME))
+
 setwd("..")
 setwd("..")
 saveRDS(monthly_dat, "Data/response_variables.RDS")

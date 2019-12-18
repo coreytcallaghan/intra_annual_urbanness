@@ -234,6 +234,14 @@ predictor_variables <- species %>%
   left_join(., mig_habitat_final) %>%
   left_join(., clutch_mating_final)
 
+# check the class of the variables
+skimr::skim(predictor_variables)
+
+# clutch size is being treated as a character for some reason
+# so I'll rewrite that to numeric
+predictor_variables <- predictor_variables %>%
+  mutate(clutch_size=as.numeric(as.character(clutch_size)))
+
 # write out predictor variables
 saveRDS(predictor_variables, "Data/predictor_variables.RDS")
 
