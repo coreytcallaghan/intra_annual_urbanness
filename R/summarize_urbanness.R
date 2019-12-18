@@ -8,6 +8,7 @@ library(tidyr)
 library(ggplot2)
 library(scales)
 library(GGally)
+library(tibble)
 
 # read in dat
 dat <- readRDS("Data/response_variables.RDS")
@@ -149,6 +150,11 @@ ggplot(summary, aes(x=total_urbanness, y=intra_annual_variance))+
 ## Now read in predcitor variables to see some quick look at variability
 ## to see if that is predicted by different things
 predictors <- readRDS("Data/predictor_variables.RDS")
+
+## calculate the percent of missing data for each trait
+percent_missing <- as.data.frame(colMeans(is.na(predictors))) %>%
+  rownames_to_column(var="Column_name") %>%
+  rename(proportion_missing=`colMeans(is.na(predictors))`)
 
 analysis_dat <- summary %>%
   left_join(., predictors)
