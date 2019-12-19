@@ -1,5 +1,7 @@
 # Intra-annual urbanness
-Investigating intra-annual urbanness patterns using a trait-based approach in North American birds
+Investigating intra-annual urbanness patterns using a trait-based approach in North American birds.
+
+Writing the paper here: https://www.overleaf.com/project/5d2e5ef80778207052220560
 
 ## Step 1: Get list of potential species from US/North America
 - A species must have a minimum of 250 observations in each month
