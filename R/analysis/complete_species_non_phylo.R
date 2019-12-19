@@ -226,33 +226,33 @@ vif_summary <- bind_rows(results_list[[1]][[1]],
                          results_list[[11]][[1]],
                          results_list[[12]][[1]])
 
-global_model_results <- bind_rows(results_list[[1]][[2]],
-                                  results_list[[2]][[2]],
-                                  results_list[[3]][[2]],
-                                  results_list[[4]][[2]],
-                                  results_list[[5]][[2]],
-                                  results_list[[6]][[2]],
-                                  results_list[[7]][[2]],
-                                  results_list[[8]][[2]],
-                                  results_list[[9]][[2]],
-                                  results_list[[10]][[2]],
-                                  results_list[[11]][[2]],
-                                  results_list[[12]][[2]])
+non_phylo_global_model_results <- bind_rows(results_list[[1]][[2]],
+                                            results_list[[2]][[2]],
+                                            results_list[[3]][[2]],
+                                            results_list[[4]][[2]],
+                                            results_list[[5]][[2]],
+                                            results_list[[6]][[2]],
+                                            results_list[[7]][[2]],
+                                            results_list[[8]][[2]],
+                                            results_list[[9]][[2]],
+                                            results_list[[10]][[2]],
+                                            results_list[[11]][[2]],
+                                            results_list[[12]][[2]])
 
-model_averaging_results <- bind_rows(results_list[[1]][[3]],
-                                     results_list[[2]][[3]],
-                                     results_list[[3]][[3]],
-                                     results_list[[4]][[3]],
-                                     results_list[[5]][[3]],
-                                     results_list[[6]][[3]],
-                                     results_list[[7]][[3]],
-                                     results_list[[8]][[3]],
-                                     results_list[[9]][[3]],
-                                     results_list[[10]][[3]],
-                                     results_list[[11]][[3]],
-                                     results_list[[12]][[3]])
+non_phylo_model_averaging_results <- bind_rows(results_list[[1]][[3]],
+                                               results_list[[2]][[3]],
+                                               results_list[[3]][[3]],
+                                               results_list[[4]][[3]],
+                                               results_list[[5]][[3]],
+                                               results_list[[6]][[3]],
+                                               results_list[[7]][[3]],
+                                               results_list[[8]][[3]],
+                                               results_list[[9]][[3]],
+                                               results_list[[10]][[3]],
+                                               results_list[[11]][[3]],
+                                               results_list[[12]][[3]])
 
-rm(list=setdiff(ls(), c("vif_summary", "global_model_results", "model_averaging_results")))
+rm(list=setdiff(ls(), c("vif_summary", "non_phylo_global_model_results", "non_phylo_model_averaging_results")))
 
 save.image("Results/complete_species_non_phylo.RData")
 

@@ -119,7 +119,7 @@ read_all_trees<-function(path){
   
 }
 
-all_tress <- read_all_trees()
+#all_tress <- read_all_trees()
 
 # a function to subset the tree to the tips of the 215 species
 # described above
@@ -220,7 +220,7 @@ phylosignal_analysis <- function(analysis, usa_tree){
 
 phylosignal_results <- phylosignal_analysis(analysis, usa_tree)
 
-saveRDS("Results/complete_phylosignal_analysis.RDS")
+saveRDS(phylosignal_results, "Results/complete_phylosignal_analysis.RDS")
 
 
 ###################################################################
@@ -356,33 +356,33 @@ results_list <- lapply(unique(analysis$MONTH), function(x){modelling_function(x)
 # out into a fashion to work with! 
 # this is a lazy way to deal with it
 # reflecting my lack of coding ability in regards to lists of lists
-global_model_results <- bind_rows(results_list[[1]][[1]],
-                         results_list[[2]][[1]],
-                         results_list[[3]][[1]],
-                         results_list[[4]][[1]],
-                         results_list[[5]][[1]],
-                         results_list[[6]][[1]],
-                         results_list[[7]][[1]],
-                         results_list[[8]][[1]],
-                         results_list[[9]][[1]],
-                         results_list[[10]][[1]],
-                         results_list[[11]][[1]],
-                         results_list[[12]][[1]])
+phylo_global_model_results <- bind_rows(results_list[[1]][[1]],
+                                        results_list[[2]][[1]],
+                                        results_list[[3]][[1]],
+                                        results_list[[4]][[1]],
+                                        results_list[[5]][[1]],
+                                        results_list[[6]][[1]],
+                                        results_list[[7]][[1]],
+                                        results_list[[8]][[1]],
+                                        results_list[[9]][[1]],
+                                        results_list[[10]][[1]],
+                                        results_list[[11]][[1]],
+                                        results_list[[12]][[1]])
 
-model_averaging_results <- bind_rows(results_list[[1]][[2]],
-                                  results_list[[2]][[2]],
-                                  results_list[[3]][[2]],
-                                  results_list[[4]][[2]],
-                                  results_list[[5]][[2]],
-                                  results_list[[6]][[2]],
-                                  results_list[[7]][[2]],
-                                  results_list[[8]][[2]],
-                                  results_list[[9]][[2]],
-                                  results_list[[10]][[2]],
-                                  results_list[[11]][[2]],
-                                  results_list[[12]][[2]])
+phylo_model_averaging_results <- bind_rows(results_list[[1]][[2]],
+                                           results_list[[2]][[2]],
+                                           results_list[[3]][[2]],
+                                           results_list[[4]][[2]],
+                                           results_list[[5]][[2]],
+                                           results_list[[6]][[2]],
+                                           results_list[[7]][[2]],
+                                           results_list[[8]][[2]],
+                                           results_list[[9]][[2]],
+                                           results_list[[10]][[2]],
+                                           results_list[[11]][[2]],
+                                           results_list[[12]][[2]])
 
-rm(list=setdiff(ls(), c("global_model_results", "model_averaging_results")))
+rm(list=setdiff(ls(), c("phylo_global_model_results", "phylo_model_averaging_results")))
 
 save.image("Results/complete_species_phylo.RData")
 
