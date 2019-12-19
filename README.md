@@ -12,6 +12,8 @@ Writing the paper here: https://www.overleaf.com/project/5d2e5ef8077820705222056
 ## Step 3: Create response variables
 - Urbanness scores for each of 12 months
   - defined as the median of the histogram for a species
-- Resampled edf in the wiggliness of a species for day of the year
+- Resampled urbanness for each month to account for potential intra-specific differences in urbanness
 
 ## Step 4: Collate predictor variables
+
+## Step 5: Model all 'complete' species for which there is trait data
