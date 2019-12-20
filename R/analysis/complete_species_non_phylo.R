@@ -125,35 +125,41 @@ modelling_function <- function(month) {
   
   # filter data for a given month
   dat <- analysis %>%
-    dplyr::filter(MONTH==month)
+    dplyr::filter(MONTH==month) %>%
+    mutate(z.log_body_size=rescale(log_body_size)) %>%
+    mutate(z.log_flock_size=rescale(log_flock_size)) %>%
+    mutate(z.log_range_size=rescale(log_range_size)) %>%
+    mutate(z.brain_residual=rescale(brain_residual)) %>%
+    mutate(z.clutch_size=rescale(clutch_size)) %>%
+    mutate(z.habitat_generalism_scaled=rescale(habitat_generalism_scaled)) %>%
+    mutate(z.diet_breadth=rescale(diet_breadth))
   
   # fit a linear global model
-  lm.mod <- lm(response ~ log_body_size + log_flock_size + log_range_size + brain_residual +
-               clutch_size + habitat_generalism_scaled + diet_breadth,
-               data=dat, na.action="na.fail", weights=weights)
-  
   # standardize the model
-  # using the arm::standardize function
-  std.mod <- arm::standardize(lm.mod)
+  # using the arm::rescale function
+  lm.mod <- lm(response ~ z.log_body_size + z.log_flock_size + z.log_range_size + 
+                 z.brain_residual + z.clutch_size + z.habitat_generalism_scaled + 
+                 z.diet_breadth,
+               data=dat, na.action="na.fail", weights=weights)
   
   # get a dataframe of variance inflation factors
   # from the arm package
   # which shows how (if) the collinearity among predictors influences the model results
-  vif_df <- as.data.frame(vif(std.mod)) %>%
+  vif_df <- as.data.frame(vif(lm.mod)) %>%
     rownames_to_column(var="term") %>%
-    rename(VIF=`vif(std.mod)`) %>%
+    rename(VIF=`vif(lm.mod)`) %>%
     mutate(MONTH=month) %>%
     mutate(VIF=round(VIF, digits=2))
   
   # now create a 'summary' dataframe
-  summary_df <- tidy(std.mod) %>%
-    mutate(lwr_95_confint=confint(std.mod)[,1]) %>%
-    mutate(upr_95_confint=confint(std.mod)[,2]) %>%
+  summary_df <- tidy(lm.mod) %>%
+    mutate(lwr_95_confint=confint(lm.mod)[,1]) %>%
+    mutate(upr_95_confint=confint(lm.mod)[,2]) %>%
     mutate(significance=ifelse(p.value <=0.05, "Significant", "Non-significant")) %>%
     mutate(trend=ifelse(.$estimate >0, "positive", "negative")) %>%
     mutate(MONTH=month) %>%
     mutate(model_type="global_model")
-  
+
   ### Now prepare for model averaging of the global model
   # this part just sets up a parallelizing which isn't necessary
   # but is increasingly necessary as more variables are included
@@ -164,7 +170,7 @@ modelling_function <- function(month) {
   
   # now uses the dredge function from MuMIn
   # but uses the 'pdredge' version which is for paralellizing
-  model.set <- pdredge(std.mod, m.lim=c(0, 8), cluster=clust, extra="R^2")
+  model.set <- pdredge(lm.mod, m.lim=c(0, 8), cluster=clust, extra="R^2")
   
   # selects all models with deltaAic < 4
   top.models <- get.models(model.set, subset=delta<4) 
@@ -206,7 +212,7 @@ modelling_function <- function(month) {
 # now apply this function for every month
 # so we get 12 sets of 'results'
 
-results_list <- lapply(unique(analysis$MONTH), function(x){modelling_function(x)})
+results_list <- lapply(as.character(unique(analysis$MONTH)), function(x){modelling_function(x)})
 
 # now just need to get the three different
 # dataframes in each list of lists
