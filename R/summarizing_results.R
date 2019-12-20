@@ -7,6 +7,7 @@ library(scales)
 library(patchwork)
 library(tidyr)
 library(ggrepel)
+library(wesanderson)
 
 
 # read in non phylogenetic modelling results
@@ -92,8 +93,9 @@ non_phylo_global_model_results %>%
   facet_wrap(~MONTH, scales="free")
 
 
-# let's plot the parameter estimates through time
+# let's plot the parameter estimates through the year
 # for each of the methods
+# first the phylogenetic global model results
 phylo_global_model_results %>%
   dplyr::filter(term != "(Intercept)") %>%
   mutate(term=gsub("rescale\\(", "z.", .$term)) %>%
@@ -101,18 +103,110 @@ phylo_global_model_results %>%
   arrange(term, MONTH) %>%
   mutate(month_num=rep(1:12, 7)) %>%
   ggplot(., aes(x=month_num, y=estimate))+
+  #geom_line(color="orchid3")+
+  geom_errorbar(aes(ymin=lwr_95_confint, ymax=upr_95_confint), width=0.4)+
   geom_point(color="limegreen")+
   facet_wrap(~term, scales="free")+
   theme_classic()+
   theme(axis.text=element_text(color="black"))+
   ylab("Parameter estimate")+
   xlab("")+
-  geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", k=11))+
+  geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", k=11), color="orchid3")+
   scale_x_continuous(breaks=c(1:12), labels=c("Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-                                            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))
+                                            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))+
+  ggtitle("Phylogenetic global model results")
 
 
+# Non-phylogenetic results
+non_phylo_global_model_results %>%
+  dplyr::filter(term != "(Intercept)") %>%
+  arrange(term, MONTH) %>%
+  mutate(month_num=rep(1:12, 7)) %>%
+  ggplot(., aes(x=month_num, y=estimate))+
+  geom_errorbar(aes(ymin=lwr_95_confint, ymax=upr_95_confint), width=0.4)+
+  geom_point(color="limegreen")+
+  facet_wrap(~term, scales="free")+
+  theme_classic()+
+  theme(axis.text=element_text(color="black"))+
+  ylab("Parameter estimate")+
+  xlab("")+
+  geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", k=11), color="orchid3")+
+  scale_x_continuous(breaks=c(1:12), labels=c("Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                                              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))+
+  ggtitle("Non-phylogenetic global model results")
 
 
+# phylogenetic model averaging results
+phylo_model_averaging_results %>%
+  dplyr::filter(term != "(Intercept)") %>%
+  mutate(term=gsub("rescale\\(", "z.", .$term)) %>%
+  mutate(term=gsub("\\)", "", .$term)) %>%
+  arrange(term, MONTH) %>%
+  mutate(month_num=rep(1:12, 7)) %>%
+  ggplot(., aes(x=month_num, y=estimate))+
+  #geom_line(color="orchid3")+
+  geom_errorbar(aes(ymin=lwr_95_confint, ymax=upr_95_confint), width=0.4)+
+  geom_point(color="limegreen")+
+  facet_wrap(~term, scales="free")+
+  theme_classic()+
+  theme(axis.text=element_text(color="black"))+
+  ylab("Parameter estimate")+
+  xlab("")+
+  geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", k=11), color="orchid3")+
+  scale_x_continuous(breaks=c(1:12), labels=c("Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                                              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))+
+  ggtitle("Phylogenetic model averaging results")
 
+# Non-phylogenetic model averaging results
+non_phylo_model_averaging_results %>%
+  dplyr::filter(term != "(Intercept)") %>%
+  arrange(term, MONTH) %>%
+  mutate(month_num=rep(1:12, 7)) %>%
+  ggplot(., aes(x=month_num, y=estimate))+
+  geom_errorbar(aes(ymin=lwr_95_confint, ymax=upr_95_confint), width=0.4)+
+  geom_point(color="limegreen")+
+  facet_wrap(~term, scales="free")+
+  theme_classic()+
+  theme(axis.text=element_text(color="black"))+
+  ylab("Parameter estimate")+
+  xlab("")+
+  geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", k=11), color="orchid3")+
+  scale_x_continuous(breaks=c(1:12), labels=c("Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                                              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))+
+  ggtitle("Non-phylogenetic model averaging results")
+
+non_phylo_global_model_results %>%
+  mutate(model_type="Non-phylo global") %>%
+  dplyr::select(term, estimate, lwr_95_confint,
+                upr_95_confint, model_type, MONTH) %>%
+  bind_rows(., non_phylo_model_averaging_results %>%
+              dplyr::select(term, estimate, lwr_95_confint,
+                            upr_95_confint, model_type, MONTH) %>%
+              mutate(model_type="Non-phylo averaged")) %>%
+  bind_rows(., phylo_global_model_results %>%
+              dplyr::select(term, estimate, lwr_95_confint,
+                            upr_95_confint, model_type, MONTH) %>%
+              mutate(model_type="Phylo global")) %>%
+  bind_rows(., phylo_model_averaging_results %>%
+              dplyr::select(term, estimate, lwr_95_confint,
+                            upr_95_confint, model_type, MONTH) %>%
+              mutate(model_type="Phylo averaged")) %>%
+  dplyr::filter(term != "(Intercept)") %>%
+  mutate(term=gsub("rescale\\(", "z.", .$term)) %>%
+  mutate(term=gsub("\\)", "", .$term)) %>%
+  mutate(term=gsub("z.habitat_generalism_scaled", "z.habitat_generalism", .$term)) %>%
+  mutate(MONTH=factor(.$MONTH, levels=c("Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                                               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))) %>%
+  ggplot(., aes(x=term, y=estimate, color=model_type))+
+  geom_errorbar(aes(ymin=lwr_95_confint, ymax=upr_95_confint), width=0.8, position=position_dodge(width=0.6))+
+  geom_point(position=position_dodge(width=0.6))+
+  coord_flip()+
+  facet_wrap(~MONTH)+
+  theme_bw()+
+  theme(axis.text=element_text(color="black"))+
+  geom_hline(yintercept=0, color="red")+
+  scale_color_brewer(palette="Set1")+
+  xlab("")+
+  ylab("Standardized parameter estimate")+
+  guides(colour = guide_legend(title="           Model"))
 
