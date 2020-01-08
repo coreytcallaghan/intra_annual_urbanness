@@ -75,23 +75,63 @@ brain_size_matched.1 <- species %>%
   dplyr::select(SCIENTIFIC_NAME) %>% 
   left_join(., brain_size) %>%
   dplyr::filter(complete.cases(brain_residual)) %>%
-  dplyr::select(-Order, -Family)
+  dplyr::select(-Order, -Family) %>%
+  rename(ebird_SCIENTIFIC_NAME=SCIENTIFIC_NAME)
 
 brain_size_matched.2 <- species %>%
   ungroup() %>%
   mutate(SCIENTIFIC_NAME=gsub(" ", "_", ebird_SCIENTIFIC_NAME)) %>%
-  dplyr::filter(!SCIENTIFIC_NAME %in% brain_size_matched.1$SCIENTIFIC_NAME) %>%
-  dplyr::select(TipLabel) %>%
+  dplyr::filter(!SCIENTIFIC_NAME %in% brain_size_matched.1$ebird_SCIENTIFIC_NAME) %>%
+  dplyr::select(TipLabel, SCIENTIFIC_NAME) %>%
+  rename(ebird_SCIENTIFIC_NAME=SCIENTIFIC_NAME) %>%
   rename(SCIENTIFIC_NAME=TipLabel) %>%
   left_join(., brain_size, by="SCIENTIFIC_NAME") %>%
   dplyr::filter(complete.cases(brain_residual)) %>%
-  dplyr::select(-Order, -Family)
+  dplyr::select(-Order, -Family, -SCIENTIFIC_NAME)
   
 brain_size_final <- bind_rows(brain_size_matched.1,
                               brain_size_matched.2) %>%
-  mutate(ebird_SCIENTIFIC_NAME=gsub("_", " ", SCIENTIFIC_NAME)) %>%
-  dplyr::select(-SCIENTIFIC_NAME)
+  mutate(ebird_SCIENTIFIC_NAME=gsub("_", " ", ebird_SCIENTIFIC_NAME)) %>%
+  distinct()
 
+# Now repeat the same general process
+# but for functional group categorical data
+# which will require a bit of extra work as well
+functional_data <- read_csv("Data/functional_data/BirdFuncDat.csv") %>%
+  dplyr::select(8,9,20,26:30) %>%
+  rename(SCIENTIFIC_NAME=Scientific) %>%
+  mutate(SCIENTIFIC_NAME=gsub(" ", "_", .$SCIENTIFIC_NAME)) %>%
+  rename(functional_diet=`Diet-5Cat`) %>%
+  rename(ground=`ForStrat-ground`) %>%
+  rename(understory=`ForStrat-understory`) %>%
+  rename(mid_high=`ForStrat-midhigh`) %>%
+  rename(canopy=`ForStrat-canopy`) %>%
+  rename(aerial=`ForStrat-aerial`)
+  
+functional_matched.1 <- species %>%
+  ungroup() %>%
+  dplyr::select(ebird_SCIENTIFIC_NAME) %>%
+  mutate(SCIENTIFIC_NAME=gsub(" ", "_", ebird_SCIENTIFIC_NAME)) %>%
+  dplyr::select(SCIENTIFIC_NAME) %>% 
+  left_join(., functional_data) %>%
+  dplyr::filter(complete.cases(functional_diet)) %>%
+  dplyr::select(-English) %>%
+  rename(ebird_SCIENTIFIC_NAME=SCIENTIFIC_NAME)
+
+functional_matched.2 <- species %>%
+  ungroup() %>%
+  mutate(SCIENTIFIC_NAME=gsub(" ", "_", ebird_SCIENTIFIC_NAME)) %>%
+  dplyr::filter(!SCIENTIFIC_NAME %in% functional_matched.1$ebird_SCIENTIFIC_NAME) %>%
+  dplyr::select(TipLabel, SCIENTIFIC_NAME) %>%
+  rename(ebird_SCIENTIFIC_NAME=SCIENTIFIC_NAME) %>%
+  rename(SCIENTIFIC_NAME=TipLabel) %>%
+  left_join(., functional_data, by="SCIENTIFIC_NAME") %>%
+  dplyr::filter(complete.cases(functional_diet)) %>%
+  dplyr::select(-English, -SCIENTIFIC_NAME)
+
+functional_final <- bind_rows(functional_matched.1,
+                              functional_matched.2) %>%
+  mutate(ebird_SCIENTIFIC_NAME=gsub("_", " ", ebird_SCIENTIFIC_NAME))
 
 # now read in a different migration status delimitation
 # with also some habitat characteristics
@@ -229,6 +269,7 @@ range_size_final <- bind_rows(range_size_matched.1,
 predictor_variables <- species %>%
   left_join(., brain_size_final) %>%
   left_join(., body_size_final) %>%
+  left_join(., functional_final) %>%
   left_join(., flock_size_final) %>%
   left_join(., range_size_final) %>%
   left_join(., mig_habitat_final) %>%
