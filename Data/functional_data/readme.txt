@@ -1,0 +1,1 @@
+This dataset is derived from this paper: https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/13-1917.1
