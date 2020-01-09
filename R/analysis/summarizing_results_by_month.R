@@ -36,6 +36,8 @@ non_phylo_global_model_results %>%
   bind_rows(., non_phylo_model_averaging_results %>%
               dplyr::select(term, estimate, lwr_95_confint,
                             upr_95_confint, model_type, MONTH)) %>%
+  mutate(MONTH=factor(.$MONTH, levels=c("Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))) %>%
   dplyr::filter(term != "(Intercept)") %>%
   pivot_wider(names_from=model_type, values_from=c(estimate, lwr_95_confint, upr_95_confint)) %>%
   ggplot(., aes(x=estimate_global_model, y=estimate_model_averaging))+
@@ -56,6 +58,8 @@ phylo_global_model_results %>%
   bind_rows(., phylo_model_averaging_results %>%
               dplyr::select(term, estimate, lwr_95_confint,
                             upr_95_confint, model_type, MONTH)) %>%
+  mutate(MONTH=factor(.$MONTH, levels=c("Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))) %>%
   dplyr::filter(term != "(Intercept)") %>%
   pivot_wider(names_from=model_type, values_from=c(estimate, lwr_95_confint, upr_95_confint)) %>%
   ggplot(., aes(x=estimate_phylo_global_mod, y=estimate_model_averaging))+
@@ -69,6 +73,10 @@ phylo_global_model_results %>%
   ggtitle("Phylogenetic analyses")
 
 
+# So it looks like that in general, the model averaging and 
+# non-model averaging approaches showed good correlation!
+
+
 # make a plot to look at difference between parameter estimates for phylo
 # and non-phylogenetic models
 non_phylo_global_model_results %>%
@@ -77,6 +85,8 @@ non_phylo_global_model_results %>%
   bind_rows(., phylo_global_model_results %>%
               dplyr::select(term, estimate, lwr_95_confint,
                             upr_95_confint, model_type, MONTH)) %>%
+  mutate(MONTH=factor(.$MONTH, levels=c("Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))) %>%
   dplyr::filter(term != "(Intercept)") %>%
   mutate(term=gsub("rescale\\(", "z.", .$term)) %>%
   mutate(term=gsub("\\)", "", .$term)) %>%
@@ -101,7 +111,7 @@ phylo_global_model_results %>%
   mutate(term=gsub("rescale\\(", "z.", .$term)) %>%
   mutate(term=gsub("\\)", "", .$term)) %>%
   arrange(term, MONTH) %>%
-  mutate(month_num=rep(1:12, 7)) %>%
+  mutate(month_num=rep(1:12, 11)) %>%
   ggplot(., aes(x=month_num, y=estimate))+
   #geom_line(color="orchid3")+
   geom_errorbar(aes(ymin=lwr_95_confint, ymax=upr_95_confint), width=0.4)+
@@ -121,7 +131,7 @@ phylo_global_model_results %>%
 non_phylo_global_model_results %>%
   dplyr::filter(term != "(Intercept)") %>%
   arrange(term, MONTH) %>%
-  mutate(month_num=rep(1:12, 7)) %>%
+  mutate(month_num=rep(1:12, 11)) %>%
   ggplot(., aes(x=month_num, y=estimate))+
   geom_errorbar(aes(ymin=lwr_95_confint, ymax=upr_95_confint), width=0.4)+
   geom_point(color="limegreen")+
@@ -142,12 +152,24 @@ phylo_model_averaging_results %>%
   mutate(term=gsub("rescale\\(", "z.", .$term)) %>%
   mutate(term=gsub("\\)", "", .$term)) %>%
   arrange(term, MONTH) %>%
-  mutate(month_num=rep(1:12, 7)) %>%
+  mutate(month_num=case_when(
+    MONTH=="Jan" ~ 1,
+    MONTH=="Feb" ~ 2,
+    MONTH=="Mar" ~ 3,
+    MONTH=="Apr" ~ 4,
+    MONTH=="May" ~ 5,
+    MONTH=="Jun" ~ 6,
+    MONTH=="Jul" ~ 7,
+    MONTH=="Aug" ~ 8,
+    MONTH=="Sep" ~ 9,
+    MONTH=="Oct" ~ 10,
+    MONTH=="Nov" ~ 11,
+    MONTH=="Dec" ~ 12)) %>%
   ggplot(., aes(x=month_num, y=estimate))+
   #geom_line(color="orchid3")+
   geom_errorbar(aes(ymin=lwr_95_confint, ymax=upr_95_confint), width=0.4)+
   geom_point(color="limegreen")+
-  facet_wrap(~term, scales="free")+
+  facet_wrap(~term, scales="free_y")+
   theme_classic()+
   theme(axis.text=element_text(color="black"))+
   ylab("Parameter estimate")+
@@ -161,7 +183,19 @@ phylo_model_averaging_results %>%
 non_phylo_model_averaging_results %>%
   dplyr::filter(term != "(Intercept)") %>%
   arrange(term, MONTH) %>%
-  mutate(month_num=rep(1:12, 7)) %>%
+  mutate(month_num=case_when(
+    MONTH=="Jan" ~ 1,
+    MONTH=="Feb" ~ 2,
+    MONTH=="Mar" ~ 3,
+    MONTH=="Apr" ~ 4,
+    MONTH=="May" ~ 5,
+    MONTH=="Jun" ~ 6,
+    MONTH=="Jul" ~ 7,
+    MONTH=="Aug" ~ 8,
+    MONTH=="Sep" ~ 9,
+    MONTH=="Oct" ~ 10,
+    MONTH=="Nov" ~ 11,
+    MONTH=="Dec" ~ 12)) %>%
   ggplot(., aes(x=month_num, y=estimate))+
   geom_errorbar(aes(ymin=lwr_95_confint, ymax=upr_95_confint), width=0.4)+
   geom_point(color="limegreen")+
