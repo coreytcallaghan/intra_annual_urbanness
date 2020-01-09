@@ -75,14 +75,14 @@ length(unique(analysis$TipLabel))
 # filter out all species without complete data
 analysis <- analysis %>%
   ungroup() %>%
-  dplyr::select(1:11, brain_residual, diet_breadth, adult_body_mass_g,
+  dplyr::select(1:11, brain_residual, diet_breadth, adult_body_mass_g, functional_diet,
                 mean_flock_size, total_range_km2, habitat_generalism_scaled, clutch_size) %>%
   dplyr::filter(complete.cases(.))
 
 # now test the tiplabel and common name lengths
 length(unique(analysis$COMMON_NAME))
 
-# left with 215 species which have complete data that can be analyzed
+# left with 245 species which have complete data that can be analyzed
 # let's start by looking at correlation and distribution of response variable
 hist(analysis$mean_urbanness)
 
@@ -94,7 +94,7 @@ analysis <- analysis %>%
   mutate(log_body_size=log(adult_body_mass_g)) %>%
   mutate(log_flock_size=log(mean_flock_size)) %>%
   mutate(log_range_size=log(total_range_km2)) %>%
-  mutate(weights=1/sd_urbanness)
+  mutate(weights=1/(sd_urbanness+0.00001))
 
 
 ##########################################
@@ -121,7 +121,7 @@ read_all_trees<-function(path){
 
 #all_tress <- read_all_trees()
 
-# a function to subset the tree to the tips of the 215 species
+# a function to subset the tree to the tips of the 245 species
 # described above
 subset_tree <- function(bird_tree) {
   
@@ -178,7 +178,7 @@ standard_phylo_model <- function(usa_tree, analysis) {
   phy_mod_rescaled <- phylolm(response ~ rescale(log_body_size) + rescale(log_flock_size) + 
                                 rescale(log_range_size) + rescale(brain_residual) +
                                 rescale(clutch_size) + rescale(habitat_generalism_scaled) + 
-                                rescale(diet_breadth),
+                                rescale(diet_breadth) + functional_diet,
                               data=analysis, phy=usa_tree, na.action="na.fail", weights=weights)
   
   return(phy_mod_rescaled)
@@ -296,7 +296,7 @@ modelling_function <- function(month){
   phy_mod_rescaled <- phylolm(response ~ rescale(log_body_size) + rescale(log_flock_size) + 
                                 rescale(log_range_size) + rescale(brain_residual) +
                                 rescale(clutch_size) + rescale(habitat_generalism_scaled) + 
-                                rescale(diet_breadth),
+                                rescale(diet_breadth) + functional_diet,
                               data=dat, phy=usa_tree, na.action="na.fail", weights=weights)
   
   

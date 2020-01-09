@@ -62,21 +62,21 @@ length(unique(analysis$COMMON_NAME))
 length(unique(analysis$TipLabel))
 
 # now they match! So we have a potential sample size of 486 species
-# I will do some imputation for the missing species
+# I might do some imputation for the missing species
 # but in this R script lets just run the models for species which have data for each category
 # that I am interested in
 # so will first filter to the columns of interest and then
 # filter out all species without complete data
 analysis <- analysis %>%
   ungroup() %>%
-  dplyr::select(1:10, brain_residual, diet_breadth, adult_body_mass_g,
+  dplyr::select(1:10, brain_residual, diet_breadth, adult_body_mass_g, functional_diet,
                 mean_flock_size, total_range_km2, habitat_generalism_scaled, clutch_size) %>%
   dplyr::filter(complete.cases(.))
 
 # now test the tiplabel and common name lengths
 length(unique(analysis$COMMON_NAME))
 
-# left with 215 species which have complete data that can be analyzed
+# left with 245 species which have complete data that can be analyzed
 # let's start by looking at correlation and distribution of response variable
 hist(analysis$mean_urbanness)
 
@@ -85,7 +85,7 @@ hist(log(analysis$mean_urbanness))
 
 # plot ggpairs of variables
 analysis %>%
-  dplyr::select(11:17) %>%
+  dplyr::select(11:18) %>%
   ggpairs()
 
 # doesn't look like too much colinearity problems
@@ -96,7 +96,7 @@ analysis <- analysis %>%
   mutate(log_body_size=log(adult_body_mass_g)) %>%
   mutate(log_flock_size=log(mean_flock_size)) %>%
   mutate(log_range_size=log(total_range_km2)) %>%
-  mutate(weights=1/sd_urbanness)
+  mutate(weights=1/(sd_urbanness+0.00001))
            
 # make a correlation plot figure
 analysis %>%
@@ -136,10 +136,9 @@ modelling_function <- function(month) {
   
   # fit a linear global model
   # standardize the model
-  # using the arm::rescale function
   lm.mod <- lm(response ~ z.log_body_size + z.log_flock_size + z.log_range_size + 
                  z.brain_residual + z.clutch_size + z.habitat_generalism_scaled + 
-                 z.diet_breadth,
+                 z.diet_breadth + functional_diet,
                data=dat, na.action="na.fail", weights=weights)
   
   # get a dataframe of variance inflation factors
@@ -147,9 +146,9 @@ modelling_function <- function(month) {
   # which shows how (if) the collinearity among predictors influences the model results
   vif_df <- as.data.frame(vif(lm.mod)) %>%
     rownames_to_column(var="term") %>%
-    rename(VIF=`vif(lm.mod)`) %>%
+    rename(adjusted_GVIF=4) %>%
     mutate(MONTH=month) %>%
-    mutate(VIF=round(VIF, digits=2))
+    mutate(adjusted_GVIF=round(adjusted_GVIF, digits=2))
   
   # now create a 'summary' dataframe
   summary_df <- tidy(lm.mod) %>%
