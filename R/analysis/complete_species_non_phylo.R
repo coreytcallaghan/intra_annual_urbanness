@@ -70,7 +70,7 @@ length(unique(analysis$TipLabel))
 analysis <- analysis %>%
   ungroup() %>%
   dplyr::select(1:10, brain_residual, diet_breadth, adult_body_mass_g, functional_diet,
-                mean_flock_size, total_range_km2, habitat_generalism_scaled, clutch_size) %>%
+                mean_flock_size, total_range_km2, habitat_generalism_scaled, clutch_size, migration_status) %>%
   dplyr::filter(complete.cases(.))
 
 # now test the tiplabel and common name lengths
@@ -261,3 +261,291 @@ rm(list=setdiff(ls(), c("vif_summary", "non_phylo_global_model_results", "non_ph
 
 save.image("Results/complete_species_non_phylo.RData")
 
+
+## Now want to repeat the modelling function above, but for migrants and residents
+migrant_dat <- analysis %>%
+  dplyr::filter(migration_status=="Migrant")
+
+modelling_function <- function(month) {
+  
+  # filter data for a given month
+  dat <- migrant_dat %>%
+    dplyr::filter(MONTH==month) %>%
+    mutate(z.log_body_size=rescale(log_body_size)) %>%
+    mutate(z.log_flock_size=rescale(log_flock_size)) %>%
+    mutate(z.log_range_size=rescale(log_range_size)) %>%
+    mutate(z.brain_residual=rescale(brain_residual)) %>%
+    mutate(z.clutch_size=rescale(clutch_size)) %>%
+    mutate(z.habitat_generalism_scaled=rescale(habitat_generalism_scaled)) %>%
+    mutate(z.diet_breadth=rescale(diet_breadth))
+  
+  # fit a linear global model
+  # standardize the model
+  lm.mod <- lm(response ~ z.log_body_size + z.log_flock_size + z.log_range_size + 
+                 z.brain_residual + z.clutch_size + z.habitat_generalism_scaled + 
+                 z.diet_breadth + functional_diet,
+               data=dat, na.action="na.fail", weights=weights)
+  
+  # get a dataframe of variance inflation factors
+  # from the arm package
+  # which shows how (if) the collinearity among predictors influences the model results
+  vif_df <- as.data.frame(vif(lm.mod)) %>%
+    rownames_to_column(var="term") %>%
+    rename(adjusted_GVIF=4) %>%
+    mutate(MONTH=month) %>%
+    mutate(adjusted_GVIF=round(adjusted_GVIF, digits=2))
+  
+  # now create a 'summary' dataframe
+  summary_df <- tidy(lm.mod) %>%
+    mutate(lwr_95_confint=confint(lm.mod)[,1]) %>%
+    mutate(upr_95_confint=confint(lm.mod)[,2]) %>%
+    mutate(significance=ifelse(p.value <=0.05, "Significant", "Non-significant")) %>%
+    mutate(trend=ifelse(.$estimate >0, "positive", "negative")) %>%
+    mutate(MONTH=month) %>%
+    mutate(model_type="global_model")
+  
+  ### Now prepare for model averaging of the global model
+  # this part just sets up a parallelizing which isn't necessary
+  # but is increasingly necessary as more variables are included
+  clusterType <- if(length(find.package("snow", quiet = TRUE))) "SOCK" else "PSOCK"
+  clust <- try(makeCluster(getOption("cl.cores", 10), type = clusterType))
+  
+  clusterExport(clust, "dat", envir = environment())
+  
+  # now uses the dredge function from MuMIn
+  # but uses the 'pdredge' version which is for paralellizing
+  model.set <- pdredge(lm.mod, m.lim=c(0, 8), cluster=clust, extra="R^2")
+  
+  # selects all models with deltaAic < 4
+  top.models <- get.models(model.set, subset=delta<4) 
+  
+  # how many top models
+  length(top.models)
+  
+  # Ranks these models based on AICc
+  my.models <- model.sel(top.models, rank="AICc") 
+  
+  # actually does the model averaging part of the analysis
+  averaged_models <- model.avg(my.models)
+  
+  # now get a summary of the averaged model results
+  # using the 'full' set of models
+  # not conditional
+  # more details on that are here: https://onlinelibrary.wiley.com/doi/10.1111/j.1420-9101.2010.02210.x
+  model_results <- as.data.frame(summary(averaged_models)$coefmat.full) %>%
+    cbind(confint(averaged_models, full=TRUE)) %>%
+    rownames_to_column(var="term") %>%
+    left_join(., data.frame(importance=averaged_models$importance) %>%
+                rownames_to_column(var="term"), by="term") %>%
+    rename(estimate=Estimate) %>%
+    rename(std.error=`Std. Error`) %>%
+    rename(adjusted_std.error=`Adjusted SE`) %>%
+    rename(z_value=`z value`) %>%
+    rename(p.value=`Pr(>|z|)`) %>%
+    rename(lwr_95_confint=`2.5 %`) %>%
+    rename(upr_95_confint=`97.5 %`) %>%
+    mutate(significance=ifelse(p.value <=0.05, "Significant", "Non-significant")) %>%
+    mutate(trend=ifelse(.$estimate >0, "positive", "negative")) %>%
+    mutate(MONTH=month) %>%
+    mutate(model_type="model_averaging")
+  
+  modelling_results_list <- list(vif_df, summary_df, model_results)
+  
+}
+
+# now apply this function for every month
+# so we get 12 sets of 'results'
+
+results_list.migrants <- lapply(as.character(unique(analysis$MONTH)), function(x){modelling_function(x)})
+
+# now just need to get the three different
+# dataframes in each list of lists
+# out into a fashion to work with! 
+# this is a lazy way to deal with it
+# reflecting my lack of coding ability in regards to lists of lists
+vif_summary.migrants <- bind_rows(results_list.migrants[[1]][[1]],
+                                  results_list.migrants[[2]][[1]],
+                                  results_list.migrants[[3]][[1]],
+                                  results_list.migrants[[4]][[1]],
+                                  results_list.migrants[[5]][[1]],
+                                  results_list.migrants[[6]][[1]],
+                                  results_list.migrants[[7]][[1]],
+                                  results_list.migrants[[8]][[1]],
+                                  results_list.migrants[[9]][[1]],
+                                  results_list.migrants[[10]][[1]],
+                                  results_list.migrants[[11]][[1]],
+                                  results_list.migrants[[12]][[1]])
+
+non_phylo_global_model_results.migrants <- bind_rows(results_list.migrants[[1]][[2]],
+                                                     results_list.migrants[[2]][[2]],
+                                                     results_list.migrants[[3]][[2]],
+                                                     results_list.migrants[[4]][[2]],
+                                                     results_list.migrants[[5]][[2]],
+                                                     results_list.migrants[[6]][[2]],
+                                                     results_list.migrants[[7]][[2]],
+                                                     results_list.migrants[[8]][[2]],
+                                                     results_list.migrants[[9]][[2]],
+                                                     results_list.migrants[[10]][[2]],
+                                                     results_list.migrants[[11]][[2]],
+                                                     results_list.migrants[[12]][[2]])
+
+non_phylo_model_averaging_results.migrants <- bind_rows(results_list.migrants[[1]][[3]],
+                                                        results_list.migrants[[2]][[3]],
+                                                        results_list.migrants[[3]][[3]],
+                                                        results_list.migrants[[4]][[3]],
+                                                        results_list.migrants[[5]][[3]],
+                                                        results_list.migrants[[6]][[3]],
+                                                        results_list.migrants[[7]][[3]],
+                                                        results_list.migrants[[8]][[3]],
+                                                        results_list.migrants[[9]][[3]],
+                                                        results_list.migrants[[10]][[3]],
+                                                        results_list.migrants[[11]][[3]],
+                                                        results_list.migrants[[12]][[3]])
+
+save(non_phylo_global_model_results.migrants, 
+     non_phylo_model_averaging_results.migrants,
+     vif_summary.migrants, file="Results/complete_species_non_phylo_migrants_only.RData")
+
+## Now want to repeat the modelling function above, but for migrants and residents
+resident_dat <- analysis %>%
+  dplyr::filter(migration_status=="Resident")
+
+modelling_function <- function(month) {
+  
+  # filter data for a given month
+  dat <- resident_dat %>%
+    dplyr::filter(MONTH==month) %>%
+    mutate(z.log_body_size=rescale(log_body_size)) %>%
+    mutate(z.log_flock_size=rescale(log_flock_size)) %>%
+    mutate(z.log_range_size=rescale(log_range_size)) %>%
+    mutate(z.brain_residual=rescale(brain_residual)) %>%
+    mutate(z.clutch_size=rescale(clutch_size)) %>%
+    mutate(z.habitat_generalism_scaled=rescale(habitat_generalism_scaled)) %>%
+    mutate(z.diet_breadth=rescale(diet_breadth))
+  
+  # fit a linear global model
+  # standardize the model
+  lm.mod <- lm(response ~ z.log_body_size + z.log_flock_size + z.log_range_size + 
+                 z.brain_residual + z.clutch_size + z.habitat_generalism_scaled + 
+                 z.diet_breadth + functional_diet,
+               data=dat, na.action="na.fail", weights=weights)
+  
+  # get a dataframe of variance inflation factors
+  # from the arm package
+  # which shows how (if) the collinearity among predictors influences the model results
+  vif_df <- as.data.frame(vif(lm.mod)) %>%
+    rownames_to_column(var="term") %>%
+    rename(adjusted_GVIF=4) %>%
+    mutate(MONTH=month) %>%
+    mutate(adjusted_GVIF=round(adjusted_GVIF, digits=2))
+  
+  # now create a 'summary' dataframe
+  summary_df <- tidy(lm.mod) %>%
+    mutate(lwr_95_confint=confint(lm.mod)[,1]) %>%
+    mutate(upr_95_confint=confint(lm.mod)[,2]) %>%
+    mutate(significance=ifelse(p.value <=0.05, "Significant", "Non-significant")) %>%
+    mutate(trend=ifelse(.$estimate >0, "positive", "negative")) %>%
+    mutate(MONTH=month) %>%
+    mutate(model_type="global_model")
+  
+  ### Now prepare for model averaging of the global model
+  # this part just sets up a parallelizing which isn't necessary
+  # but is increasingly necessary as more variables are included
+  clusterType <- if(length(find.package("snow", quiet = TRUE))) "SOCK" else "PSOCK"
+  clust <- try(makeCluster(getOption("cl.cores", 10), type = clusterType))
+  
+  clusterExport(clust, "dat", envir = environment())
+  
+  # now uses the dredge function from MuMIn
+  # but uses the 'pdredge' version which is for paralellizing
+  model.set <- pdredge(lm.mod, m.lim=c(0, 8), cluster=clust, extra="R^2")
+  
+  # selects all models with deltaAic < 4
+  top.models <- get.models(model.set, subset=delta<4) 
+  
+  # how many top models
+  length(top.models)
+  
+  # Ranks these models based on AICc
+  my.models <- model.sel(top.models, rank="AICc") 
+  
+  # actually does the model averaging part of the analysis
+  averaged_models <- model.avg(my.models)
+  
+  # now get a summary of the averaged model results
+  # using the 'full' set of models
+  # not conditional
+  # more details on that are here: https://onlinelibrary.wiley.com/doi/10.1111/j.1420-9101.2010.02210.x
+  model_results <- as.data.frame(summary(averaged_models)$coefmat.full) %>%
+    cbind(confint(averaged_models, full=TRUE)) %>%
+    rownames_to_column(var="term") %>%
+    left_join(., data.frame(importance=averaged_models$importance) %>%
+                rownames_to_column(var="term"), by="term") %>%
+    rename(estimate=Estimate) %>%
+    rename(std.error=`Std. Error`) %>%
+    rename(adjusted_std.error=`Adjusted SE`) %>%
+    rename(z_value=`z value`) %>%
+    rename(p.value=`Pr(>|z|)`) %>%
+    rename(lwr_95_confint=`2.5 %`) %>%
+    rename(upr_95_confint=`97.5 %`) %>%
+    mutate(significance=ifelse(p.value <=0.05, "Significant", "Non-significant")) %>%
+    mutate(trend=ifelse(.$estimate >0, "positive", "negative")) %>%
+    mutate(MONTH=month) %>%
+    mutate(model_type="model_averaging")
+  
+  modelling_results_list <- list(vif_df, summary_df, model_results)
+  
+}
+
+# now apply this function for every month
+# so we get 12 sets of 'results'
+
+results_list.residents <- lapply(as.character(unique(analysis$MONTH)), function(x){modelling_function(x)})
+
+# now just need to get the three different
+# dataframes in each list of lists
+# out into a fashion to work with! 
+# this is a lazy way to deal with it
+# reflecting my lack of coding ability in regards to lists of lists
+vif_summary.residents <- bind_rows(results_list.residents[[1]][[1]],
+                                  results_list.residents[[2]][[1]],
+                                  results_list.residents[[3]][[1]],
+                                  results_list.residents[[4]][[1]],
+                                  results_list.residents[[5]][[1]],
+                                  results_list.residents[[6]][[1]],
+                                  results_list.residents[[7]][[1]],
+                                  results_list.residents[[8]][[1]],
+                                  results_list.residents[[9]][[1]],
+                                  results_list.residents[[10]][[1]],
+                                  results_list.residents[[11]][[1]],
+                                  results_list.residents[[12]][[1]])
+
+non_phylo_global_model_results.residents <- bind_rows(results_list.residents[[1]][[2]],
+                                                     results_list.residents[[2]][[2]],
+                                                     results_list.residents[[3]][[2]],
+                                                     results_list.residents[[4]][[2]],
+                                                     results_list.residents[[5]][[2]],
+                                                     results_list.residents[[6]][[2]],
+                                                     results_list.residents[[7]][[2]],
+                                                     results_list.residents[[8]][[2]],
+                                                     results_list.residents[[9]][[2]],
+                                                     results_list.residents[[10]][[2]],
+                                                     results_list.residents[[11]][[2]],
+                                                     results_list.residents[[12]][[2]])
+
+non_phylo_model_averaging_results.residents <- bind_rows(results_list.residents[[1]][[3]],
+                                                        results_list.residents[[2]][[3]],
+                                                        results_list.residents[[3]][[3]],
+                                                        results_list.residents[[4]][[3]],
+                                                        results_list.residents[[5]][[3]],
+                                                        results_list.residents[[6]][[3]],
+                                                        results_list.residents[[7]][[3]],
+                                                        results_list.residents[[8]][[3]],
+                                                        results_list.residents[[9]][[3]],
+                                                        results_list.residents[[10]][[3]],
+                                                        results_list.residents[[11]][[3]],
+                                                        results_list.residents[[12]][[3]])
+
+save(non_phylo_global_model_results.residents, 
+     non_phylo_model_averaging_results.residents,
+     vif_summary.residents, file="Results/complete_species_non_phylo_residents_only.RData")
