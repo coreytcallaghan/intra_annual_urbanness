@@ -19,6 +19,11 @@ library(snow)
 library(MuMIn)
 library(forcats)
 library(ggtree)
+library(phylolm)
+library(phylosignal)
+library(phylobase)
+library(ape)
+library(phylosignal)
 
 # read in response variables
 response <- readRDS("Data/response_variables.RDS") %>%
