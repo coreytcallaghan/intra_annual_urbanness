@@ -116,6 +116,8 @@ analysis %>%
              colors = c("#6D9EC1", "white", "#E46726"))+
   theme(axis.text=element_text(color="black"))
 
+ggsave("Figures/correlation_among_predictors.png", width=6, height=7, units="in")
+
 # alright - it generally looks pretty good
 # now need to think about putting the model together
 # but I want to run a separate model for every month

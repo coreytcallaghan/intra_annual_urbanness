@@ -9,6 +9,7 @@
 
 # packages
 library(dplyr)
+library(readr)
 library(ggplot2)
 library(car)
 library(ggcorrplot)
@@ -23,6 +24,10 @@ library(ape)
 library(phylolm)
 library(phylosignal)
 library(phylobase)
+library(phytools)
+library(patchwork)
+
+source("R/global_functions.R")
 
 # read in response variables
 response <- readRDS("Data/response_variables.RDS")
@@ -86,11 +91,80 @@ length(unique(analysis$COMMON_NAME))
 # let's start by looking at correlation and distribution of response variable
 hist(analysis$mean_urbanness)
 
+monthly_histograms <- ggplot(analysis, aes(x=mean_urbanness))+
+  geom_histogram(color="black", fill="#4DAF4A", bins=50)+
+  scale_x_log10()+
+  facet_wrap(~MONTH)+
+  theme_bw()+
+  theme(axis.text=element_text(color="black"))+
+  scale_fill_brewer(palette="Set1")+
+  xlab("Species-specific urbanness")+
+  ylab("Number of species")+
+  ggtitle("a)")
+
+monthly_histograms
+
+ggsave("Figures/monthly_urbanness_distributions.png", width=8.5, height=7.8, units="in")
+
+analysis %>%
+  group_by(MONTH) %>%
+  summarize(mean=mean(mean_urbanness),
+            sd=sd(mean_urbanness))
+
+monthly_means <- analysis %>%
+  group_by(MONTH) %>%
+  summarize(mean=mean(mean_urbanness),
+            sd=sd(mean_urbanness)) %>%
+  ggplot(., aes(x=MONTH, y=mean, group=1))+
+  geom_point()+
+  geom_line()+
+  theme_bw()+
+  theme(axis.text=element_text(color="black"))+
+  scale_color_brewer(palette="Set1")+
+  ylab("Mean of species-specific urbanness")+
+  xlab("")+
+  ggtitle("b)")
+
+monthly_means
+
+ggsave("Figures/monthly_urbanness_mean_line.png", width=7, height=5.8, units="in")
+
+
+monthly_means_split <- analysis %>%
+  group_by(MONTH, migration_status) %>%
+  summarize(mean=mean(mean_urbanness),
+            sd=sd(mean_urbanness)) %>%
+  ggplot(., aes(x=MONTH, y=mean, group=migration_status, color=migration_status))+
+  geom_point()+
+  geom_line()+
+  theme_bw()+
+  theme(axis.text=element_text(color="black"))+
+  scale_color_brewer(palette="Set1")+
+  ylab("Mean of species-specific urbanness")+
+  xlab("")+
+  ggtitle("c)")+
+  labs(color="Migratory status")+
+  theme(legend.position="bottom")
+
+monthly_means_split
+
+ggsave("Figures/monthly_urbanness_mean_line_split.png", width=7, height=5.8, units="in")
+
+
+
+monthly_histograms + monthly_means + monthly_means_split + plot_layout(ncol=1)
+
+ggsave("Figures/monthly_all_species_urbanness_summary.png", height=10, width=7.5, units="in")
+
+
+# how many obs for results
+sum(analysis$number_obs)
+
 # doesn't look like too much colinearity problems
 # some of the variables look pretty skewed, unsurprisingly
 # so will need to log-transform these and they should look pretty normal
 analysis <- analysis %>%
-  mutate(response=log(mean_urbanness)) %>%
+  mutate(response=log10(mean_urbanness)) %>%
   mutate(log_body_size=log(adult_body_mass_g)) %>%
   mutate(log_flock_size=log(mean_flock_size)) %>%
   mutate(log_range_size=log(total_range_km2)) %>%
@@ -119,7 +193,7 @@ read_all_trees<-function(path){
   
 }
 
-#all_tress <- read_all_trees()
+all_trees <- read_all_trees()
 
 # a function to subset the tree to the tips of the 245 species
 # described above
@@ -133,6 +207,16 @@ subset_tree <- function(bird_tree, dataset) {
 }
 
 usa_tree <- subset_tree(bird_tree, analysis)
+
+# need to get a consensus tree to run the phylogenetic analyses on
+# first subset all trees to the 245 species
+non_usa_sp <- bird_tree$tip.label[!bird_tree$tip.label %in% analysis$TipLabel]
+
+subset_trees <- lapply(all_trees, drop.tip, tip=non_usa_sp)
+
+con_tree <- consensus.edges(subset_trees,consensus.tree=consensus(subset_trees, p=0.5, check.labels=TRUE))
+
+
 
 # a function to run many phylo models
 run_many_phylo_models <- function(data, all_trees, n=1000){
@@ -164,45 +248,50 @@ run_one_phylo_model <- function(usa_tree, analysis){
   
   phy_mod <- phylolm(response ~ log_body_size + log_flock_size + log_range_size + brain_residual +
                        clutch_size + habitat_generalism_scaled + diet_breadth,
-                     data=analysis, phy=usa_tree, na.action="na.fail", weights=weights)
+                     data=analysis, phy=con_tree, na.action="na.fail", weights=weights)
   
   return(phy_mod)
 }
 
 # run a phylo model, but on standardized data
 # using arm::rescale
-standard_phylo_model <- function(usa_tree, analysis) {
+standard_phylo_model <- function(con_tree, analysis) {
   
   row.names(analysis) <- analysis$TipLabel
   
   phy_mod_rescaled <- phylolm(response ~ rescale(log_body_size) + rescale(log_flock_size) + 
                                 rescale(log_range_size) + rescale(brain_residual) +
                                 rescale(clutch_size) + rescale(habitat_generalism_scaled) + 
-                                rescale(diet_breadth) + functional_diet,
-                              data=analysis, phy=usa_tree, na.action="na.fail", weights=weights)
+                                rescale(diet_breadth),
+                              data=analysis, phy=con_tree, na.action="na.fail", weights=weights)
   
   return(phy_mod_rescaled)
   
 }
 
 ## phylosignal analysis
-phylosignal_analysis <- function(analysis, usa_tree){
+## do this for every month
+## because the signal for urbanness could change throughout the months
+phylosig_month_function <- function(month) {
+  
+phylosignal_analysis <- function(analysis, con_tree){
 
   distinct_dat <- analysis %>%
     dplyr::select(COMMON_NAME, TipLabel, log_body_size, log_flock_size, 
-                  log_range_size, brain_residual,
-                  clutch_size, habitat_generalism_scaled, diet_breadth) %>%
+                  log_range_size, brain_residual, response,
+                  clutch_size, habitat_generalism_scaled, diet_breadth, MONTH) %>%
     distinct()
   
   dat <- distinct_dat %>%
-    dplyr::select(log_body_size, log_flock_size, log_range_size, brain_residual,
-                    clutch_size, habitat_generalism_scaled, diet_breadth)
-  
-  row.names(dat) <- distinct_dat$TipLabel #name rows so that it matches the tree
+    dplyr::select(log_body_size, log_flock_size, log_range_size, brain_residual, TipLabel,
+                    clutch_size, habitat_generalism_scaled, diet_breadth, response, MONTH) %>%
+    dplyr::filter(MONTH==month) %>%
+    dplyr::select(-MONTH) %>%
+    column_to_rownames(var="TipLabel")
   
   #dd$rand<-rnorm(dim(dd)[2]) #random numbers to test package
   
-  p4d <- phylo4d(usa_tree, dat) #create phylobase object
+  p4d <- phylo4d(con_tree, dat) #create phylobase object
   
   ps <- phyloSignal(p4d,reps = 9999) #run calculation, p values a bit unstable at 999 reps
   
@@ -218,10 +307,23 @@ phylosignal_analysis <- function(analysis, usa_tree){
   
 }
 
-phylosignal_results <- phylosignal_analysis(analysis, usa_tree)
+phylosignal_results <- phylosignal_analysis(analysis, con_tree) %>%
+  mutate(MONTH=month)
 
-saveRDS(phylosignal_results, "Results/complete_phylosignal_analysis.RDS")
+return(phylosignal_results)
+#saveRDS(phylosignal_results, paste0("Results/", month, "_complete_phylosignal_analysis.RDS"))
 
+}
+
+
+month_phylosignal_results <- bind_rows(lapply(unique(response$MONTH), phylosig_month_function))
+
+
+response_phylosig <- month_phylosignal_results %>%
+  dplyr::filter(term=="response") %>%
+  round_df(., digits=4)
+
+write_csv(response_phylosig, "Results/phylosignal_monthly_results.csv")
 
 ###################################################################
 ###################################################################
@@ -269,11 +371,16 @@ modelling_function <- function(month){
   
   # filter data for a given month
   dat <- analysis %>%
-    dplyr::filter(MONTH==month)
+    dplyr::filter(MONTH==month) %>%
+    column_to_rownames(var="TipLabel")
   
   # run a global phylogenetic model
   # on this filtered data
-  phy_mod_rescaled <- standard_phylo_model(usa_tree, dat)
+  phy_mod_rescaled <- phylolm(response ~ rescale(log_body_size) + rescale(log_flock_size) + 
+                                rescale(log_range_size) + rescale(brain_residual) +
+                                rescale(clutch_size) + rescale(habitat_generalism_scaled) + 
+                                rescale(diet_breadth) + migration_status,
+                              data=dat, phy=con_tree, na.action="na.fail", weights=weights)
   
   # summarize the results of the model
   # I don't think there is compatibility with tidy
@@ -289,22 +396,6 @@ modelling_function <- function(month){
     mutate(trend=ifelse(.$estimate >0, "positive", "negative")) %>%
     mutate(MONTH=month) %>%
     mutate(model_type="phylo_global_mod")
-  
-  # now do a model averaging approach for the phylogenetic model
-  row.names(dat) <- dat$TipLabel
-  
-  phy_mod_rescaled <- phylolm(response ~ rescale(log_body_size) + rescale(log_flock_size) + 
-                                rescale(log_range_size) + rescale(brain_residual) +
-                                rescale(clutch_size) + rescale(habitat_generalism_scaled) + 
-                                rescale(diet_breadth) + functional_diet,
-                              data=dat, phy=usa_tree, na.action="na.fail", weights=weights)
-  
-  
-  
-  clusterType <- if(length(find.package("snow", quiet = TRUE))) "SOCK" else "PSOCK"
-  clust <- try(makeCluster(getOption("cl.cores", 10), type = clusterType))
-  
-  clusterExport(clust, c("dat", "phylolm", "rescale", "usa_tree"), envir = .GlobalEnv)
   
   # now uses the dredge function from MuMIn
   # but uses the 'pdredge' version which is for paralellizing
@@ -343,7 +434,6 @@ modelling_function <- function(month){
     mutate(model_type="model_averaging")
   
   modelling_results_list <- list(glob_mod_results, model_results)
-  
 }
 
 # now apply this function for every month
@@ -382,9 +472,10 @@ phylo_model_averaging_results <- bind_rows(results_list[[1]][[2]],
                                            results_list[[11]][[2]],
                                            results_list[[12]][[2]])
 
-rm(list=setdiff(ls(), c("phylo_global_model_results", "phylo_model_averaging_results")))
+save(phylo_global_model_results, 
+     phylo_model_averaging_results, 
+     file="Results/complete_species_phylo.RData")
 
-save.image("Results/complete_species_phylo.RData")
 
 
 
@@ -401,7 +492,7 @@ migrant_dat <- analysis %>%
 
 modelling_function <- function(month){
   
-  tree <- subset_tree(bird_tree, migrant_dat)
+  tree <- subset_tree(con_tree, migrant_dat)
   
   # filter data for a given month
   dat <- migrant_dat %>%
@@ -432,15 +523,15 @@ modelling_function <- function(month){
   phy_mod_rescaled <- phylolm(response ~ rescale(log_body_size) + rescale(log_flock_size) + 
                                 rescale(log_range_size) + rescale(brain_residual) +
                                 rescale(clutch_size) + rescale(habitat_generalism_scaled) + 
-                                rescale(diet_breadth) + functional_diet,
+                                rescale(diet_breadth),
                               data=dat, phy=tree, na.action="na.fail", weights=weights)
   
   
   
-  clusterType <- if(length(find.package("snow", quiet = TRUE))) "SOCK" else "PSOCK"
-  clust <- try(makeCluster(getOption("cl.cores", 10), type = clusterType))
-  
-  clusterExport(clust, c("dat", "phylolm", "rescale", "tree"), envir = .GlobalEnv)
+  # clusterType <- if(length(find.package("snow", quiet = TRUE))) "SOCK" else "PSOCK"
+  # clust <- try(makeCluster(getOption("cl.cores", 10), type = clusterType))
+  # 
+  # clusterExport(clust, c("dat", "phylolm", "rescale", "tree"), envir = .GlobalEnv)
   
   # now uses the dredge function from MuMIn
   # but uses the 'pdredge' version which is for paralellizing
@@ -529,7 +620,7 @@ resident_dat <- analysis %>%
 
 modelling_function <- function(month){
   
-  tree <- subset_tree(bird_tree, resident_dat)
+  tree <- subset_tree(con_tree, resident_dat)
   
   # filter data for a given month
   dat <- resident_dat %>%
@@ -560,15 +651,15 @@ modelling_function <- function(month){
   phy_mod_rescaled <- phylolm(response ~ rescale(log_body_size) + rescale(log_flock_size) + 
                                 rescale(log_range_size) + rescale(brain_residual) +
                                 rescale(clutch_size) + rescale(habitat_generalism_scaled) + 
-                                rescale(diet_breadth) + functional_diet,
+                                rescale(diet_breadth),
                               data=dat, phy=tree, na.action="na.fail", weights=weights)
   
   
   
-  clusterType <- if(length(find.package("snow", quiet = TRUE))) "SOCK" else "PSOCK"
-  clust <- try(makeCluster(getOption("cl.cores", 10), type = clusterType))
-  
-  clusterExport(clust, c("dat", "phylolm", "rescale", "tree"), envir = .GlobalEnv)
+  # clusterType <- if(length(find.package("snow", quiet = TRUE))) "SOCK" else "PSOCK"
+  # clust <- try(makeCluster(getOption("cl.cores", 10), type = clusterType))
+  # 
+  # clusterExport(clust, c("dat", "phylolm", "rescale", "tree"), envir = .GlobalEnv)
   
   # now uses the dredge function from MuMIn
   # but uses the 'pdredge' version which is for paralellizing

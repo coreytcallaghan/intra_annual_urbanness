@@ -24,12 +24,17 @@ library(phylosignal)
 library(phylobase)
 library(ape)
 library(phylosignal)
+library(phytools)
+library(RColorBrewer)
+
+source("R/global_functions.R")
 
 # read in response variables
 response <- readRDS("Data/response_variables.RDS") %>%
   group_by(COMMON_NAME) %>%
   summarize(intra_annual_variability=sd(mean_urbanness),
-            sd_of_intra_annual_variability=sd(sd_urbanness)) 
+            range_of_variability=(max(mean_urbanness) - min(mean_urbanness)),
+            sd_of_intra_annual_variability=mean(sd_urbanness)) 
 
 # read in predictor variables
 predictors <- readRDS("Data/predictor_variables.RDS")
@@ -80,7 +85,7 @@ length(unique(analysis$TipLabel))
 # filter out all species without complete data
 analysis <- analysis %>%
   ungroup() %>%
-  dplyr::select(1:7, brain_residual, diet_breadth, adult_body_mass_g, functional_diet,
+  dplyr::select(1:8, brain_residual, diet_breadth, adult_body_mass_g, functional_diet,
                 mean_flock_size, total_range_km2, habitat_generalism_scaled, clutch_size,
                 migration_status, migratory_status) %>%
   dplyr::filter(complete.cases(.))
@@ -95,6 +100,35 @@ hist(analysis$intra_annual_variability)
 # heavily skewed so will try log transform
 hist(log(analysis$intra_annual_variability))
 
+# make plot of this for supplementary material
+brewer.pal(name="Set1", n=1)
+
+ggplot(analysis, aes(x=intra_annual_variability))+
+  geom_histogram(color="black", fill="#E41A1C", bins=20)+
+  scale_x_log10()+
+  theme_bw()+
+  theme(axis.text=element_text(color="black"))+
+  xlab("Intra-annual variability of urban-tolerance")+
+  ylab("Number of species")
+
+ggsave("Figures/intra_annual_variability_histogram.png", width=6.5, height=4.5, units='in')
+
+# summary statistics for paper
+summary(analysis$intra_annual_variability)
+mean(analysis$intra_annual_variability)
+sd(analysis$intra_annual_variability)
+
+analysis %>%
+  group_by(migration_status) %>%
+  summarize(mean=mean(intra_annual_variability),
+            sd=sd(intra_annual_variability))
+
+# plot the relationship between sd and range
+ggplot(analysis, aes(x=intra_annual_variability, y=range_of_variability))+
+  geom_point()+
+  geom_smooth(method="lm")+
+  theme_bw()
+
 # plot ggpairs of variables
 analysis %>%
   dplyr::select(8:17) %>%
@@ -104,11 +138,215 @@ analysis %>%
 # some of the variables look pretty skewed, unsurprisingly
 # so will need to log-transform these and they should look pretty normal
 analysis <- analysis %>%
-  mutate(response=log(intra_annual_variability)) %>%
+  mutate(response=log10(intra_annual_variability)) %>%
   mutate(log_body_size=log(adult_body_mass_g)) %>%
   mutate(log_flock_size=log(mean_flock_size)) %>%
   mutate(log_range_size=log(total_range_km2)) %>%
   mutate(weights=1/sd_of_intra_annual_variability)
+
+# but we need to consider the potential of phylogenetic signal in intra-annual variability
+# so first let's test the phylogenetic signal of this variable
+# function to read one tree in
+# function to read one tree in
+read_one_tree<-function(path, x=1){
+  
+  one_bird_tree <- ape::read.tree(file = "Data/phylo/phy.tre")[[x]]
+  
+  return(one_bird_tree)
+}
+
+bird_tree <- read_one_tree()
+
+
+# function to read all trees in
+read_all_trees<-function(path){
+  
+  ape::read.tree(file = "Data/phylo/phy.tre")
+  
+}
+
+all_trees <- read_all_trees()
+
+# a function to subset the tree to the tips of the 245 species
+# described above
+subset_tree <- function(bird_tree, dataset) {
+  
+  non_usa_sp <- bird_tree$tip.label[!bird_tree$tip.label %in% dataset$TipLabel]
+  
+  usa_bird_tree <- drop.tip(bird_tree, non_usa_sp)
+  
+  return(usa_bird_tree)
+}
+
+usa_tree <- subset_tree(bird_tree, analysis)
+
+# need to get a consensus tree to run the phylogenetic analyses on
+# first subset all trees to the 245 species
+non_usa_sp <- bird_tree$tip.label[!bird_tree$tip.label %in% analysis$TipLabel]
+
+subset_trees <- lapply(all_trees, drop.tip, tip=non_usa_sp)
+
+con_tree <- consensus.edges(subset_trees,consensus.tree=consensus(subset_trees, p=0.5, check.labels=TRUE))
+
+# now do a phylogenetic signal analysis
+phylo_dat <- dat %>%
+  dplyr::select(COMMON_NAME, TipLabel, response) %>%
+  distinct()
+
+phylo_dat.2 <- phylo_dat %>%
+  dplyr::select(response)
+
+row.names(phylo_dat.2) <- phylo_dat$TipLabel #name rows so that it matches the tree
+
+p4d <- phylo4d(con_tree, phylo_dat.2) #create phylobase object
+
+ps <- phyloSignal(p4d,reps = 9999) #run calculation, p values a bit unstable at 999 reps
+
+stats <- ps$stat %>%
+  rownames_to_column(var="term") %>%
+  mutate(value="Statistic")
+
+p_values <- ps$pvalue %>%
+  rownames_to_column(var="term") %>%
+  mutate(value="P value")
+
+phylo_sig_results <- bind_rows(stats, p_values) %>%
+  round_df(., digits=4) %>%
+  knitr::kable()
+
+phylo_sig_results
+
+# plot the intra annual variability on a tree
+plasma_pal <- c(viridis::plasma(n = 8))
+
+ggtree(p4d, layout='circular', aes(color=response), 
+       ladderize = FALSE, size=1)+
+  #scale_color_gradient(low = "yellow", high = "red", na.value = NA)+
+  scale_color_gradientn(colors=plasma_pal, 
+                        name = "Intra-annual variability:  ", breaks=c(-4.5,-2, 0), 
+                        labels = c(0.000, 0.01, 1))+
+  #scale_color_gradientn(colours=c("red", 'orange', 'green', 'cyan', 'blue'))+
+  geom_tiplab(aes(angle=angle), size=2.5)+
+  theme(legend.position = "bottom")
+  #guides(color=guide_legend(label.hjust = 0.01))
+
+ggsave("Figures/phylo_tree_of_intra_annual_variability.png", width=10, height=10, units="in")
+
+# looks like strong phylo signal in intra-annual variability, which probably isn't terrible surprising
+
+# The interesting thing here is whether intra-annual variability is explained by migration status
+# which is a reasonable hypothesis as you would expect that migratory species 
+# are more likely to have higher variability
+# first plot this
+ggplot(dat, aes(x=factor(migration_status, levels=c("Resident", "Migrant")),
+                y=intra_annual_variability, fill=migration_status))+
+  geom_violin(position=position_dodge()) +
+  geom_boxplot(width=0.1, color="black", position = position_dodge(width =0.9))+
+  coord_flip()+
+  scale_fill_brewer(palette="Set1")+
+  scale_y_log10()+
+  theme_bw()+
+  theme(axis.text=element_text(color="black"))+
+  xlab("")+
+  ylab("Intra-annual urbanness variability")+
+  guides(fill=FALSE)
+
+ggsave("Figures/intra_annual_variability_vs_migration_status.png", width=6.5, height=4.5, units="in")
+
+# Now run a phylo model
+
+phy_mod_migration <- phylolm(response ~ migration_status,
+                             data=phylo_dat_3, phy=con_tree, na.action="na.fail", weights=weights)
+
+summary(phy_mod_migration)
+
+# now run a non-phylogenetic model
+simple_mig_mod <- lm(response ~ migration_status, data=dat, na.action="na.fail", weights=weights)
+summary(simple_mig_mod)
+
+
+
+
+
+
+phylo_dat_3 <- dat %>%
+  dplyr::select(TipLabel, response, weights, migration_status, z.log_body_size, z.log_flock_size,
+                z.log_range_size, z.brain_residual, z.clutch_size, z.habitat_generalism_scaled,
+                z.diet_breadth, functional_diet) %>%
+  distinct() %>%
+  column_to_rownames(var="TipLabel")
+
+phy_mod_rescaled <- phylolm(response ~ z.log_body_size + z.log_flock_size + z.brain_residual +
+                              z.clutch_size + z.habitat_generalism_scaled + 
+                              z.diet_breadth + migration_status,
+                            data=phylo_dat_3, phy=con_tree, na.action="na.fail", weights=weights)
+
+summary(phy_mod_rescaled)
+
+phy_mod_results <- as.data.frame(summary(phy_mod_rescaled)$coefficients) %>%
+  cbind(confint(phy_mod_rescaled)) %>%
+  rownames_to_column(var="term") %>%
+  rename(estimate=Estimate) %>%
+  rename(std.error=StdErr) %>%
+  rename(lwr_95_confint=`2.5 %`) %>%
+  rename(upr_95_confint=`97.5 %`) %>%
+  mutate(significance=ifelse(p.value <=0.05, "Significant", "Non-significant")) %>%
+  mutate(trend=ifelse(.$estimate >0, "positive", "negative"))
+
+
+phy_mod_results %>%
+  dplyr::filter(term != "(Intercept)") %>%
+  mutate(term=case_when(
+    term == "z.log_body_size" ~ "Body size (log)",
+    term == "z.log_flock_size" ~ "Mean flock size (log)",
+    term == "z.log_range_size" ~ "Range size (log km2)",
+    term == "z.brain_residual" ~ "Brain residual",
+    term == "z.clutch_size" ~ "Clutch size",
+    term == "z.habitat_generalism_scaled" ~ "Habitat generalism",
+    term == "z.diet_breadth" ~ "Diet breadth",
+    term == "migration_statusResident" ~ "Resident")) %>%
+  ggplot(., aes(x=fct_inorder(term), y=estimate))+
+  geom_errorbar(aes(ymin=lwr_95_confint, ymax=upr_95_confint), 
+                width=0.8, position=position_dodge(width=0.6))+
+  geom_point(position=position_dodge(width=0.6), aes(color=significance))+
+  coord_flip()+
+  theme_bw()+
+  theme(axis.text=element_text(color="black"))+
+  geom_hline(yintercept=0, color="red")+
+  scale_color_brewer(palette="Set1")+
+  xlab("")+
+  ylab("Parameter estimate")+
+  labs(color="Significance")
+
+ggsave("Figures/phylogenetic_global_model_of_intra_annual_variability.png", width=7.5, height=6.8, units="in")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# fit a linear global model
+# standardize the model
+simple_mig_mod <- lm(response ~ migration_status, data=dat, na.action="na.fail", weights=weights)
+summary(simple_mig_mod)
+AIC(simple_mig_mod)
+
+
+
+
+
 
 
 # get dat for model
@@ -270,87 +508,4 @@ ggplot(model_results, aes(x=fct_inorder(term), y=estimate))+
   xlab("")+
   ylab("Standardized parameter estimate")
 
-# but we need to consider the potential of phylogenetic signal in intra-annual variability
-# so first let's test the phylogenetic signal of this variable
-# function to read one tree in
-read_one_tree<-function(path, x=50){
-  
-  one_bird_tree <- ape::read.tree(file = "Data/phylo/phy.tre")[[x]]
-  
-  return(one_bird_tree)
-}
 
-bird_tree <- read_one_tree()
-
-
-# function to read all trees in
-read_all_trees<-function(path){
-  
-  ape::read.tree(file = "Data/phylo/phy.tre")
-  
-}
-
-#all_tress <- read_all_trees()
-
-# a function to subset the tree to the tips of the 245 species
-# described above
-subset_tree <- function(bird_tree) {
-  
-  non_usa_sp <- bird_tree$tip.label[!bird_tree$tip.label %in% analysis$TipLabel]
-  
-  usa_bird_tree <- drop.tip(bird_tree, non_usa_sp)
-  
-  return(usa_bird_tree)
-}
-
-usa_tree <- subset_tree(bird_tree)
-
-# now do a phylogenetic signal analysis
-phylo_dat <- dat %>%
-  dplyr::select(COMMON_NAME, TipLabel, response) %>%
-  distinct()
-
-phylo_dat.2 <- phylo_dat %>%
-  dplyr::select(response)
-
-row.names(phylo_dat.2) <- phylo_dat$TipLabel #name rows so that it matches the tree
-
-p4d <- phylo4d(usa_tree, phylo_dat.2) #create phylobase object
-
-ps <- phyloSignal(p4d,reps = 9999) #run calculation, p values a bit unstable at 999 reps
-
-stats <- ps$stat %>%
-  rownames_to_column(var="term") %>%
-  mutate(value="Statistic")
-
-p_values <- ps$pvalue %>%
-  rownames_to_column(var="term") %>%
-  mutate(value="P value")
-
-phylo_sig_results <- bind_rows(stats, p_values)
-
-# plot the intra annual variability on a tree
-ggtree(p4d, layout='circular', aes(color=response), 
-       ladderize = FALSE, size=1)+
-  scale_color_gradientn(colours=c("red", 'orange', 'green', 'cyan', 'blue'))+
-  geom_tiplab(aes(angle=angle), size=2.5)+
-  theme(legend.position = c(.05, .85))
-
-# looks like strong phylo signal in intra-annual variability, which probably isn't terrible surprising
-# so let's now repeat the above models, but make them phylogenetic models
-
-# now do a phylogenetic signal analysis
-phylo_dat_3 <- dat %>%
-  dplyr::select(TipLabel, response, weights, migration_status, z.log_body_size, z.log_flock_size,
-                z.log_range_size, z.brain_residual, z.clutch_size, z.habitat_generalism_scaled,
-                z.diet_breadth, functional_diet) %>%
-  distinct() %>%
-  column_to_rownames(var="TipLabel")
-
-phy_mod_rescaled <- phylolm(response ~ z.log_body_size + z.log_flock_size + 
-                              z.log_range_size + z.brain_residual +
-                              z.clutch_size + z.habitat_generalism_scaled + 
-                              z.diet_breadth + functional_diet + migration_status,
-                            data=phylo_dat_3, phy=usa_tree, na.action="na.fail", weights=weights)
-
-summary(phy_mod_rescaled)

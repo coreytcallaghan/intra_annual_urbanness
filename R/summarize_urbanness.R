@@ -29,7 +29,11 @@ ggplot(dat, aes(x=urban_score, y=mean_urbanness))+
   theme(axis.text=element_text(color="black"))+
   geom_smooth(method="lm")+
   ylab("Resampled urbanness")+
-  xlab("Total urbanness")
+  xlab("Total urbanness")+
+  scale_x_log10()+
+  scale_y_log10()
+
+ggsave("Figures/resampled_vs_not-resampled_urbanness.png", width=6, height=5, units="in")
 
 # plot the relationship between each month's urbanness
 # for each month, using ggpairs
