@@ -189,7 +189,7 @@ subset_trees <- lapply(all_trees, drop.tip, tip=non_usa_sp)
 con_tree <- consensus.edges(subset_trees,consensus.tree=consensus(subset_trees, p=0.5, check.labels=TRUE))
 
 # now do a phylogenetic signal analysis
-phylo_dat <- dat %>%
+phylo_dat <- analysis %>%
   dplyr::select(COMMON_NAME, TipLabel, response) %>%
   distinct()
 
@@ -217,7 +217,7 @@ phylo_sig_results <- bind_rows(stats, p_values) %>%
 phylo_sig_results
 
 # plot the intra annual variability on a tree
-plasma_pal <- c(viridis::plasma(n = 8))
+plasma_pal <- c(viridis::plasma(n = 12, direction=-1))
 
 ggtree(p4d, layout='circular', aes(color=response), 
        ladderize = FALSE, size=1)+
@@ -238,7 +238,7 @@ ggsave("Figures/phylo_tree_of_intra_annual_variability.png", width=10, height=10
 # which is a reasonable hypothesis as you would expect that migratory species 
 # are more likely to have higher variability
 # first plot this
-ggplot(dat, aes(x=factor(migration_status, levels=c("Resident", "Migrant")),
+ggplot(analysis, aes(x=factor(migration_status, levels=c("Resident", "Migrant")),
                 y=intra_annual_variability, fill=migration_status))+
   geom_violin(position=position_dodge()) +
   geom_boxplot(width=0.1, color="black", position = position_dodge(width =0.9))+
