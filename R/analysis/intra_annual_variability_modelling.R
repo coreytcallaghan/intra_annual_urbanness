@@ -26,6 +26,7 @@ library(ape)
 library(phylosignal)
 library(phytools)
 library(RColorBrewer)
+library(readr)
 
 source("R/global_functions.R")
 
@@ -75,6 +76,70 @@ analysis <- analysis %>%
 # now test the tiplabel and common name lengths
 length(unique(analysis$COMMON_NAME))
 length(unique(analysis$TipLabel))
+
+# # First let's just look at migration as a function of the response
+# # to summarize
+# migration_analysis <- analysis %>%
+#   dplyr::select(1:8, migration_status, migratory_status) %>%
+#   dplyr::filter(complete.cases(migration_status))
+# 
+# # The interesting thing here is whether intra-annual variability is explained by migration status
+# # which is a reasonable hypothesis as you would expect that migratory species 
+# # are more likely to have higher variability
+# # first plot this
+# ggplot(migration_analysis, aes(x=factor(migration_status, levels=c("Resident", "Migrant")),
+#                      y=intra_annual_variability, fill=migration_status))+
+#   geom_violin(position=position_dodge()) +
+#   geom_boxplot(width=0.1, color="black", position = position_dodge(width =0.9))+
+#   coord_flip()+
+#   scale_fill_brewer(palette="Set1")+
+#   scale_y_log10()+
+#   theme_bw()+
+#   theme(axis.text=element_text(color="black"))+
+#   xlab("")+
+#   ylab("Intra-annual urbanness variability")+
+#   guides(fill=FALSE)
+# 
+# ggsave("Figures/intra_annual_variability_vs_migration_status.png", width=6.5, height=4.5, units="in")
+# 
+# 
+# # left with 245 species which have complete data that can be analyzed
+# # let's start by looking at correlation and distribution of response variable
+# hist(migration_analysis$intra_annual_variability)
+# 
+# # heavily skewed so will try log transform
+# hist(log(migration_analysis$intra_annual_variability))
+# 
+# # make plot of this for supplementary material
+# brewer.pal(name="Set1", n=1)
+# 
+# ggplot(migration_analysis, aes(x=intra_annual_variability))+
+#   geom_histogram(color="black", fill="#E41A1C", bins=20)+
+#   scale_x_log10()+
+#   theme_bw()+
+#   theme(axis.text=element_text(color="black"))+
+#   xlab("Intra-annual variability of urban-tolerance")+
+#   ylab("Number of species")
+# 
+# ggsave("Figures/intra_annual_variability_histogram.png", width=6.5, height=4.5, units='in')
+# 
+# # summary statistics for paper
+# summary(migration_analysis$intra_annual_variability)
+# mean(migration_analysis$intra_annual_variability)
+# sd(migration_analysis$intra_annual_variability)
+# 
+# migration_analysis %>%
+#   group_by(migration_status) %>%
+#   summarize(mean=mean(intra_annual_variability),
+#             sd=sd(intra_annual_variability))
+
+
+
+
+
+
+
+
 
 
 # now they match! So we have a potential sample size of 486 species
@@ -238,8 +303,8 @@ ggsave("Figures/phylo_tree_of_intra_annual_variability.png", width=10, height=10
 # which is a reasonable hypothesis as you would expect that migratory species 
 # are more likely to have higher variability
 # first plot this
-ggplot(analysis, aes(x=factor(migration_status, levels=c("Resident", "Migrant")),
-                y=intra_annual_variability, fill=migration_status))+
+ggplot(migration_analysis, aes(x=factor(migration_status, levels=c("Resident", "Migrant")),
+                               y=intra_annual_variability, fill=migration_status))+
   geom_violin(position=position_dodge()) +
   geom_boxplot(width=0.1, color="black", position = position_dodge(width =0.9))+
   coord_flip()+
@@ -252,6 +317,10 @@ ggplot(analysis, aes(x=factor(migration_status, levels=c("Resident", "Migrant"))
   guides(fill=FALSE)
 
 ggsave("Figures/intra_annual_variability_vs_migration_status.png", width=6.5, height=4.5, units="in")
+
+
+
+
 
 # Now run a phylo model
 
@@ -322,20 +391,90 @@ ggsave("Figures/phylogenetic_global_model_of_intra_annual_variability.png", widt
 
 
 
+# Let's try a k-means clustering approach to see if we can cluster species
+# based on their seasonal responses
+# i.e., those high in breeding season low otherwise, those high during migraton, etc.
+all_response <- readRDS("Data/response_variables.RDS") %>%
+  dplyr::filter(COMMON_NAME %in% analysis$COMMON_NAME) %>%
+  #dplyr::filter(!COMMON_NAME %in% c("Monk Parakeet", "Red-crowned Parrot")) %>%
+  dplyr::select(COMMON_NAME, MONTH, mean_urbanness) %>%
+  group_by(COMMON_NAME) %>%
+  mutate(mean_urbanness=scales::rescale(mean_urbanness)) %>%
+  pivot_wider(names_from=MONTH, values_from=mean_urbanness) %>%
+  column_to_rownames(var="COMMON_NAME")
+
+library(gridExtra)
+library(cluster)
+library(factoextra)
+
+distance <- get_dist(all_response)
+fviz_dist(distance, gradient=list(low = "#00AFBB", mid = "white", high = "#FC4E07"))
+fviz_nbclust(all_response, kmeans, method="wss")
+fviz_nbclust(all_response, kmeans, method="silhouette")
+
+k2 <- kmeans(all_response, centers=2, nstart=30)
+
+fviz_cluster(k2, data=all_response)+
+  theme_bw()+
+  theme(axis.text=element_text(color="black"))
+
+# now get out the clusters and plot their seasonal trends to see if they make sense...
+clusters <- data.frame(cluster=k2$cluster) %>%
+  rownames_to_column(var="COMMON_NAME")
+
+readRDS("Data/response_variables.RDS") %>%
+  dplyr::filter(COMMON_NAME %in% analysis$COMMON_NAME) %>%
+  #dplyr::filter(!COMMON_NAME %in% c("Monk Parakeet", "Red-crowned Parrot")) %>%
+  dplyr::select(COMMON_NAME, MONTH, mean_urbanness) %>%
+  group_by(COMMON_NAME) %>%
+  mutate(mean_urbanness=scales::rescale(mean_urbanness)) %>%
+  left_join(clusters) %>%
+  mutate(cluster_name="Cluster") %>%
+  unite(cluster, cluster_name, cluster, sep=" ") %>%
+  mutate(cluster=as.character(cluster)) %>%
+  ggplot()+
+  geom_point(aes(x=MONTH, y=mean_urbanness, group=COMMON_NAME), size=0.6, color="gray90")+
+  geom_line(aes(x=MONTH, y=mean_urbanness, group=COMMON_NAME), size=0.6, color="gray90")+
+  #scale_y_continuous(labels = scales::percent)+
+  geom_smooth(aes(x=MONTH, y=mean_urbanness, group=cluster, color=cluster), 
+              method="gam", formula = y ~ s(x, bs = "cc"), size=1.2)+
+  facet_wrap(~cluster, scales="free_y")+
+  theme_bw()+
+  theme(axis.text=element_text(color="black"))+
+  xlab("Month")+
+  ylab("Scaled urbanness")+
+  theme(legend.position="none")+
+  scale_color_brewer(palette="Set1")+
+  scale_x_discrete(breaks=c("Jan", "Feb", "Mar", "Apr", 
+                            "May", "Jun", "Jul", "Aug",
+                            "Sep", "Oct", "Nov", "Dec"), labels=c("Jan", "", "", "", "", "Jun", 
+                                              "", "", "", "", "", "Dec"))
+
+ggsave("Figures/clustering_results.png", width=7.5, height=4.8, units="in")
 
 
 
+clusters %>%
+  left_join(analysis) %>%
+  group_by(cluster, migration_status) %>%
+  summarize(N=n())
 
 
+##########################################
+# prepare table S1
+table_s1 <- analysis %>%
+  left_join(clusters) %>%
+  dplyr::select(1, 5:8, 2, 9:17, 24) %>%
+  left_join(., readRDS("Data/response_variables.RDS") %>%
+              dplyr::filter(COMMON_NAME %in% analysis$COMMON_NAME) %>%
+              #dplyr::filter(!COMMON_NAME %in% c("Monk Parakeet", "Red-crowned Parrot")) %>%
+              dplyr::select(COMMON_NAME, MONTH, mean_urbanness) %>%
+              group_by(COMMON_NAME) %>%
+              pivot_wider(names_from=MONTH, values_from=mean_urbanness)) %>%
+  dplyr::select(1:5, 17:28, 6:16) %>%
+  rename(SCIENTIFIC_NAME=ebird_SCIENTIFIC_NAME)
 
-
-
-
-
-
-
-
-
+write_csv(table_s1, "Results/table_s1.csv")
 
 # fit a linear global model
 # standardize the model
