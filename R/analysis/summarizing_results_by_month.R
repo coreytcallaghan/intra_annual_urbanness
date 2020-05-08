@@ -80,7 +80,10 @@ phylo_global_model_results %>%
   geom_line(color="#377EB8")+
   geom_errorbar(aes(ymin=lwr_95_confint, ymax=upr_95_confint), width=0.4)+
   geom_point(color="#E41A1C")+
-  facet_wrap(~term, scales="free", ncol=2)+
+  facet_wrap(~factor(term, levels=c("Clutch size", "Mean flock size (log)",
+                                    "Brain residual", "Diet breadth",
+                                    "Resident", "Habitat generalism",
+                                    "Body size (log)", "Range size (log km2)")), scales="free", ncol=2)+
   theme_bw()+
   theme(axis.text=element_text(color="black"))+
   ylab("Parameter estimate")+
@@ -124,7 +127,10 @@ migrants_vs_residents <- global_model_results %>%
   geom_point()+
   geom_line()+
   scale_color_brewer(palette="Set1")+
-  facet_wrap(~term, scales="free", ncol=2)+
+  facet_wrap(~factor(term, levels=c("Clutch size", "Mean flock size (log)",
+                                    "Brain residual", "Diet breadth",
+                                    "Habitat generalism",
+                                    "Body size (log)", "Range size (log km2)")), scales="free", ncol=2)+
   theme_bw()+
   theme(axis.text=element_text(color="black"))+
   ylab("Parameter estimate")+
