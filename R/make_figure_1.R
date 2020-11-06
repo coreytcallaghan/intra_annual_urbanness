@@ -45,7 +45,8 @@ ambi <- readRDS(paste0("Data/species_RDS/American_Bittern_ebird_May19.RDS")) %>%
 hosp <- readRDS(paste0("Data/species_RDS/House_Sparrow_ebird_May19.RDS")) %>%
   mutate(MONTH=month(OBSERVATION_DATE, abbr=TRUE, label=TRUE))
 
-all_dat <- bind_rows(haha, caja, ambi, oven, hosp, weta)
+all_dat <- bind_rows(haha, caja, ambi, oven, hosp, weta) %>%
+  dplyr::filter(OBSERVATION_DATE >= "2014-01-01")
 
 processed_dat <- readRDS("Data/response_variables.RDS") %>%
   dplyr::filter(COMMON_NAME %in% c("Harris's Hawk", "Canada Jay",
