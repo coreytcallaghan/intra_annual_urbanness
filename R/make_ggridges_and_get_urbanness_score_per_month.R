@@ -30,7 +30,8 @@ file_names <- list.files("Data/species_RDS/")
 for (i in file_names) {
 
 df <- readRDS(paste0("Data/species_RDS/", i)) %>%
-  mutate(MONTH=month(OBSERVATION_DATE, abbr=TRUE, label=TRUE))
+  mutate(MONTH=month(OBSERVATION_DATE, abbr=TRUE, label=TRUE)) %>%
+  dplyr::filter(OBSERVATION_DATE > "2014-01-01")
 
 
 title_name <- unique(df$COMMON_NAME)
