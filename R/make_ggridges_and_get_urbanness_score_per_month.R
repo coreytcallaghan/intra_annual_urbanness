@@ -97,6 +97,11 @@ urbanness_month <- df %>%
 # save the as an RDS
 saveRDS(urbanness_month, file = paste0("Data/species_monthly_summaries/", title_name, ".RDS"))
 
+}
+
+
+
+############################################################################
 # repeat the above process, but for 'day of year' as opposed to month
 # write a function to resample the urbaness for each day
 # using 10 random samples per day
