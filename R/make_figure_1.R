@@ -81,12 +81,12 @@ ggplot(plot_dat, aes(x=avg_rad, y=MONTH, fill=title, height=..density..))+
                             "Jul", "Jun", "May", "Apr", "Mar", "Feb", "Jan"), 
                    limits=c("Dec", "Nov", "Oct", "Sep", "Aug", 
                             "Jul", "Jun", "May", "Apr", "Mar", "Feb", "Jan"))+
-  facet_wrap(~factor(title, levels=c("House Sparrow; N=3830607; SD=0.84",
-                                     "Canada Jay; N=59646; SD=0.04",
-                                     "Harris's Hawk; N=51630; SD=1.03",
-                                     "American Bittern; N=103672; SD=1.46",
-                                     "Ovenbird; N=634534; SD=1.89",
-                                     "Western Tanager; N=314160; SD=1.95")),scales="free")+
+  facet_wrap(~factor(title, levels=c("House Sparrow; N=3058735; SD=0.86",
+                                     "Canada Jay; N=46957; SD=0.03",
+                                     "Harris's Hawk; N=42184; SD=1.22",
+                                     "American Bittern; N=83238; SD=1.55",
+                                     "Ovenbird; N=513209; SD=1.7",
+                                     "Western Tanager; N=249770; SD=1.82")),scales="free")+
   guides(fill=FALSE)
 
 
