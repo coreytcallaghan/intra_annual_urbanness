@@ -243,6 +243,23 @@ analysis %>%
 ggsave("Figures/correlation_among_predictors.png", width=6, height=7, units="in")
 
 
+##########################################
+# prepare table S1
+table_s1 <- analysis %>%
+  dplyr::select(1, 5:8, 2, 9:17) %>%
+  left_join(., readRDS("Data/response_variables.RDS") %>%
+              dplyr::filter(COMMON_NAME %in% analysis$COMMON_NAME) %>%
+              #dplyr::filter(!COMMON_NAME %in% c("Monk Parakeet", "Red-crowned Parrot")) %>%
+              dplyr::select(COMMON_NAME, MONTH, mean_urbanness) %>%
+              group_by(COMMON_NAME) %>%
+              pivot_wider(names_from=MONTH, values_from=mean_urbanness)) %>%
+  dplyr::select(1:5, 17:27, 6:16) %>%
+  rename(SCIENTIFIC_NAME=ebird_SCIENTIFIC_NAME)
+
+write_csv(table_s1, "Results/table_s1.csv")
+
+
+
 # but we need to consider the potential of phylogenetic signal in intra-annual variability
 # so first let's test the phylogenetic signal of this variable
 # function to read one tree in
