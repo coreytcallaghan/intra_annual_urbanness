@@ -91,6 +91,23 @@ length(unique(analysis$COMMON_NAME))
 # let's start by looking at correlation and distribution of response variable
 hist(analysis$mean_urbanness)
 
+# I redid analyses that will influence the number of species
+# because I now only use data from 2014, so some species won't meet the 250
+# threshold for all 12 months.
+# get a list of these species
+# and remove them from possible analyses
+species_without_enough_dat <- analysis %>%
+  dplyr::filter(number_obs<=250) %>%
+  dplyr::select(COMMON_NAME) %>%
+  distinct()
+
+analysis <- analysis %>%
+  dplyr::filter(!COMMON_NAME %in% species_without_enough_dat$COMMON_NAME)
+
+# now test the tiplabel and common name lengths
+length(unique(analysis$COMMON_NAME))
+length(unique(analysis$TipLabel))
+
 monthly_histograms <- ggplot(analysis, aes(x=mean_urbanness))+
   geom_histogram(color="black", fill="#4DAF4A", bins=50)+
   scale_x_log10()+
@@ -98,7 +115,7 @@ monthly_histograms <- ggplot(analysis, aes(x=mean_urbanness))+
   theme_bw()+
   theme(axis.text=element_text(color="black"))+
   scale_fill_brewer(palette="Set1")+
-  xlab("Species-specific urbanness")+
+  xlab("Species-specific urban tolerance")+
   ylab("Number of species")+
   ggtitle("a)")
 
@@ -109,19 +126,24 @@ ggsave("Figures/monthly_urbanness_distributions.png", width=8.5, height=7.8, uni
 analysis %>%
   group_by(MONTH) %>%
   summarize(mean=mean(mean_urbanness),
-            sd=sd(mean_urbanness))
+            sd=sd(mean_urbanness),
+            N=n()) %>%
+  mutate(se=sd/sqrt(N))
 
 monthly_means <- analysis %>%
   group_by(MONTH) %>%
   summarize(mean=mean(mean_urbanness),
-            sd=sd(mean_urbanness)) %>%
+            sd=sd(mean_urbanness),
+            N=n()) %>%
+  mutate(se=sd/sqrt(N)) %>%
   ggplot(., aes(x=MONTH, y=mean, group=1))+
   geom_point()+
   geom_line()+
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=0.4)+
   theme_bw()+
   theme(axis.text=element_text(color="black"))+
   scale_color_brewer(palette="Set1")+
-  ylab("Mean of species-specific urbanness")+
+  ylab("Mean of urban tolerances")+
   xlab("")+
   ggtitle("b)")
 
@@ -133,14 +155,17 @@ ggsave("Figures/monthly_urbanness_mean_line.png", width=7, height=5.8, units="in
 monthly_means_split <- analysis %>%
   group_by(MONTH, migration_status) %>%
   summarize(mean=mean(mean_urbanness),
-            sd=sd(mean_urbanness)) %>%
+            sd=sd(mean_urbanness),
+            N=n()) %>%
+  mutate(se=sd/sqrt(N)) %>%
   ggplot(., aes(x=MONTH, y=mean, group=migration_status, color=migration_status))+
   geom_point()+
   geom_line()+
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=0.4)+
   theme_bw()+
   theme(axis.text=element_text(color="black"))+
   scale_color_brewer(palette="Set1")+
-  ylab("Mean of species-specific urbanness")+
+  ylab("Mean of urban tolerances")+
   xlab("")+
   ggtitle("c)")+
   labs(color="Migratory status")+
@@ -168,7 +193,8 @@ analysis <- analysis %>%
   mutate(log_body_size=log(adult_body_mass_g)) %>%
   mutate(log_flock_size=log(mean_flock_size)) %>%
   mutate(log_range_size=log(total_range_km2)) %>%
-  mutate(weights=1/(sd_urbanness+0.00001))
+  mutate(weights=1/(sd_urbanness)) %>%
+  mutate(weights=ifelse(weights>50, 50, weights))
 
 
 ##########################################
@@ -399,7 +425,7 @@ modelling_function <- function(month){
   
   # now uses the dredge function from MuMIn
   # but uses the 'pdredge' version which is for paralellizing
-  model.set <- pdredge(phy_mod_rescaled, m.lim=c(0, 8), cluster=clust)
+  model.set <- dredge(phy_mod_rescaled, m.lim=c(0, 8))
   
   # selects all models with deltaAic < 4
   top.models <- get.models(model.set, subset=delta<4) 
@@ -535,7 +561,7 @@ modelling_function <- function(month){
   
   # now uses the dredge function from MuMIn
   # but uses the 'pdredge' version which is for paralellizing
-  model.set <- pdredge(phy_mod_rescaled, m.lim=c(0, 8), cluster=clust)
+  model.set <- dredge(phy_mod_rescaled, m.lim=c(0, 8))
   
   # selects all models with deltaAic < 4
   top.models <- get.models(model.set, subset=delta<4) 
@@ -663,7 +689,7 @@ modelling_function <- function(month){
   
   # now uses the dredge function from MuMIn
   # but uses the 'pdredge' version which is for paralellizing
-  model.set <- pdredge(phy_mod_rescaled, m.lim=c(0, 8), cluster=clust)
+  model.set <- dredge(phy_mod_rescaled, m.lim=c(0, 8))
   
   # selects all models with deltaAic < 4
   top.models <- get.models(model.set, subset=delta<4) 

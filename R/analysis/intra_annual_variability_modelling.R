@@ -31,7 +31,20 @@ library(readr)
 source("R/global_functions.R")
 
 # read in response variables
-response <- readRDS("Data/response_variables.RDS") %>%
+response <- readRDS("Data/response_variables.RDS") 
+
+# I redid analyses that will influence the number of species
+# because I now only use data from 2014, so some species won't meet the 250
+# threshold for all 12 months.
+# get a list of these species
+# and remove them from possible analyses
+species_without_enough_dat <- response %>%
+  dplyr::filter(number_obs<=250) %>%
+  dplyr::select(COMMON_NAME) %>%
+  distinct()
+
+response <- response %>%
+  dplyr::filter(!COMMON_NAME %in% species_without_enough_dat$COMMON_NAME) %>%
   group_by(COMMON_NAME) %>%
   summarize(intra_annual_variability=sd(mean_urbanness),
             range_of_variability=(max(mean_urbanness) - min(mean_urbanness)),
@@ -173,7 +186,7 @@ ggplot(analysis, aes(x=intra_annual_variability))+
   scale_x_log10()+
   theme_bw()+
   theme(axis.text=element_text(color="black"))+
-  xlab("Intra-annual variability of urban-tolerance")+
+  xlab("Intra-annual variability of urban tolerance")+
   ylab("Number of species")
 
 ggsave("Figures/intra_annual_variability_histogram.png", width=6.5, height=4.5, units='in')
@@ -196,7 +209,7 @@ ggplot(analysis, aes(x=intra_annual_variability, y=range_of_variability))+
 
 # plot ggpairs of variables
 analysis %>%
-  dplyr::select(8:17) %>%
+  dplyr::select(9:17) %>%
   ggpairs()
 
 # doesn't look like too much colinearity problems
@@ -208,6 +221,27 @@ analysis <- analysis %>%
   mutate(log_flock_size=log(mean_flock_size)) %>%
   mutate(log_range_size=log(total_range_km2)) %>%
   mutate(weights=1/sd_of_intra_annual_variability)
+
+# make a correlation plot figure
+analysis %>%
+  dplyr::select(log_body_size, log_flock_size, log_range_size, brain_residual,
+                clutch_size, habitat_generalism_scaled, diet_breadth) %>%
+  rename(`Body size (log)`=log_body_size) %>%
+  rename(`Mean flock size (log)`=log_flock_size) %>%
+  rename(`Range size (log km2)`=log_range_size) %>%
+  rename(`Brain residual`=brain_residual) %>%
+  rename(`Clutch size`=clutch_size) %>%
+  rename(`Habitat generalism`=habitat_generalism_scaled) %>%
+  rename(`Diet breadth`=diet_breadth) %>%
+  cor(., use="pairwise.complete.obs") %>%
+  ggcorrplot(lab=TRUE, 
+             outline.col = "white",
+             ggtheme = ggplot2::theme_classic,
+             colors = c("#6D9EC1", "white", "#E46726"))+
+  theme(axis.text=element_text(color="black"))
+
+ggsave("Figures/correlation_among_predictors.png", width=6, height=7, units="in")
+
 
 # but we need to consider the potential of phylogenetic signal in intra-annual variability
 # so first let's test the phylogenetic signal of this variable
@@ -303,7 +337,7 @@ ggsave("Figures/phylo_tree_of_intra_annual_variability.png", width=10, height=10
 # which is a reasonable hypothesis as you would expect that migratory species 
 # are more likely to have higher variability
 # first plot this
-ggplot(migration_analysis, aes(x=factor(migration_status, levels=c("Resident", "Migrant")),
+ggplot(analysis, aes(x=factor(migration_status, levels=c("Resident", "Migrant")),
                                y=intra_annual_variability, fill=migration_status))+
   geom_violin(position=position_dodge()) +
   geom_boxplot(width=0.1, color="black", position = position_dodge(width =0.9))+
@@ -313,17 +347,31 @@ ggplot(migration_analysis, aes(x=factor(migration_status, levels=c("Resident", "
   theme_bw()+
   theme(axis.text=element_text(color="black"))+
   xlab("")+
-  ylab("Intra-annual urbanness variability")+
+  ylab("Intra-annual urban tolerance variability")+
   guides(fill=FALSE)
 
 ggsave("Figures/intra_annual_variability_vs_migration_status.png", width=6.5, height=4.5, units="in")
 
 
+dat <- analysis %>%
+  mutate(z.log_body_size=rescale(log_body_size)) %>%
+  mutate(z.log_flock_size=rescale(log_flock_size)) %>%
+  mutate(z.log_range_size=rescale(log_range_size)) %>%
+  mutate(z.brain_residual=rescale(brain_residual)) %>%
+  mutate(z.clutch_size=rescale(clutch_size)) %>%
+  mutate(z.habitat_generalism_scaled=rescale(habitat_generalism_scaled)) %>%
+  mutate(z.diet_breadth=rescale(diet_breadth))
 
+
+phylo_dat_3 <- dat %>%
+  dplyr::select(TipLabel, response, weights, migration_status, z.log_body_size, z.log_flock_size,
+                z.log_range_size, z.brain_residual, z.clutch_size, z.habitat_generalism_scaled,
+                z.diet_breadth, functional_diet) %>%
+  distinct() %>%
+  column_to_rownames(var="TipLabel")
 
 
 # Now run a phylo model
-
 phy_mod_migration <- phylolm(response ~ migration_status,
                              data=phylo_dat_3, phy=con_tree, na.action="na.fail", weights=weights)
 
@@ -337,6 +385,17 @@ summary(simple_mig_mod)
 
 
 
+
+
+
+
+
+
+
+
+
+############################## OLD STUFF!!! #############################################
+######################## NO LONGER IN THE PAPER
 
 phylo_dat_3 <- dat %>%
   dplyr::select(TipLabel, response, weights, migration_status, z.log_body_size, z.log_flock_size,
