@@ -1,25 +1,25 @@
-Month,,Cmean,I,K,K.star,Lambda
-Jan,Statistic,0.2493,0.0698,0.1627,0.1821,0.4023
-,p-value,0.0001,0.0001,0.0001,0.0001,0.0001
-Feb,Statistic,0.2525,0.0656,0.1661,0.1859,0.4163
-,p-value,0.0001,0.0001,0.0001,0.0001,0.0001
-Mar,Statistic,0.2066,0.0452,0.1406,0.1561,0.3263
-,p-value,0.0001,0.0001,0.0002,0.0002,0.0001
-Apr,Statistic,0.1357,0.0151,0.1390,0.1494,0.1989
-,p-value,0.0008,0.0260,0.0004,0.0004,0.0457
-May,Statistic,0.1318,0.0132,0.1403,0.1524,0.1703
-,p-value,0.0016,0.0332,0.0002,0.0002,0.2809
-Jun,Statistic,0.1874,0.0251,0.1341,0.1500,0.4328
-,p-value,0.0002,0.0041,0.0004,0.0005,0.0014
-Jul,Statistic,0.1759,0.0202,0.1448,0.1619,0.3842
-,p-value,0.0002,0.0101,0.0001,0.0001,0.0124
-Aug,Statistic,0.1311,0.0068,0.1450,0.1596,0.0000
-,p-value,0.0022,0.1049,0.0002,0.0001,1.0000
-Sep,Statistic,0.1950,0.0159,0.1501,0.1625,0.3961
-,p-value,0.0001,0.0215,0.0001,0.0001,0.0115
-Oct,Statistic,0.1509,0.0102,0.1222,0.1324,0.1602
-,p-value,0.0003,0.0568,0.0017,0.0019,0.1037
-Nov,Statistic,0.1868,0.0317,0.1370,0.1533,0.2735
-,p-value,0.0002,0.0009,0.0002,0.0004,0.0041
-Dec,Statistic,0.2463,0.0632,0.1625,0.1819,0.3853
-,p-value,0.0001,0.0001,0.0001,0.0001,0.0001
+term,Cmean,I,K,K.star,Lambda,value,MONTH
+response,0.2584,0.0735,0.1652,0.1848,0.3915,Statistic,Jan
+response,1e-4,1e-4,1e-4,1e-4,1e-4,P value,Jan
+response,0.2512,0.0663,0.1659,0.1856,0.3899,Statistic,Feb
+response,1e-4,1e-4,1e-4,1e-4,1e-4,P value,Feb
+response,0.2057,0.0454,0.1437,0.1599,0.2871,Statistic,Mar
+response,1e-4,2e-4,1e-4,1e-4,2e-4,P value,Mar
+response,0.117,0.0119,0.139,0.1492,0.0838,Statistic,Apr
+response,0.0044,0.0454,3e-4,1e-4,0.4599,P value,Apr
+response,0.1227,0.0117,0.1404,0.15310000000000001,0,Statistic,May
+response,0.004,0.0535,2e-4,5e-4,1,P value,May
+response,0.1888,0.0268,0.1389,0.1554,0.4292,Statistic,Jun
+response,1e-4,0.0033,2e-4,2e-4,0.0053,P value,Jun
+response,0.1895,0.0222,0.1507,0.1684,0.4002,Statistic,Jul
+response,1e-4,0.0092,1e-4,1e-4,0.03,P value,Jul
+response,0.137,0.007,0.1495,0.1651,1e-4,Statistic,Aug
+response,0.0016,0.1128,1e-4,1e-4,1,P value,Aug
+response,0.1907,0.0146,0.1554,0.1684,0.3635,Statistic,Sep
+response,2e-4,0.0323,1e-4,1e-4,0.1212,P value,Sep
+response,0.1521,0.0086,0.1263,0.1363,0.0603,Statistic,Oct
+response,5e-4,0.0831,8e-4,0.0014,0.3948,P value,Oct
+response,0.1997,0.032,0.1388,0.1552,0.2321,Statistic,Nov
+response,1e-4,0.0016,2e-4,3e-4,0.0169,P value,Nov
+response,0.2614,0.0656,0.1658,0.1855,0.3947,Statistic,Dec
+response,1e-4,1e-4,1e-4,1e-4,1e-4,P value,Dec
