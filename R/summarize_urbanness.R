@@ -28,8 +28,8 @@ ggplot(dat, aes(x=urban_score, y=mean_urbanness))+
   theme_bw()+
   theme(axis.text=element_text(color="black"))+
   geom_smooth(method="lm")+
-  ylab("Resampled urbanness")+
-  xlab("Total urbanness")+
+  ylab("Resampled urban tolerance")+
+  xlab("Total urban tolerance")+
   scale_x_log10()+
   scale_y_log10()
 
