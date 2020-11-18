@@ -182,6 +182,20 @@ monthly_histograms + monthly_means + monthly_means_split + plot_layout(ncol=1)
 ggsave("Figures/monthly_all_species_urbanness_summary.png", height=10, width=7.5, units="in")
 
 
+# pick some species with different breeding periods
+response %>%
+  dplyr::filter(COMMON_NAME %in% c("Barred Owl", "American Goldfinch",
+                                   "Northern Mockingbird", "Prairie Warbler",
+                                   "Mallard", "Blackburnian Warbler",
+                                   "Horned Lark", "Pine Grosbeak")) %>%
+  ggplot(., aes(x=MONTH, y=urban_score, group=1))+
+  geom_line()+
+  geom_point()+
+  facet_wrap(~COMMON_NAME, scales="free", ncol=2)+
+  theme_bw()
+
+
+
 # how many obs for results
 sum(analysis$number_obs)
 
