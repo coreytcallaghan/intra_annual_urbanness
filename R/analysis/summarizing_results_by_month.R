@@ -87,7 +87,7 @@ phylo_global_model_results %>%
   theme_bw()+
   theme(axis.text=element_text(color="black"))+
   ylab("Parameter estimate")+
-  xlab("")+
+  xlab("Month")+
   #geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", k=11), color="orchid3")+
   scale_x_continuous(breaks=c(1:12), labels=c("Jan", "", "", "", "", "Jun", 
                                               "", "", "", "", "", "Dec"))
@@ -134,7 +134,7 @@ migrants_vs_residents <- global_model_results %>%
   theme_bw()+
   theme(axis.text=element_text(color="black"))+
   ylab("Parameter estimate")+
-  xlab("")+
+  xlab("Month")+
   #geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", k=11), color="orchid3")+
   scale_x_continuous(breaks=c(1:12), labels=c("Jan", "", "", "", "", "Jun", 
                                               "", "", "", "", "", "Dec"))+
